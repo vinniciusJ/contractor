@@ -1,14 +1,9 @@
 import { FC } from 'react'
 
-import { useGetAll } from '@/hooks/get'
-import { Contract } from '@/schemas/contract'
+import { ContractsTable } from '@/components/contracts/table'
 
 const Contracts: FC = () => {
-	const contracts = useGetAll<Contract>('contracts')
-
-	console.log(contracts)
-
-	return <div></div>
+	return <ContractsTable />
 }
 
 export default Contracts
