@@ -11,11 +11,18 @@
     "prepare": "husky install",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --quiet --fix",
     "type:check": "tsc --noEmit",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "server": "npx json-server data.json"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.52.1",
+    "axios": "^1.7.5",
+    "json-server": "^1.0.0-beta.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
+    "react-toastify": "^10.0.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
