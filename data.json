@@ -1,216 +1,661 @@
 {
-    "companies": [
-        {
-            "id": 1,
-            "name": "Tech Innovators",
-            "corporateName": "Tech Innovators Ltd.",
-            "code": "TI-2024",
-            "phone": "123-456-7890",
-            "address": "123 Tech Lane, Innovation City"
-        },
-        {
-            "id": 2,
-            "name": "Green Energy Solutions",
-            "corporateName": "Green Energy Solutions Inc.",
-            "code": "GE-2024",
-            "phone": "098-765-4321",
-            "address": "456 Eco Street, Green Town"
-        }
-    ],
-    "contractual-types": [
-        {
-            "id": 1,
-            "name": "Service",
-            "contractObjective": "IT infrastructure upgrade",
-            "contractItems": [
-                {
-                    "id": 1,
-                    "name": "Server Installation",
-                    "scheduledDate": "2024-09-01T00:00:00.000Z"
-                },
-                {
-                    "id": 2,
-                    "name": "Network Setup",
-                    "scheduledDate": "2024-09-15T00:00:00.000Z"
-                }
-            ]
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Alice Smith",
-            "email": "alice.smith@techinnovators.com",
-            "phone": "123-456-7890"
-        },
-        {
-            "id": 2,
-            "name": "Bob Johnson",
-            "email": "bob.johnson@greenenergy.com",
-            "phone": "098-765-4321"
-        }
-    ],
-    "contracted-company-employees": [
-        {
-            "id": 2,
-            "name": "Bob Johnson",
-            "email": "bob.johnson@greenenergy.com",
-            "phone": "098-765-4321",
-            "contractedCompany": {
-                "id": 2,
-                "name": "Green Energy Solutions",
-                "corporateName": "Green Energy Solutions Inc.",
-                "code": "GE-2024",
-                "phone": "098-765-4321",
-                "address": "456 Eco Street, Green Town"
-            }
-        }
-    ],
-    "subsidiary-company-employees": [
-        {
-            "id": 1,
-            "name": "Alice Smith",
-            "email": "alice.smith@techinnovators.com",
-            "phone": "123-456-7890",
-            "subsidiaryCompany": {
-                "id": 1,
-                "name": "Tech Innovators",
-                "corporateName": "Tech Innovators Ltd.",
-                "code": "TI-2024",
-                "phone": "123-456-7890",
-                "address": "123 Tech Lane, Innovation City",
-                "matrix": true
-            }
-        }
-    ],
-    "subsidiary-companies": [
-        {
-            "id": 1,
-            "name": "Tech Innovators",
-            "corporateName": "Tech Innovators Ltd.",
-            "code": "TI-2024",
-            "phone": "123-456-7890",
-            "address": "123 Tech Lane, Innovation City",
-            "matrix": true
-        }
-    ],
-    "installments": [
-        {
-            "id": 1,
-            "value": 100000.00,
-            "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-            "paymentDate": "2024-09-02T00:00:00.000Z",
-            "paymentReceipt": true
-        },
-        {
-            "id": 2,
-            "value": 200000.00,
-            "scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
-            "paymentDate": "2024-10-02T00:00:00.000Z",
-            "paymentReceipt": false
-        }
-    ],
-    "payment-methods": [
-        {
-            "id": 1,
-            "name": "Bank Transfer",
-            "installmentsNumber": 5
-        },
-        {
-            "id": 2,
-            "name": "Credit Card",
-            "installmentsNumber": 3
-        }
-    ],
-    "contracts": [
-        {
-            "id": 1,
-            "name": "IT Infrastructure Upgrade",
-            "contractType": "Service",
-            "contractObjective": "Upgrade of IT infrastructure across all branches.",
-            "contractItems": [
-                {
-                    "id": 1,
-                    "name": "Server Installation",
-                    "scheduledDate": "2024-09-01T00:00:00.000Z"
-                },
-                {
-                    "id": 2,
-                    "name": "Network Setup",
-                    "scheduledDate": "2024-09-15T00:00:00.000Z"
-                }
-            ],
-            "startDate": "2024-08-01T00:00:00.000Z",
-            "endDate": "2024-12-31T00:00:00.000Z",
-            "contractedValue": 500000.00,
-            "paymentMethod": {
-                "id": 1,
-                "name": "Bank Transfer",
-                "installmentsNumber": 5
-            },
-            "installments": [
-                {
-                    "id": 1,
-                    "value": 100000.00,
-                    "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-                    "paymentDate": "2024-09-02T00:00:00.000Z",
-                    "paymentReceipt": true
-                },
-                {
-                    "id": 2,
-                    "value": 200000.00,
-                    "scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
-                    "paymentDate": "2024-10-02T00:00:00.000Z",
-                    "paymentReceipt": false
-                }
-            ],
-            "executionLocal": "Main Headquarters",
-            "contractedCompany": {
-                "id": 2,
-                "name": "Green Energy Solutions",
-                "corporateName": "Green Energy Solutions Inc.",
-                "code": "GE-2024",
-                "phone": "098-765-4321",
-                "address": "456 Eco Street, Green Town"
-            },
-            "subsidiaryCompany": {
-                "id": 1,
-                "name": "Tech Innovators",
-                "corporateName": "Tech Innovators Ltd.",
-                "code": "TI-2024",
-                "phone": "123-456-7890",
-                "address": "123 Tech Lane, Innovation City",
-                "matrix": true
-            },
-            "contractManager": {
-                "id": 1,
-                "name": "Alice Smith",
-                "email": "alice.smith@techinnovators.com",
-                "phone": "123-456-7890",
-                "subsidiaryCompany": {
-                    "id": 1,
-                    "name": "Tech Innovators",
-                    "corporateName": "Tech Innovators Ltd.",
-                    "code": "TI-2024",
-                    "phone": "123-456-7890",
-                    "address": "123 Tech Lane, Innovation City",
-                    "matrix": true
-                }
-            },
-            "legalRepresentative": {
-                "id": 2,
-                "name": "Bob Johnson",
-                "email": "bob.johnson@greenenergy.com",
-                "phone": "098-765-4321",
-                "contractedCompany": {
-                    "id": 2,
-                    "name": "Green Energy Solutions",
-                    "corporateName": "Green Energy Solutions Inc.",
-                    "code": "GE-2024",
-                    "phone": "098-765-4321",
-                    "address": "456 Eco Street, Green Town"
-                }
-            }
-        }
-    ]
+	"companies": [
+		{
+			"id": 1,
+			"name": "Tech Innovators",
+			"corporateName": "Tech Innovators Ltd.",
+			"code": "TI-2024",
+			"phone": "123-456-7890",
+			"address": "123 Tech Lane, Innovation City"
+		},
+		{
+			"id": 2,
+			"name": "Green Energy Solutions",
+			"corporateName": "Green Energy Solutions Inc.",
+			"code": "GE-2024",
+			"phone": "098-765-4321",
+			"address": "456 Eco Street, Green Town"
+		}
+	],
+	"contractual-types": [
+		{
+			"id": 1,
+			"name": "Service",
+			"contractObjective": "IT infrastructure upgrade",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Server Installation",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Network Setup",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			]
+		}
+	],
+	"employees": [
+		{
+			"id": 1,
+			"name": "Alice Smith",
+			"email": "alice.smith@techinnovators.com",
+			"phone": "123-456-7890"
+		},
+		{
+			"id": 2,
+			"name": "Bob Johnson",
+			"email": "bob.johnson@greenenergy.com",
+			"phone": "098-765-4321"
+		}
+	],
+	"contracted-company-employees": [
+		{
+			"id": 2,
+			"name": "Bob Johnson",
+			"email": "bob.johnson@greenenergy.com",
+			"phone": "098-765-4321",
+			"contractedCompany": {
+				"id": 2,
+				"name": "Green Energy Solutions",
+				"corporateName": "Green Energy Solutions Inc.",
+				"code": "GE-2024",
+				"phone": "098-765-4321",
+				"address": "456 Eco Street, Green Town"
+			}
+		}
+	],
+	"subsidiary-company-employees": [
+		{
+			"id": 1,
+			"name": "Alice Smith",
+			"email": "alice.smith@techinnovators.com",
+			"phone": "123-456-7890",
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Tech Innovators",
+				"corporateName": "Tech Innovators Ltd.",
+				"code": "TI-2024",
+				"phone": "123-456-7890",
+				"address": "123 Tech Lane, Innovation City",
+				"matrix": true
+			}
+		}
+	],
+	"subsidiary-companies": [
+		{
+			"id": 1,
+			"name": "Tech Innovators",
+			"corporateName": "Tech Innovators Ltd.",
+			"code": "TI-2024",
+			"phone": "123-456-7890",
+			"address": "123 Tech Lane, Innovation City",
+			"matrix": true
+		}
+	],
+	"installments": [
+		{
+			"id": 1,
+			"value": 100000.00,
+			"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+			"paymentDate": "2024-09-02T00:00:00.000Z",
+			"paymentReceipt": true
+		},
+		{
+			"id": 2,
+			"value": 200000.00,
+			"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+			"paymentDate": "2024-10-02T00:00:00.000Z",
+			"paymentReceipt": false
+		}
+	],
+	"payment-methods": [
+		{
+			"id": 1,
+			"name": "Bank Transfer",
+			"installmentsNumber": 5
+		},
+		{
+			"id": 2,
+			"name": "Credit Card",
+			"installmentsNumber": 3
+		}
+	],
+	"contracts": [
+		{
+			"id": 1,
+			"name": "IT Infrastructure Upgrade",
+			"contractType": "Service",
+			"contractObjective": "Upgrade of IT infrastructure across all branches.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Server Installation",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Network Setup",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-08-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 500000.00,
+			"paymentMethod": {
+				"id": 1,
+				"name": "Bank Transfer",
+				"installmentsNumber": 5
+			},
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000.00,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 200000.00,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Main Headquarters",
+			"contractedCompany": {
+				"id": 2,
+				"name": "Green Energy Solutions",
+				"corporateName": "Green Energy Solutions Inc.",
+				"code": "GE-2024",
+				"phone": "098-765-4321",
+				"address": "456 Eco Street, Green Town"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Tech Innovators",
+				"corporateName": "Tech Innovators Ltd.",
+				"code": "TI-2024",
+				"phone": "123-456-7890",
+				"address": "123 Tech Lane, Innovation City",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 1,
+				"name": "Alice Smith",
+				"email": "alice.smith@techinnovators.com",
+				"phone": "123-456-7890",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Tech Innovators",
+					"corporateName": "Tech Innovators Ltd.",
+					"code": "TI-2024",
+					"phone": "123-456-7890",
+					"address": "123 Tech Lane, Innovation City",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 2,
+				"name": "Bob Johnson",
+				"email": "bob.johnson@greenenergy.com",
+				"phone": "098-765-4321",
+				"contractedCompany": {
+					"id": 2,
+					"name": "Green Energy Solutions",
+					"corporateName": "Green Energy Solutions Inc.",
+					"code": "GE-2024",
+					"phone": "098-765-4321",
+					"address": "456 Eco Street, Green Town"
+				}
+			}
+		},
+		{
+			"id": 1,
+			"name": "IT Infrastructure Upgrade",
+			"contractType": "Service",
+			"contractObjective": "Upgrade of IT infrastructure across all branches.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Server Installation",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Network Setup",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-08-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 500000.00,
+			"paymentMethod": {
+				"id": 1,
+				"name": "Bank Transfer",
+				"installmentsNumber": 5
+			},
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000.00,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 200000.00,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Main Headquarters",
+			"contractedCompany": {
+				"id": 2,
+				"name": "Green Energy Solutions",
+				"corporateName": "Green Energy Solutions Inc.",
+				"code": "GE-2024",
+				"phone": "098-765-4321",
+				"address": "456 Eco Street, Green Town"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Tech Innovators",
+				"corporateName": "Tech Innovators Ltd.",
+				"code": "TI-2024",
+				"phone": "123-456-7890",
+				"address": "123 Tech Lane, Innovation City",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 1,
+				"name": "Alice Smith",
+				"email": "alice.smith@techinnovators.com",
+				"phone": "123-456-7890",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Tech Innovators",
+					"corporateName": "Tech Innovators Ltd.",
+					"code": "TI-2024",
+					"phone": "123-456-7890",
+					"address": "123 Tech Lane, Innovation City",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 2,
+				"name": "Bob Johnson",
+				"email": "bob.johnson@greenenergy.com",
+				"phone": "098-765-4321",
+				"contractedCompany": {
+					"id": 2,
+					"name": "Green Energy Solutions",
+					"corporateName": "Green Energy Solutions Inc.",
+					"code": "GE-2024",
+					"phone": "098-765-4321",
+					"address": "456 Eco Street, Green Town"
+				}
+			}
+		},
+		{
+			"id": 1,
+			"name": "IT Infrastructure Upgrade",
+			"contractType": "Service",
+			"contractObjective": "Upgrade of IT infrastructure across all branches.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Server Installation",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Network Setup",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-08-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 500000.00,
+			"paymentMethod": {
+				"id": 1,
+				"name": "Bank Transfer",
+				"installmentsNumber": 5
+			},
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000.00,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 200000.00,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Main Headquarters",
+			"contractedCompany": {
+				"id": 2,
+				"name": "Green Energy Solutions",
+				"corporateName": "Green Energy Solutions Inc.",
+				"code": "GE-2024",
+				"phone": "098-765-4321",
+				"address": "456 Eco Street, Green Town"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Tech Innovators",
+				"corporateName": "Tech Innovators Ltd.",
+				"code": "TI-2024",
+				"phone": "123-456-7890",
+				"address": "123 Tech Lane, Innovation City",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 1,
+				"name": "Alice Smith",
+				"email": "alice.smith@techinnovators.com",
+				"phone": "123-456-7890",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Tech Innovators",
+					"corporateName": "Tech Innovators Ltd.",
+					"code": "TI-2024",
+					"phone": "123-456-7890",
+					"address": "123 Tech Lane, Innovation City",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 2,
+				"name": "Bob Johnson",
+				"email": "bob.johnson@greenenergy.com",
+				"phone": "098-765-4321",
+				"contractedCompany": {
+					"id": 2,
+					"name": "Green Energy Solutions",
+					"corporateName": "Green Energy Solutions Inc.",
+					"code": "GE-2024",
+					"phone": "098-765-4321",
+					"address": "456 Eco Street, Green Town"
+				}
+			}
+		},
+		{
+			"id": 1,
+			"name": "IT Infrastructure Upgrade",
+			"contractType": "Service",
+			"contractObjective": "Upgrade of IT infrastructure across all branches.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Server Installation",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Network Setup",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-08-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 500000.00,
+			"paymentMethod": {
+				"id": 1,
+				"name": "Bank Transfer",
+				"installmentsNumber": 5
+			},
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000.00,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 200000.00,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Main Headquarters",
+			"contractedCompany": {
+				"id": 2,
+				"name": "Green Energy Solutions",
+				"corporateName": "Green Energy Solutions Inc.",
+				"code": "GE-2024",
+				"phone": "098-765-4321",
+				"address": "456 Eco Street, Green Town"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Tech Innovators",
+				"corporateName": "Tech Innovators Ltd.",
+				"code": "TI-2024",
+				"phone": "123-456-7890",
+				"address": "123 Tech Lane, Innovation City",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 1,
+				"name": "Alice Smith",
+				"email": "alice.smith@techinnovators.com",
+				"phone": "123-456-7890",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Tech Innovators",
+					"corporateName": "Tech Innovators Ltd.",
+					"code": "TI-2024",
+					"phone": "123-456-7890",
+					"address": "123 Tech Lane, Innovation City",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 2,
+				"name": "Bob Johnson",
+				"email": "bob.johnson@greenenergy.com",
+				"phone": "098-765-4321",
+				"contractedCompany": {
+					"id": 2,
+					"name": "Green Energy Solutions",
+					"corporateName": "Green Energy Solutions Inc.",
+					"code": "GE-2024",
+					"phone": "098-765-4321",
+					"address": "456 Eco Street, Green Town"
+				}
+			}
+		},
+		{
+			"id": 1,
+			"name": "IT Infrastructure Upgrade",
+			"contractType": "Service",
+			"contractObjective": "Upgrade of IT infrastructure across all branches.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Server Installation",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Network Setup",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-08-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 500000.00,
+			"paymentMethod": {
+				"id": 1,
+				"name": "Bank Transfer",
+				"installmentsNumber": 5
+			},
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000.00,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 200000.00,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Main Headquarters",
+			"contractedCompany": {
+				"id": 2,
+				"name": "Green Energy Solutions",
+				"corporateName": "Green Energy Solutions Inc.",
+				"code": "GE-2024",
+				"phone": "098-765-4321",
+				"address": "456 Eco Street, Green Town"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Tech Innovators",
+				"corporateName": "Tech Innovators Ltd.",
+				"code": "TI-2024",
+				"phone": "123-456-7890",
+				"address": "123 Tech Lane, Innovation City",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 1,
+				"name": "Alice Smith",
+				"email": "alice.smith@techinnovators.com",
+				"phone": "123-456-7890",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Tech Innovators",
+					"corporateName": "Tech Innovators Ltd.",
+					"code": "TI-2024",
+					"phone": "123-456-7890",
+					"address": "123 Tech Lane, Innovation City",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 2,
+				"name": "Bob Johnson",
+				"email": "bob.johnson@greenenergy.com",
+				"phone": "098-765-4321",
+				"contractedCompany": {
+					"id": 2,
+					"name": "Green Energy Solutions",
+					"corporateName": "Green Energy Solutions Inc.",
+					"code": "GE-2024",
+					"phone": "098-765-4321",
+					"address": "456 Eco Street, Green Town"
+				}
+			}
+		},
+		{
+			"id": 1,
+			"name": "IT Infrastructure Upgrade",
+			"contractType": "Service",
+			"contractObjective": "Upgrade of IT infrastructure across all branches.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Server Installation",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Network Setup",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-08-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 500000.00,
+			"paymentMethod": {
+				"id": 1,
+				"name": "Bank Transfer",
+				"installmentsNumber": 5
+			},
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000.00,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 200000.00,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Main Headquarters",
+			"contractedCompany": {
+				"id": 2,
+				"name": "Green Energy Solutions",
+				"corporateName": "Green Energy Solutions Inc.",
+				"code": "GE-2024",
+				"phone": "098-765-4321",
+				"address": "456 Eco Street, Green Town"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Tech Innovators",
+				"corporateName": "Tech Innovators Ltd.",
+				"code": "TI-2024",
+				"phone": "123-456-7890",
+				"address": "123 Tech Lane, Innovation City",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 1,
+				"name": "Alice Smith",
+				"email": "alice.smith@techinnovators.com",
+				"phone": "123-456-7890",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Tech Innovators",
+					"corporateName": "Tech Innovators Ltd.",
+					"code": "TI-2024",
+					"phone": "123-456-7890",
+					"address": "123 Tech Lane, Innovation City",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 2,
+				"name": "Bob Johnson",
+				"email": "bob.johnson@greenenergy.com",
+				"phone": "098-765-4321",
+				"contractedCompany": {
+					"id": 2,
+					"name": "Green Energy Solutions",
+					"corporateName": "Green Energy Solutions Inc.",
+					"code": "GE-2024",
+					"phone": "098-765-4321",
+					"address": "456 Eco Street, Green Town"
+				}
+			}
+		}
+	]
 }

@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { contractorAPI } from '@/shared/api'
 import { Endpoints } from '@/utils/endpoints'
 
 export class Service {
 	api = contractorAPI
 
-	async get<T extends object | object[]>(endpoint: Endpoints): Promise<T> {
-		const response = await this.api.get<T>(endpoint)
+	async get<T extends object | object[]>(endpoint: Endpoints, params?: Record<string, any>): Promise<T> {
+		const response = await this.api.get<T>(endpoint, { params })
 
 		return response.data
 	}

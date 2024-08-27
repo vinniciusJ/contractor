@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
 
 import { Table } from '@/components/ui/table'
-import { useGetAll } from '@/hooks/get'
+import { useGetPageable } from '@/hooks/get'
 import { Contract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
@@ -58,7 +58,7 @@ const columns = [
 ] as ColumnDef<Contract>[]
 
 export const ContractsTable: FC = () => {
-	const contracts = useGetAll<Contract>('contracts')
+	const { data: contracts } = useGetPageable<Contract>('contracts')
 
-	return <Table columns={columns} data={contracts} />
+	return <Table columns={columns} data={contracts.data} items={contracts.items} />
 }

@@ -21,12 +21,23 @@ export interface DeleteMutationOptions<T extends object> extends MutationOptions
 	method: 'DELETE'
 }
 
+export type EndpointParams = (string | number)[]
+
 export const mutationFeedbackSchema = z.object({
 	success: z.string(),
 	error: z.string(),
+})
+
+export const getPageableReturnSchema = z.object({
+	first: z.number().nonnegative().default(0),
+	last: z.number().nonnegative().default(0),
+	items: z.number().nonnegative().default(0),
+	data: z.any().array().default([]),
 })
 
 export const mutationMethodsSchema = z.enum(['POST', 'PUT', 'DELETE'])
 
 export type MutationMethods = z.infer<typeof mutationMethodsSchema>
 export type MutationFeedback = z.output<typeof mutationFeedbackSchema>
+
+export type PageableReturn<T extends object> = z.infer<typeof getPageableReturnSchema> & { data: T[] }
