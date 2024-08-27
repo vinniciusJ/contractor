@@ -7,3 +7,5 @@ export const installmentSchema = z.object({
 	paymentDate: z.date(),
 	paymentReceipt: z.boolean(),
 })
+
+export type Installment = z.infer<typeof installmentSchema>

@@ -1,6 +1,6 @@
 import { useMutation as useTanstackMutation } from '@tanstack/react-query'
 
-import { MutationOptions } from '@/schemas/utils'
+import { MutationOptions } from '@/schemas/utils/mutations'
 import { Endpoints } from '@/utils/endpoints'
 import { handleMutation } from '@/utils/mutation'
 

@@ -8,3 +8,5 @@ export const contractualTypeSchema = z.object({
 	contractObjective: z.string(),
 	contractItems: contractItemSchema.array(),
 })
+
+export type ContractualType = z.infer<typeof contractualTypeSchema>

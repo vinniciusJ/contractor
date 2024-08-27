@@ -5,3 +5,5 @@ export const paymentMethodSchema = z.object({
 	name: z.string(),
 	installmentsNumber: z.number(),
 })
+
+export type PaymentMethod = z.infer<typeof paymentMethodSchema>

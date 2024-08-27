@@ -5,3 +5,5 @@ export const contractItemSchema = z.object({
 	name: z.string(),
 	scheduledDate: z.date(),
 })
+
+export type ContractItem = z.infer<typeof contractItemSchema>

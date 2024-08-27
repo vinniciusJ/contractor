@@ -14,3 +14,6 @@ export const contractedCompanySchema = companySchema
 export const subsidiaryCompanySchema = companySchema.extend({
 	matrix: z.boolean(),
 })
+
+export type Company = z.infer<typeof companySchema>
+export type SubsidiaryCompany = z.infer<typeof subsidiaryCompanySchema>

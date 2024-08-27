@@ -1,4 +1,4 @@
-import { MutationOptions, PostMutationOptions } from '@/schemas/utils'
+import { MutationOptions, PostMutationOptions } from '@/schemas/utils/mutations'
 import { Service } from '@/services'
 
 const isPostMutation = <T extends object>(options: MutationOptions<T>): options is PostMutationOptions<T> => {
