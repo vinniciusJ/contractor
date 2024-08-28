@@ -15,6 +15,16 @@ export const router = createBrowserRouter([
 			{
 				path: 'contracts',
 				element: <ContractsPage />,
+				children: [
+					{
+						path: 'map',
+						element: <p>Map</p>,
+					},
+					{
+						path: 'list',
+						element: <p>Lista</p>,
+					},
+				],
 			},
 		],
 	},
