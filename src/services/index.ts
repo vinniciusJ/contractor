@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { PageableReturn } from '@/schemas/utils/mutations'
 import { contractorAPI } from '@/shared/api'
 import { Endpoints } from '@/utils/endpoints'
 
 export class Service {
 	api = contractorAPI
 
-	async get<T extends object | object[]>(endpoint: Endpoints, params?: Record<string, any>): Promise<T> {
+	async get<T extends object | object[] | PageableReturn<T>>(
+		endpoint: Endpoints,
+		params?: Record<string, any>
+	): Promise<T> {
 		const response = await this.api.get<T>(endpoint, { params })
 
 		return response.data
