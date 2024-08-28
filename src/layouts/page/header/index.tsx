@@ -18,13 +18,13 @@ export const PageLayoutHeaderTitle: FC<TitleProps> = ({ children, endAdornment }
 	if (endAdornment) {
 		return (
 			<Stack direction="row" gap={1}>
-				<Typography>{children}</Typography>
+				<Typography variant="h1">{children}</Typography>
 				{endAdornment}
 			</Stack>
 		)
 	}
 
-	return <Typography>{children}</Typography>
+	return <Typography variant="h1">{children}</Typography>
 }
 
 export const PageLayoutRightElementGroup: FC<PropsWithChildren> = ({ children }) => {

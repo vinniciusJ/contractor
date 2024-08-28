@@ -1,6 +1,8 @@
-import { createTheme } from '@mui/material'
+import { createTheme, tabClasses } from '@mui/material'
 
 import { COLORS } from './colors'
+import { IBM_PLEX_SANS_FONT_FAMILY, fonts } from './fonts'
+import { LIGHT_WEIGHT, MEDIUM_WEIGHT, REGULAR_WEIGHT, SEMIBOLD_WEIGHT } from '@/utils/constants'
 
 export const theme = createTheme({
 	palette: {
@@ -13,6 +15,73 @@ export const theme = createTheme({
 			orange: COLORS.orange,
 			purple: COLORS.purple,
 			red: COLORS.red,
+		},
+	},
+	typography: {
+		fontFamily: IBM_PLEX_SANS_FONT_FAMILY,
+		h4: undefined,
+		h5: undefined,
+		h6: undefined,
+		h1: {
+			fontWeight: MEDIUM_WEIGHT,
+			fontSize: 24,
+			lineHeight: 1.5,
+		},
+		h2: {
+			fontWeight: LIGHT_WEIGHT,
+			fontSize: 18,
+			lineHeight: 3,
+		},
+		h3: {
+			fontWeight: SEMIBOLD_WEIGHT,
+			fontSize: 12,
+			lineHeight: 2,
+		},
+		body1: {
+			fontWeight: REGULAR_WEIGHT,
+			fontSize: 14,
+			lineHeight: 2,
+		},
+		allVariants: {
+			fontFamily: IBM_PLEX_SANS_FONT_FAMILY,
+			color: COLORS.neutral[100],
+		},
+	},
+	components: {
+		MuiCssBaseline: {
+			styleOverrides: Object.values(fonts).join('\n'),
+		},
+		MuiButton: {
+			styleOverrides: {
+				root: {
+					textTransform: 'initial',
+					width: '100%',
+				},
+			},
+			defaultProps: {
+				disableRipple: true,
+				variant: 'contained',
+			},
+		},
+		MuiTabs: {
+			styleOverrides: {
+				indicator: {
+					backgroundColor: COLORS.secondary[60],
+				},
+			},
+		},
+		MuiTab: {
+			styleOverrides: {
+				root: {
+					fontSize: 16,
+					lineHeight: 2,
+					fontWeight: MEDIUM_WEIGHT,
+					textTransform: 'initial',
+					[`&.${tabClasses.selected}`]: {
+						color: COLORS.secondary[60],
+					},
+				},
+			},
 		},
 	},
 })

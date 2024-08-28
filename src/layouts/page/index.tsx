@@ -5,7 +5,7 @@ import { PageLayoutSections } from './tabs'
 
 export const PageLayout = {
 	Root: PageLayoutRoot,
-	Tabs: PageLayoutSections,
+	Sections: PageLayoutSections,
 	Content: PageLayoutContent,
 	Header: {
 		Root: PageLayoutHeader,
