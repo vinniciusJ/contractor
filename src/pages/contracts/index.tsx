@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { Button } from '@mui/material'
 
-import { PageLayout } from '@/layouts/sections'
+import { PageLayout } from '@/layouts/page'
 import { Section } from '@/types/label-value'
 
 const SECTIONS: Section[] = [
