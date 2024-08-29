@@ -10,7 +10,7 @@ export const AppLayout: FC = () => {
 		<Stack>
 			<AppMenu />
 
-			<Stack ml="15vw" p={4}>
+			<Stack ml="15vw" p={3}>
 				<Outlet />
 			</Stack>
 		</Stack>
