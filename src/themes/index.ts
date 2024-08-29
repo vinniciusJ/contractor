@@ -1,4 +1,4 @@
-import { createTheme, tabClasses } from '@mui/material'
+import { createTheme, menuItemClasses, tabClasses } from '@mui/material'
 
 import { COLORS } from './colors'
 import { IBM_PLEX_SANS_FONT_FAMILY, fonts } from './fonts'
@@ -56,13 +56,13 @@ export const theme = createTheme({
 				root: {
 					textTransform: 'initial',
 					width: '100%',
+					borderRadius: 0,
 				},
 			},
 			variants: [
 				{
 					props: { variant: 'outlined' },
 					style: {
-						borderRadius: 0,
 						borderColor: COLORS.neutral[50],
 						color: COLORS.neutral[100],
 						transition: 'background',
@@ -146,6 +146,27 @@ export const theme = createTheme({
 			styleOverrides: {
 				root: {
 					border: 'none',
+				},
+			},
+		},
+		MuiMenuItem: {
+			styleOverrides: {
+				root: {
+					padding: 16,
+					transition: 'background',
+					'&:hover': {
+						background: COLORS.neutral[20],
+					},
+					'&:active': {
+						background: COLORS.neutral[40],
+					},
+					[`&.${menuItemClasses.selected}`]: {
+						background: COLORS.neutral[30],
+						color: COLORS.secondary[60],
+						'&:hover': {
+							background: COLORS.neutral[30],
+						},
+					},
 				},
 			},
 		},

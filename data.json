@@ -88,10 +88,47 @@
 			"id": 1,
 			"name": "Tech Innovators",
 			"corporateName": "Tech Innovators Ltd.",
-			"code": "TI-2024",
-			"phone": "123-456-7890",
-			"address": "123 Tech Lane, Innovation City",
+			"code": "TI-001",
+			"phone": "+1-555-123-4567",
+			"email": "contact@techinnovators.com",
+			"address": "123 Innovation Drive, Silicon Valley, CA",
 			"matrix": true
+		},
+		{
+			"id": 2,
+			"name": "Global Solutions",
+			"corporateName": "Global Solutions Inc.",
+			"code": "GS-002",
+			"phone": "+1-555-234-5678",
+			"email": "info@globalsolutions.com",
+			"address": "456 Global Ave, New York, NY"
+		},
+		{
+			"id": 3,
+			"name": "Eco Ventures",
+			"corporateName": "Eco Ventures LLC",
+			"code": "EV-003",
+			"phone": "+1-555-345-6789",
+			"email": "support@ecoventures.com",
+			"address": "789 Green Street, Portland, OR"
+		},
+		{
+			"id": 4,
+			"name": "HealthTech",
+			"corporateName": "HealthTech Corporation",
+			"code": "HT-004",
+			"phone": "+1-555-456-7890",
+			"email": "contact@healthtech.com",
+			"address": "101 Wellness Blvd, Austin, TX"
+		},
+		{
+			"id": 5,
+			"name": "FinTech Partners",
+			"corporateName": "FinTech Partners Ltd.",
+			"code": "FP-005",
+			"phone": "+1-555-567-8901",
+			"email": "partners@fintech.com",
+			"address": "202 Finance Lane, Chicago, IL"
 		}
 	],
 	"installments": [

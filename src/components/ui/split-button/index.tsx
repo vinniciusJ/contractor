@@ -43,7 +43,11 @@ export const SplitButton: FC<Props> = ({ options }) => {
 
 			<Popover ref={popoverRef}>
 				{options.map((option, index) => (
-					<MenuItem key={sha256(option.label)} onClick={() => handleOptionClick(index)}>
+					<MenuItem
+						key={sha256(option.label)}
+						selected={selectedOption === index}
+						onClick={() => handleOptionClick(index)}
+					>
 						{option.label}
 					</MenuItem>
 				))}

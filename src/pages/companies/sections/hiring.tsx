@@ -1,50 +1,53 @@
 import { FC } from 'react'
 
-import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
-
 import { Table } from '@/components/ui/table'
+import { Tag } from '@/components/ui/tag'
 import { useGetPageable } from '@/hooks/get'
 import { HiringCompany } from '@/schemas/company'
+import { createColumns } from '@/utils/create-columns'
 
-const columnHelper = createColumnHelper<HiringCompany>()
-
-const columns = [
-	columnHelper.accessor('name', {
+const columns = createColumns<HiringCompany>((helper) => [
+	helper.accessor('name', {
 		id: 'name',
 		header: 'Nome',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('corporateName', {
+	helper.accessor('corporateName', {
 		id: 'corporateName',
 		header: 'Razão social',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('code', {
+	helper.accessor('code', {
 		id: 'code',
 		header: 'CNPJ',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('phone', {
+	helper.accessor('phone', {
 		id: 'phone',
 		header: 'Telefone',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('email', {
+	helper.accessor('email', {
 		id: 'email',
 		header: 'E-mail',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('address', {
+	helper.accessor('address', {
 		id: 'address',
 		header: 'Endereço',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('matrix', {
+	helper.accessor('matrix', {
 		id: 'matrix',
 		header: '',
-		cell: (props) => (props.getValue() ? 'Sim' : 'Não'),
+		cell: (props) =>
+			props.getValue() && (
+				<Tag bgcolor="juicy.primary.20" color="juicy.primary.60" justifyContent="flex-end">
+					Matriz
+				</Tag>
+			),
 	}),
-] as ColumnDef<HiringCompany>[]
+])
 
 const HiringCompaniesPage: FC = () => {
 	const {
