@@ -74,6 +74,9 @@ export function Table<T extends object>({ data, items, columns }: Readonly<Props
 				page={page - 1}
 				onPageChange={handlePageChange}
 				onRowsPerPageChange={handleRowPerPageChange}
+				labelRowsPerPage={'Linhas por página:'}
+				rowsPerPageOptions={[5, 10, 25, 100]}
+				labelDisplayedRows={(props) => `${props.from} a ${props.to} de ${props.count}`}
 			/>
 		</Stack>
 	)

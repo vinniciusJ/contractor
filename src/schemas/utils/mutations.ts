@@ -40,4 +40,4 @@ export const mutationMethodsSchema = z.enum(['POST', 'PUT', 'DELETE'])
 export type MutationMethods = z.infer<typeof mutationMethodsSchema>
 export type MutationFeedback = z.output<typeof mutationFeedbackSchema>
 
-export type PageableReturn<T extends object> = z.infer<typeof getPageableReturnSchema> & { data: T[] }
+export type PageableReturn<T extends object> = Omit<z.infer<typeof getPageableReturnSchema>, 'data'> & { data: T[] }

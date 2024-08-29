@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { contractedCompanySchema, subsidiaryCompanySchema } from './company'
+import { contractedCompanySchema, hiringCompanySchema } from './company'
 
 export const employeeSchema = z.object({
 	id: z.number(),
@@ -13,10 +13,10 @@ export const contractedCompanyEmployeeSchema = employeeSchema.extend({
 	contractedCompany: contractedCompanySchema,
 })
 
-export const subsidiaryCompanyEmployeeSchema = subsidiaryCompanySchema.extend({
-	subsidiaryCompany: subsidiaryCompanySchema,
+export const subsidiaryCompanyEmployeeSchema = hiringCompanySchema.extend({
+	subsidiaryCompany: hiringCompanySchema,
 })
 
 export type Employee = z.infer<typeof employeeSchema>
 export type ContractedCompanyEmployee = z.infer<typeof contractedCompanyEmployeeSchema>
-export type SubsidiaryCompanyEmployee = z.infer<typeof subsidiaryCompanySchema>
+export type SubsidiaryCompanyEmployee = z.infer<typeof hiringCompanySchema>

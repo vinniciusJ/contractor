@@ -1,7 +1,7 @@
 import { PageLayoutContent } from './content'
 import { PageLayoutHeader, PageLayoutHeaderTitle, PageLayoutRightElementGroup } from './header'
 import { PageLayoutRoot } from './root'
-import { PageLayoutSections } from './tabs'
+import { PageLayoutSections } from './sections'
 
 export const PageLayout = {
 	Root: PageLayoutRoot,

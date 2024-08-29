@@ -25,22 +25,22 @@ export const theme = createTheme({
 		h1: {
 			fontWeight: MEDIUM_WEIGHT,
 			fontSize: 24,
-			lineHeight: 1.5,
+			lineHeight: 0.75,
 		},
 		h2: {
 			fontWeight: LIGHT_WEIGHT,
 			fontSize: 18,
-			lineHeight: 3,
+			lineHeight: 1.5,
 		},
 		h3: {
 			fontWeight: SEMIBOLD_WEIGHT,
 			fontSize: 12,
-			lineHeight: 2,
+			lineHeight: 1,
 		},
 		body1: {
 			fontWeight: REGULAR_WEIGHT,
 			fontSize: 14,
-			lineHeight: 2,
+			lineHeight: 1,
 		},
 		allVariants: {
 			fontFamily: IBM_PLEX_SANS_FONT_FAMILY,
@@ -84,6 +84,19 @@ export const theme = createTheme({
 				variant: 'contained',
 			},
 		},
+		MuiButtonGroup: {
+			variants: [
+				{
+					props: { variant: 'outlined' },
+					style: {
+						'&:hover': {
+							background: 'rgba(218, 218, 218, .5)',
+							borderColor: COLORS.neutral[50],
+						},
+					},
+				},
+			],
+		},
 		MuiTabs: {
 			styleOverrides: {
 				indicator: {
@@ -101,6 +114,38 @@ export const theme = createTheme({
 					[`&.${tabClasses.selected}`]: {
 						color: COLORS.secondary[60],
 					},
+				},
+			},
+		},
+		MuiTable: {
+			styleOverrides: {
+				root: {
+					tableLayout: 'fixed',
+				},
+			},
+		},
+		MuiTableRow: {
+			styleOverrides: {
+				head: {
+					background: COLORS.neutral[30],
+				},
+			},
+		},
+		MuiTableCell: {
+			styleOverrides: {
+				root: {
+					fontSize: 12,
+					lineHeight: 1,
+				},
+				head: {
+					fontWeight: SEMIBOLD_WEIGHT,
+				},
+			},
+		},
+		MuiTablePagination: {
+			styleOverrides: {
+				root: {
+					border: 'none',
 				},
 			},
 		},

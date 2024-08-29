@@ -6,14 +6,15 @@ export const companySchema = z.object({
 	corporateName: z.string(),
 	code: z.string(),
 	phone: z.string(),
+	email: z.string().email(),
 	address: z.string(),
 })
 
 export const contractedCompanySchema = companySchema
 
-export const subsidiaryCompanySchema = companySchema.extend({
+export const hiringCompanySchema = companySchema.extend({
 	matrix: z.boolean(),
 })
 
 export type Company = z.infer<typeof companySchema>
-export type SubsidiaryCompany = z.infer<typeof subsidiaryCompanySchema>
+export type HiringCompany = z.infer<typeof hiringCompanySchema>

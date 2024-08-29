@@ -55,6 +55,6 @@ export const useGetPageable = <T extends object>(
 
 	return {
 		...query,
-		data: getPageableReturnSchema.parse(data),
+		data: getPageableReturnSchema.parse(data) as PageableReturn<T>,
 	}
 }

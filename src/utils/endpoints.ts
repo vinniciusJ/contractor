@@ -13,7 +13,7 @@ const routes = {
 	'subsidiary-company-employees': {
 		':id': {},
 	},
-	'subsidiary-companies': {
+	'hiring-companies': {
 		':id': {},
 	},
 	installments: {

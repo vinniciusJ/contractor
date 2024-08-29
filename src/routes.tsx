@@ -5,7 +5,8 @@ import { Navigate, createBrowserRouter } from 'react-router-dom'
 import { AppLayout } from './layouts/app'
 
 const ContractsPage = lazy(() => import('@/pages/contracts'))
-const CompaniesPage = lazy(() => import('@/pages/companies'))
+const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
+const HiringCompaniesPage = lazy(() => import('@/pages/companies/sections/hiring'))
 
 export const router = createBrowserRouter([
 	{
@@ -32,10 +33,11 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: 'companies',
-				element: <CompaniesPage />,
+				element: <CompaniesPageLayout />,
 				children: [
 					{
 						path: 'hiring',
+						element: <HiringCompaniesPage />,
 					},
 					{
 						path: 'contracted',
