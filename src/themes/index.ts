@@ -58,8 +58,29 @@ export const theme = createTheme({
 					width: '100%',
 				},
 			},
+			variants: [
+				{
+					props: { variant: 'outlined' },
+					style: {
+						borderRadius: 0,
+						borderColor: COLORS.neutral[50],
+						color: COLORS.neutral[100],
+						transition: 'background',
+						'&:hover': {
+							background: 'rgba(218, 218, 218, .5)',
+							borderColor: COLORS.neutral[50],
+						},
+						'&:active': {
+							background: 'rgba(138, 139, 141, .5)',
+							borderColor: COLORS.neutral[50],
+						},
+						'& svg': { fill: COLORS.neutral[60] },
+					},
+				},
+			],
 			defaultProps: {
 				disableRipple: true,
+				disableFocusRipple: true,
 				variant: 'contained',
 			},
 		},
