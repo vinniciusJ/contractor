@@ -34,15 +34,17 @@ export const useGetList = <T extends object>(endpointQueryKey: EndpointQueryKey)
 }
 
 export const useGetPageable = <T extends object>(
-	endpointQueryKey: EndpointQueryKey
+	endpointQueryKey: EndpointQueryKey,
+	params?: Record<string, unknown>
 ): QueryResult<PageableReturn<T>> => {
 	const [endpoint, queryKey] = getEndpointAndQueryKey(endpointQueryKey)
 
 	const pagination = usePaginationValues()
 
 	const { data = DEFAULT_PAGE, ...query } = useQuery({
-		queryKey: [...queryKey, { ...pagination }],
-		queryFn: async () => await service.get<PageableReturn<T>>(endpoint, { ...paginationSchema.parse(pagination) }),
+		queryKey: [...queryKey, { ...pagination, ...params }],
+		queryFn: async () =>
+			await service.get<PageableReturn<T>>(endpoint, { ...paginationSchema.parse(pagination), ...params }),
 	})
 
 	return {

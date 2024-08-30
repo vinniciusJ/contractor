@@ -9,6 +9,8 @@ export const employeeSchema = z.object({
 	phone: z.string(),
 })
 
+export const employeeFormSchema = employeeSchema.omit({ id: true })
+
 export const contractedCompanyEmployeeSchema = employeeSchema.extend({
 	company: contractedCompanySchema,
 	isLegalRepresentative: z.boolean(),
@@ -20,5 +22,7 @@ export const hiringCompanyEmployeeSchema = hiringCompanySchema.extend({
 })
 
 export type Employee = z.infer<typeof employeeSchema>
+export type EmployeeFormFields = z.input<typeof employeeFormSchema>
+
 export type ContractedCompanyEmployee = z.infer<typeof contractedCompanyEmployeeSchema>
-export type SubsidiaryCompanyEmployee = z.infer<typeof hiringCompanySchema>
+export type HiringCompanyEmployee = z.infer<typeof hiringCompanySchema>

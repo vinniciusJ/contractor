@@ -10,7 +10,7 @@ const routes = {
 	'contracted-company-employees': {
 		':id': {},
 	},
-	'subsidiary-company-employees': {
+	'hiring-company-employees': {
 		':id': {},
 	},
 	'hiring-companies': {
