@@ -18,6 +18,8 @@ export const contractSchema = z.object({
 	paymentMethod: paymentMethodSchema,
 	installments: installmentSchema.array(),
 	executionLocal: z.string(),
+	latitude: z.number(),
+	longitude: z.number(),
 	contractedCompany: contractedCompanySchema,
 	subsidiaryCompany: hiringCompanySchema,
 	contractManager: subsidiaryCompanyEmployeeSchema,

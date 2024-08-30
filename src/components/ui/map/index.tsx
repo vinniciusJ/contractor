@@ -10,9 +10,9 @@ interface Props {
 }
 
 // eslint-disable-next-line sonarjs/no-globals-shadowing
-export const Map = ({ children, zoom = 15 }: Props) => {
+export const Map = ({ children, zoom = 5 }: Props) => {
 	return (
-		<MapContainer center={[-25.419_218_237_616_92, -54.596_047_442_975_88]} zoom={zoom} style={{ height: '75vh' }}>
+		<MapContainer center={[-10.333_333_3, -53.2]} zoom={zoom} style={{ height: '75vh' }}>
 			<TileLayer
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
