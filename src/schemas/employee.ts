@@ -10,11 +10,13 @@ export const employeeSchema = z.object({
 })
 
 export const contractedCompanyEmployeeSchema = employeeSchema.extend({
-	contractedCompany: contractedCompanySchema,
+	company: contractedCompanySchema,
+	isLegalRepresentative: z.boolean(),
 })
 
 export const subsidiaryCompanyEmployeeSchema = hiringCompanySchema.extend({
-	subsidiaryCompany: hiringCompanySchema,
+	company: hiringCompanySchema,
+	isProjectManager: z.boolean(),
 })
 
 export type Employee = z.infer<typeof employeeSchema>

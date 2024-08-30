@@ -1,7 +1,16 @@
-import { FC } from 'react'
+import { FC, PropsWithChildren } from 'react'
 
+import { Stack } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 
-export const PageLayoutContent: FC<unknown> = (...props) => {
-	return <Outlet context={props} />
+interface Props extends PropsWithChildren {
+	[key: string]: unknown
+}
+
+export const PageLayoutContent: FC<Props> = ({ children, ...context }) => {
+	if (children) {
+		return <Stack>{children}</Stack>
+	}
+
+	return <Outlet context={context} />
 }

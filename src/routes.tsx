@@ -8,6 +8,8 @@ const ContractsPage = lazy(() => import('@/pages/contracts'))
 const ContractsMapPage = lazy(() => import('@/pages/contracts/sections/map'))
 const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
 
+const CompanyPage = lazy(() => import('@/pages/company'))
+
 const HiringCompaniesSection = lazy(() => import('@/pages/companies/sections/hiring'))
 const ContractedCompaniesSection = lazy(() => import('@/pages/companies/sections/contracted'))
 
@@ -36,15 +38,23 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: 'companies',
-				element: <CompaniesPageLayout />,
 				children: [
 					{
-						path: 'hiring',
-						element: <HiringCompaniesSection />,
+						element: <CompaniesPageLayout />,
+						children: [
+							{
+								path: 'hiring',
+								element: <HiringCompaniesSection />,
+							},
+							{
+								path: 'contracted',
+								element: <ContractedCompaniesSection />,
+							},
+						],
 					},
 					{
-						path: 'contracted',
-						element: <ContractedCompaniesSection />,
+						path: ':companyType/:companyId',
+						element: <CompanyPage />,
 					},
 				],
 			},

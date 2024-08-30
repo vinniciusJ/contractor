@@ -56,7 +56,8 @@ export const theme = createTheme({
 				root: {
 					fontFamily: IBM_PLEX_SANS_FONT_FAMILY,
 					textTransform: 'initial',
-					width: '100%',
+					paddingLeft: 24,
+					paddingRight: 24,
 					borderRadius: 0,
 				},
 			},
