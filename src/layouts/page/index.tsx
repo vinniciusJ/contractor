@@ -1,5 +1,11 @@
 import { PageLayoutContent } from './content'
-import { PageLayoutHeader, PageLayoutHeaderTitle, PageLayoutRightElementGroup } from './header'
+import {
+	PageLayoutGoBackButton,
+	PageLayoutHeader,
+	PageLayoutHeaderTitle,
+	PageLayoutHeaderTitleRoot,
+	PageLayoutRightElementGroup,
+} from './header'
 import { PageLayoutRoot } from './root'
 import { PageLayoutSections } from './sections'
 
@@ -9,7 +15,11 @@ export const PageLayout = {
 	Content: PageLayoutContent,
 	Header: {
 		Root: PageLayoutHeader,
-		Title: PageLayoutHeaderTitle,
+		Title: {
+			Root: PageLayoutHeaderTitleRoot,
+			GoBackButton: PageLayoutGoBackButton,
+			Text: PageLayoutHeaderTitle,
+		},
 		RightElementGroup: PageLayoutRightElementGroup,
 	},
 }

@@ -1,6 +1,6 @@
 import { UseQueryResult, useQuery } from '@tanstack/react-query'
 
-import { usePaginationValues } from './pagination'
+import { usePagination } from './pagination'
 import { PageableReturn, getPageableReturnSchema } from '@/schemas/utils/mutations'
 import { paginationSchema } from '@/schemas/utils/pagination'
 import { EndpointQueryKey, getEndpointAndQueryKey } from '@/schemas/utils/query'
@@ -39,12 +39,15 @@ export const useGetPageable = <T extends object>(
 ): QueryResult<PageableReturn<T>> => {
 	const [endpoint, queryKey] = getEndpointAndQueryKey(endpointQueryKey)
 
-	const pagination = usePaginationValues()
+	const { page, pageSize } = usePagination()
 
 	const { data = DEFAULT_PAGE, ...query } = useQuery({
-		queryKey: [...queryKey, { ...pagination, ...params }],
+		queryKey: [...queryKey, { page, pageSize, ...params }],
 		queryFn: async () =>
-			await service.get<PageableReturn<T>>(endpoint, { ...paginationSchema.parse(pagination), ...params }),
+			await service.get<PageableReturn<T>>(endpoint, {
+				...paginationSchema.parse({ page, pageSize }),
+				...params,
+			}),
 	})
 
 	return {

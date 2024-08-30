@@ -12,7 +12,9 @@ const Contracts: FC = () => {
 	return (
 		<PageLayout.Root>
 			<PageLayout.Header.Root>
-				<PageLayout.Header.Title>Contratos</PageLayout.Header.Title>
+				<PageLayout.Header.Title.Root>
+					<PageLayout.Header.Title.Text>Contratos</PageLayout.Header.Title.Text>
+				</PageLayout.Header.Title.Root>
 			</PageLayout.Header.Root>
 
 			<PageLayout.Sections sections={SECTIONS} />

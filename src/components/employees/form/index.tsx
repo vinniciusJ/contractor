@@ -7,8 +7,10 @@ import { useForm } from 'react-hook-form'
 import { FormModal } from '@/components/ui/form-modal'
 import { Input } from '@/components/ui/inputs'
 import { useMutation } from '@/hooks/mutations'
+import { Company } from '@/schemas/company'
 import { EmployeeFormFields, employeeFormSchema, employeeSchema } from '@/schemas/employee'
 import { MutationFeedback } from '@/schemas/utils/mutations'
+import { Service } from '@/services'
 import { FormProps } from '@/types/form'
 import { getSchemaDefault } from '@/utils/schema'
 
@@ -26,6 +28,8 @@ const UPDATE_FEEDBACK: MutationFeedback = {
 	error: 'Houve um erro durante o cadastro do empregado',
 }
 
+const service = new Service()
+
 export const EmployeeForm: FC<Props> = ({ formRef, companyType: type, id }) => {
 	const form = useForm<EmployeeFormFields>({
 		defaultValues: getSchemaDefault(employeeSchema),
@@ -38,7 +42,9 @@ export const EmployeeForm: FC<Props> = ({ formRef, companyType: type, id }) => {
 	})
 
 	const submitForm = useCallback(async (data: EmployeeFormFields) => {
-		await mutation.mutateAsync(data)
+		const company = await service.get<Company>(`${type}-companies`)
+
+		await mutation.mutateAsync({ ...data, company: company })
 	}, [])
 
 	return (

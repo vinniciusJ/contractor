@@ -19,7 +19,9 @@ const CompaniesPage: FC = () => {
 		<>
 			<PageLayout.Root>
 				<PageLayout.Header.Root>
-					<PageLayout.Header.Title>Empresas</PageLayout.Header.Title>
+					<PageLayout.Header.Title.Root>
+						<PageLayout.Header.Title.Text>Empresas</PageLayout.Header.Title.Text>
+					</PageLayout.Header.Title.Root>
 
 					<PageLayout.Header.RightElementGroup>
 						<SplitButton

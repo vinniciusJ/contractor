@@ -39,9 +39,13 @@ const CompanyPage: FC = () => {
 		<>
 			<PageLayout.Root>
 				<PageLayout.Header.Root>
-					<PageLayout.Header.Title>
-						Empresa {companyType === 'hiring' ? 'contrante' : 'contratada'} - {params.companyId}
-					</PageLayout.Header.Title>
+					<PageLayout.Header.Title.Root>
+						<PageLayout.Header.Title.GoBackButton />
+
+						<PageLayout.Header.Title.Text>
+							Empresa {companyType === 'hiring' ? 'contrante' : 'contratada'} - {params.companyId}
+						</PageLayout.Header.Title.Text>
+					</PageLayout.Header.Title.Root>
 				</PageLayout.Header.Root>
 
 				<PageLayout.Content>

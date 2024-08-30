@@ -59,6 +59,9 @@ export const theme = createTheme({
 					paddingLeft: 24,
 					paddingRight: 24,
 					borderRadius: 0,
+					'& svg': {
+						fill: COLORS.neutral[100],
+					},
 				},
 			},
 			variants: [
@@ -93,6 +96,15 @@ export const theme = createTheme({
 				disableRipple: true,
 				disableFocusRipple: true,
 				variant: 'contained',
+			},
+		},
+		MuiIconButton: {
+			styleOverrides: {
+				root: {
+					'& svg': {
+						fill: COLORS.neutral[100],
+					},
+				},
 			},
 		},
 		MuiButtonGroup: {

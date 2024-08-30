@@ -11,17 +11,22 @@ import {
 	TableRow,
 } from '@mui/material'
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
+import { useNavigate } from 'react-router-dom'
 
 import { usePagination } from '@/hooks/pagination'
+import { interpolate } from '@/utils/interpolate'
 
 interface Props<T extends object> {
 	data: T[]
 	items: number
 	columns: ColumnDef<T>[]
+	to?: string
 }
 
-export function Table<T extends object>({ data, items, columns }: Readonly<Props<T>>) {
+export function Table<T extends object>({ data, items, to, columns }: Readonly<Props<T>>) {
 	const { page, pageSize, setPage, setPageSize } = usePagination()
+
+	const navigate = useNavigate()
 
 	const table = useReactTable({
 		data,
@@ -30,6 +35,16 @@ export function Table<T extends object>({ data, items, columns }: Readonly<Props
 		manualPagination: true,
 		state: { pagination: { pageIndex: page, pageSize: pageSize } },
 	})
+
+	const navigateTo = useCallback(
+		(data: T) => {
+			if (to) {
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
+				navigate(interpolate(to, { ...data } as any))
+			}
+		},
+		[to]
+	)
 
 	const handleRowPerPageChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
 		setPageSize(Number.parseInt(event.target.value, 10))
@@ -56,7 +71,10 @@ export function Table<T extends object>({ data, items, columns }: Readonly<Props
 					</TableHead>
 					<TableBody>
 						{table.getRowModel().rows.map((row) => (
-							<TableRow key={row.id}>
+							<TableRow
+								key={row.id}
+								{...(to && { onClick: () => navigateTo(row.original), sx: { cursor: 'pointer' } })}
+							>
 								{row.getVisibleCells().map((cell) => (
 									<TableCell key={cell.id}>
 										{flexRender(cell.column.columnDef.cell, cell.getContext())}

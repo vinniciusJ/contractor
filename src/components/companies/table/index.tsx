@@ -72,5 +72,5 @@ export const CompaniesTable: FC<Props> = ({ type }) => {
 
 	const columns = getCompaniesTableColumns(type)
 
-	return <Table columns={columns} data={companies} items={items} />
+	return <Table columns={columns} data={companies} items={items} to="{id}" />
 }
