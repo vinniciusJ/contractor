@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 import { contractedCompanySchema, hiringCompanySchema } from './company'
 import { contractItemSchema } from './contract-item'
-import { contractedCompanyEmployeeSchema, subsidiaryCompanyEmployeeSchema } from './employee'
+import { contractedCompanyEmployeeSchema, hiringCompanyEmployeeSchema } from './employee'
 import { installmentSchema } from './installment'
 import { paymentMethodSchema } from './payment-method'
 
@@ -20,7 +20,7 @@ export const contractSchema = z.object({
 	executionLocal: z.string(),
 	contractedCompany: contractedCompanySchema,
 	subsidiaryCompany: hiringCompanySchema,
-	contractManager: subsidiaryCompanyEmployeeSchema,
+	contractManager: hiringCompanyEmployeeSchema,
 	legalRepresentative: contractedCompanyEmployeeSchema,
 })
 

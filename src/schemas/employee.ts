@@ -14,7 +14,7 @@ export const contractedCompanyEmployeeSchema = employeeSchema.extend({
 	isLegalRepresentative: z.boolean(),
 })
 
-export const subsidiaryCompanyEmployeeSchema = hiringCompanySchema.extend({
+export const hiringCompanyEmployeeSchema = hiringCompanySchema.extend({
 	company: hiringCompanySchema,
 	isProjectManager: z.boolean(),
 })
