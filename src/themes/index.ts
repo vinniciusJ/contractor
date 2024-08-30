@@ -110,7 +110,7 @@ export const theme = createTheme({
 		MuiButtonGroup: {
 			variants: [
 				{
-					props: { variant: 'outlined' },
+					props: { variant: 'contained' },
 					style: {
 						'&:hover': {
 							background: 'rgba(218, 218, 218, .5)',

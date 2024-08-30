@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import { Button } from '@mui/material'
+
 import { PageLayout } from '@/layouts/page'
 import { Section } from '@/types/label-value'
 
@@ -15,6 +17,10 @@ const Contracts: FC = () => {
 				<PageLayout.Header.Title.Root>
 					<PageLayout.Header.Title.Text>Contratos</PageLayout.Header.Title.Text>
 				</PageLayout.Header.Title.Root>
+
+				<PageLayout.Header.RightElementGroup>
+					<Button>Cadastrar</Button>
+				</PageLayout.Header.RightElementGroup>
 			</PageLayout.Header.Root>
 
 			<PageLayout.Sections sections={SECTIONS} />

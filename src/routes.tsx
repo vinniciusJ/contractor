@@ -6,6 +6,8 @@ import { AppLayout } from './layouts/app'
 
 const ContractsPage = lazy(() => import('@/pages/contracts'))
 const ContractsMapPage = lazy(() => import('@/pages/contracts/sections/map'))
+const ContractsListPage = lazy(() => import('@/pages/contracts/sections/list'))
+
 const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
 
 const CompanyPage = lazy(() => import('@/pages/company'))
@@ -32,7 +34,7 @@ export const router = createBrowserRouter([
 					},
 					{
 						path: 'list',
-						element: <p>Lista</p>,
+						element: <ContractsListPage />,
 					},
 				],
 			},

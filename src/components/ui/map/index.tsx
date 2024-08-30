@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 import { MapContainer, TileLayer } from 'react-leaflet'
-
+import './styles.css'
 import 'leaflet/dist/leaflet.css'
 
 interface Props {

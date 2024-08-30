@@ -24,6 +24,8 @@ export const contractSchema = z.object({
 	subsidiaryCompany: hiringCompanySchema,
 	contractManager: hiringCompanyEmployeeSchema,
 	legalRepresentative: contractedCompanyEmployeeSchema,
+	status: z.number(),
+	financialProgress: z.number(),
 })
 
 export type Contract = z.infer<typeof contractSchema>
