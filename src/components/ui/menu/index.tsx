@@ -12,9 +12,14 @@ export const AppMenu: FC = () => {
 
 	const currentPage = useMemo(() => location.pathname.split('/')[1], [location])
 
-	const navigatoToPage = useCallback((_: MouseEvent<HTMLElement>, page: string) => {
-		navigate(page)
-	}, [])
+	const navigatoToPage = useCallback(
+		(_: MouseEvent<HTMLElement>, page: string) => {
+			const to = page ?? currentPage
+
+			navigate(`${to}/${to === 'companies' ? 'hiring' : 'map'}`)
+		},
+		[currentPage]
+	)
 
 	return (
 		<Stack

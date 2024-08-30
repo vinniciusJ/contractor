@@ -1,4 +1,4 @@
-import { FC, SyntheticEvent, useCallback, useEffect } from 'react'
+import { FC, SyntheticEvent, useCallback } from 'react'
 
 import { Stack, Tab, Tabs } from '@mui/material'
 
@@ -14,10 +14,6 @@ export const PageLayoutSections: FC<Props> = ({ sections }) => {
 
 	const handleTabChange = useCallback((_event: SyntheticEvent, value: string) => {
 		setSection(value)
-	}, [])
-
-	useEffect(() => {
-		setSection(sections[0].value)
 	}, [])
 
 	return (

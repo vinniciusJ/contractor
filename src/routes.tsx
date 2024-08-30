@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <Navigate to="contracts" />,
+				element: <Navigate to="contracts/map" />,
 			},
 			{
 				path: 'contracts',
