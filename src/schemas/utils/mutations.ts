@@ -1,22 +1,25 @@
 import { z } from 'zod'
 
-export interface MutationOptions<T extends object> {
-	data?: T
+export interface MutationOptions {
 	method: MutationMethods
 	feedback: MutationFeedback
 }
 
-export interface PostMutationOptions<T extends object> extends MutationOptions<T> {
+export interface MutationFn<T> {
+	data?: T
+}
+
+export interface PostMutationOptions<T extends object> extends MutationOptions {
 	data: T
 	method: 'POST'
 }
 
-export interface PutMutationOptions<T extends object> extends MutationOptions<T> {
+export interface PutMutationOptions<T extends object> extends MutationOptions {
 	data: T
 	method: 'PUT'
 }
 
-export interface DeleteMutationOptions<T extends object> extends MutationOptions<T> {
+export interface DeleteMutationOptions extends MutationOptions {
 	data?: never
 	method: 'DELETE'
 }

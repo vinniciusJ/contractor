@@ -5,7 +5,7 @@ import { NavigateOptions, useSearchParams } from 'react-router-dom'
 export const useQueryParams = () => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
-	const getQueryParams = useCallback((key: string) => searchParams.get(key) ?? '', [searchParams])
+	const getQueryParams = useCallback((key: string) => searchParams.get(key) ?? '', [])
 
 	const setQueryParams = useCallback(
 		(key: string, value: unknown, options?: NavigateOptions) => {
@@ -34,8 +34,8 @@ export const useQueryParam = (key: string, defaultValue?: string) => {
 	const param = getQueryParams(key) || defaultValue
 
 	const setQueryParam = useCallback(
-		(value: unknown) => {
-			setQueryParams(key, value)
+		(value: unknown, options?: NavigateOptions) => {
+			setQueryParams(key, value, options)
 		},
 		[key]
 	)

@@ -1,30 +1,20 @@
-import { MutationOptions, PostMutationOptions } from '@/schemas/utils/mutations'
+import { Endpoints } from './endpoints'
+import { MutationOptions } from '@/schemas/utils/mutations'
 import { Service } from '@/services'
 
-const isPostMutation = <T extends object>(options: MutationOptions<T>): options is PostMutationOptions<T> => {
-	return !!options.data && options.method === 'POST'
-}
-
-const isPutMutation = <T extends object>(options: MutationOptions<T>): options is PostMutationOptions<T> => {
-	return !!options.data && options.method === 'PUT'
-}
-
-const isDeleteMutation = <T extends object>(options: MutationOptions<T>): options is PostMutationOptions<T> => {
-	return !options.data && options.method === 'DELETE'
-}
-
-export const handleMutation = async <T extends object>(endpoint: string, options: MutationOptions<T>) => {
+export const handleMutation = async <T extends object>(
+	endpoint: Endpoints,
+	options: MutationOptions & { data?: T }
+): Promise<unknown> => {
 	const service = new Service()
 
-	if (isPostMutation(options)) {
+	if (options.method === 'POST' && options.data) {
 		return await service.post<T>(options.data, endpoint)
 	}
 
-	if (isPutMutation(options)) {
+	if (options.method === 'PUT' && options.data) {
 		return await service.put<T>(options.data, endpoint)
 	}
 
-	if (isDeleteMutation(options)) {
-		await service.delete(endpoint)
-	}
+	return await service.delete(endpoint)
 }

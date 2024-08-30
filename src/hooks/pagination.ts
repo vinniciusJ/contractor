@@ -9,14 +9,14 @@ const DEFAULT_PAGE_SIZE = getSchemaDefault(pageSizeSchema)
 
 export const usePagination = () => {
 	const [page, setCurrentPage] = useQueryParam('page', String(DEFAULT_PAGE))
-	const [pageSize, setCurrentPageSize] = useQueryParam('pageSize', String(DEFAULT_PAGE_SIZE))
+	const [pageSize, setCurrentPageSize] = useQueryParam('page-size', String(DEFAULT_PAGE_SIZE))
 
 	const setPage = useCallback((value: number) => {
-		setCurrentPage(pageSchema.parse(value))
+		setCurrentPage(pageSchema.parse(value), { replace: true })
 	}, [])
 
 	const setPageSize = useCallback((value: number) => {
-		setCurrentPageSize(pageSizeSchema.parse(value))
+		setCurrentPageSize(pageSizeSchema.parse(value), { replace: true })
 	}, [])
 
 	return {

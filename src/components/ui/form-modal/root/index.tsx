@@ -1,5 +1,6 @@
 import { ForwardedRef, forwardRef, useCallback, useImperativeHandle } from 'react'
 
+import { Stack } from '@mui/material'
 import { FormProvider, UseFormReturn } from 'react-hook-form'
 
 import { Modal } from '../../modal'
@@ -30,9 +31,11 @@ export function FormModalRootComponent<T extends object>(props: Props<T>, ref: F
 	}
 
 	return (
-		<Modal.Root ref={modalRef} onClose={props.onClose}>
+		<Modal.Root ref={modalRef} onClose={props.onClose} {...props}>
 			<FormProvider {...props.form}>
-				<form onSubmit={props.form.handleSubmit(onSubmit)}>{props.children}</form>
+				<form onSubmit={props.form.handleSubmit(onSubmit)}>
+					<Stack gap={3}>{props.children}</Stack>
+				</form>
 			</FormProvider>
 		</Modal.Root>
 	)

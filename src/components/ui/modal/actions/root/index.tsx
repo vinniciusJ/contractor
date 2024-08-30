@@ -4,8 +4,10 @@ import { Stack, StackProps } from '@mui/material'
 
 export const ModalActionsRoot: FC<StackProps> = ({ children, ...props }) => {
 	return (
-		<Stack direction="row" justifyContent="flex-end" gap={2} {...props}>
-			{children}
+		<Stack alignItems="flex-end" gap={2} {...props}>
+			<Stack gap={2} width="50%" direction="row">
+				{children}
+			</Stack>
 		</Stack>
 	)
 }
