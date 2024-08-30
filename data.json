@@ -1,20 +1,58 @@
 {
-  "companies": [
+  "contracted-companies": [
     {
-      "id": "1",
-      "name": "Tech Innovators",
-      "corporateName": "Tech Innovators Ltd.",
-      "code": "TI-2024",
-      "phone": "123-456-7890",
-      "address": "123 Tech Lane, Innovation City"
+      "id": 1,
+      "name": "Tech Solutions",
+      "corporateName": "Tech Solutions Inc.",
+      "code": "TS1234",
+      "phone": "+1-800-555-1234",
+      "email": "contact@techsolutions.com",
+      "address": "123 Innovation Drive, Tech City, TC 12345"
     },
     {
-      "id": "2",
-      "name": "Green Energy Solutions",
-      "corporateName": "Green Energy Solutions Inc.",
-      "code": "GE-2024",
-      "phone": "098-765-4321",
-      "address": "456 Eco Street, Green Town"
+      "id": 2,
+      "name": "Global Enterprises",
+      "corporateName": "Global Enterprises Ltd.",
+      "code": "GE5678",
+      "phone": "+1-800-555-5678",
+      "email": "info@globalenterprises.com",
+      "address": "456 Market Street, Global City, GC 67890"
+    },
+    {
+      "id": 3,
+      "name": "Creative Labs",
+      "corporateName": "Creative Labs LLC",
+      "code": "CL9101",
+      "phone": "+1-800-555-9101",
+      "email": "support@creativelabs.com",
+      "address": "789 Art Avenue, Creative Town, CT 91011"
+    },
+    {
+      "id": 4,
+      "name": "Green Energy",
+      "corporateName": "Green Energy Solutions Co.",
+      "code": "GE1122",
+      "phone": "+1-800-555-1122",
+      "email": "sales@greenenergy.com",
+      "address": "321 Eco Way, Green City, GC 11223"
+    },
+    {
+      "id": 5,
+      "name": "HealthCare Partners",
+      "corporateName": "HealthCare Partners Group",
+      "code": "HP3344",
+      "phone": "+1-800-555-3344",
+      "email": "contact@healthcarepartners.com",
+      "address": "654 Wellness Boulevard, Health City, HC 33445"
+    },
+    {
+      "id": "c133",
+      "name": "Lorem",
+      "corporateName": "Lorem",
+      "code": "Lorem",
+      "phone": "Lorem",
+      "email": "lorem@email.com",
+      "address": "Lorem"
     }
   ],
   "contractual-types": [

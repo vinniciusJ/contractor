@@ -16,6 +16,9 @@ const routes = {
 	'hiring-companies': {
 		':id': {},
 	},
+	'contracted-companies': {
+		':id': {},
+	},
 	installments: {
 		':id': {},
 	},

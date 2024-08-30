@@ -6,7 +6,9 @@ import { AppLayout } from './layouts/app'
 
 const ContractsPage = lazy(() => import('@/pages/contracts'))
 const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
-const HiringCompaniesPage = lazy(() => import('@/pages/companies/sections/hiring'))
+
+const HiringCompaniesSection = lazy(() => import('@/pages/companies/sections/hiring'))
+const ContractedCompaniesSection = lazy(() => import('@/pages/companies/sections/contracted'))
 
 export const router = createBrowserRouter([
 	{
@@ -37,10 +39,11 @@ export const router = createBrowserRouter([
 				children: [
 					{
 						path: 'hiring',
-						element: <HiringCompaniesPage />,
+						element: <HiringCompaniesSection />,
 					},
 					{
 						path: 'contracted',
+						element: <ContractedCompaniesSection />,
 					},
 				],
 			},

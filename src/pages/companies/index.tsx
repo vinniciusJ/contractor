@@ -12,7 +12,8 @@ const SECTIONS: Section[] = [
 ]
 
 const CompaniesPage: FC = () => {
-	const formRef = useModal()
+	const hiringCompanyFormRef = useModal()
+	const contractedCompanyFormRef = useModal()
 
 	return (
 		<>
@@ -23,8 +24,14 @@ const CompaniesPage: FC = () => {
 					<PageLayout.Header.RightElementGroup>
 						<SplitButton
 							options={[
-								{ label: 'Cadastrar contratante', dispatch: () => formRef.current?.openModal() },
-								{ label: 'Cadastrar contratada', dispatch: () => console.log('oiie') },
+								{
+									label: 'Cadastrar contratante',
+									dispatch: () => hiringCompanyFormRef.current?.openModal(),
+								},
+								{
+									label: 'Cadastrar contratada',
+									dispatch: () => contractedCompanyFormRef.current?.openModal(),
+								},
 							]}
 						/>
 					</PageLayout.Header.RightElementGroup>
@@ -35,7 +42,8 @@ const CompaniesPage: FC = () => {
 				<PageLayout.Content />
 			</PageLayout.Root>
 
-			<CompanyForm formRef={formRef} />
+			<CompanyForm type="hiring" formRef={hiringCompanyFormRef} />
+			<CompanyForm type="contracted" formRef={contractedCompanyFormRef} />
 		</>
 	)
 }

@@ -1,4 +1,4 @@
-import { ChangeEvent, useCallback } from 'react'
+import { ChangeEvent, ForwardedRef, forwardRef, useCallback } from 'react'
 
 import { TextField } from '@mui/material'
 import { useController } from 'react-hook-form'
@@ -6,8 +6,11 @@ import { useController } from 'react-hook-form'
 import type { InputProps, InputPropsWithForm, SimpleInputProps } from '@/types/form/input'
 import { Primitive } from '@/types/label-value'
 
-function SimpleInput<P extends Primitive>(props: Readonly<SimpleInputProps<P>>) {
-	const { defaultValue, onChange, inputRef, ...inputProps } = props
+const SimpleInput = forwardRef(function SimpleInput<P extends Primitive>(
+	props: Readonly<SimpleInputProps<P>>,
+	ref: ForwardedRef<HTMLInputElement>
+) {
+	const { defaultValue, onChange, ...inputProps } = props
 
 	const handleChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
 		if (onChange) onChange(event.target.value as P)
@@ -16,13 +19,13 @@ function SimpleInput<P extends Primitive>(props: Readonly<SimpleInputProps<P>>) 
 	return (
 		<TextField
 			onChange={handleChange}
-			{...(inputRef && { ref: inputRef })}
+			{...(ref && { inputRef: ref })}
 			{...inputProps}
 			value={inputProps.value || defaultValue || ''}
 			fullWidth
 		/>
 	)
-}
+}) as <P extends Primitive>(props: SimpleInputProps<P> & { ref?: ForwardedRef<HTMLDivElement> }) => JSX.Element
 
 function InputWithForm<T extends object, P extends Primitive>(props: InputPropsWithForm<T, P>) {
 	const { control, onChange, name, ...inputProps } = props

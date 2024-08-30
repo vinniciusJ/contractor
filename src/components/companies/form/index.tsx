@@ -12,6 +12,10 @@ import { MutationFeedback } from '@/schemas/utils/mutations'
 import { FormProps } from '@/types/form'
 import { getSchemaDefault } from '@/utils/schema'
 
+interface Props extends FormProps {
+	type: 'hiring' | 'contracted'
+}
+
 const CREATE_FEEDBACK: MutationFeedback = {
 	success: 'Empresa cadastrada com sucesso',
 	error: 'Houve um erro durante o cadastro da empresa',
@@ -22,13 +26,13 @@ const UPDATE_FEEDBACK: MutationFeedback = {
 	error: 'Houve um erro durante o cadastro da empresa',
 }
 
-export const CompanyForm: FC<FormProps> = ({ formRef, id, onClose }) => {
+export const CompanyForm: FC<Props> = ({ formRef, type, id }) => {
 	const form = useForm<CompanyFormFields>({
 		defaultValues: getSchemaDefault(companySchema),
 		resolver: zodResolver(companyFormSchema),
 	})
 
-	const mutation = useMutation<CompanyFormFields>('hiring-companies', {
+	const mutation = useMutation<CompanyFormFields>(`${type}-companies`, {
 		method: id ? 'PUT' : 'POST',
 		feedback: id ? UPDATE_FEEDBACK : CREATE_FEEDBACK,
 	})
@@ -38,8 +42,8 @@ export const CompanyForm: FC<FormProps> = ({ formRef, id, onClose }) => {
 	}, [])
 
 	return (
-		<FormModal.Root form={form} onSubmit={submitForm} ref={formRef} onClose={onClose}>
-			<FormModal.Header>Empresas</FormModal.Header>
+		<FormModal.Root form={form} onSubmit={submitForm} ref={formRef}>
+			<FormModal.Header>Empresa {type === 'hiring' ? 'contrante' : 'contratada'}</FormModal.Header>
 
 			<FormModal.Content>
 				<Grid item xs={2}>

@@ -146,6 +146,9 @@ export const theme = createTheme({
 				root: {
 					fontSize: 12,
 					lineHeight: 1,
+					whiteSpace: 'nowrap',
+					overflow: 'hidden',
+					textOverflow: 'ellipsis',
 				},
 				head: {
 					fontWeight: SEMIBOLD_WEIGHT,

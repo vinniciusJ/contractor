@@ -16,8 +16,18 @@ interface Props<T extends object> extends ModalRootProps {
 export function FormModalRootComponent<T extends object>(props: Props<T>, ref: ForwardedRef<ModalOptions>) {
 	const modalRef = useModal()
 
+	const onClose = useCallback(() => {
+		if (props.onClose) {
+			props.onClose()
+		}
+
+		props.form.reset()
+	}, [])
+
 	const onSubmit = useCallback(async (data: T) => {
 		await props.onSubmit(data)
+
+		props.form.reset()
 		modalRef.current?.closeModal()
 	}, [])
 
@@ -31,7 +41,7 @@ export function FormModalRootComponent<T extends object>(props: Props<T>, ref: F
 	}
 
 	return (
-		<Modal.Root ref={modalRef} onClose={props.onClose} {...props}>
+		<Modal.Root ref={modalRef} onClose={onClose} {...props}>
 			<FormProvider {...props.form}>
 				<form onSubmit={props.form.handleSubmit(onSubmit)}>
 					<Stack gap={3}>{props.children}</Stack>

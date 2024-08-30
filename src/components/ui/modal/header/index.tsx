@@ -7,7 +7,7 @@ import { useModalContext } from '../provider'
 import { REGULAR_WEIGHT } from '@/utils/constants'
 
 interface Props {
-	children: string
+	children: string | string[]
 }
 
 export const ModalHeader: FC<Props> = ({ children }) => {
