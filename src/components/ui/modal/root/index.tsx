@@ -44,7 +44,7 @@ const ModalRootComponent: ForwardRefRenderFunction<ModalOptions, ModalRootProps>
 			<Dialog
 				open={isOpened}
 				onClose={closeModal}
-				sx={{ '& .MuiDialog-paper': { maxWidth: props.width ?? '30vw', width: props.width ?? '30vw' } }}
+				sx={{ '& .MuiDialog-paper': { maxWidth: props.width ?? '40vw', width: props.width ?? '40vw' } }}
 			>
 				<Stack gap={4} px={4} py={2}>
 					<ModalProvider openModal={openModal} closeModal={closeModal}>

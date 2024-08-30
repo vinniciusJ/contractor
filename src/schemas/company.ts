@@ -10,11 +10,15 @@ export const companySchema = z.object({
 	address: z.string(),
 })
 
+export const companyFormSchema = companySchema.omit({ id: true })
+
 export const contractedCompanySchema = companySchema
 
 export const hiringCompanySchema = companySchema.extend({
 	matrix: z.boolean(),
 })
+
+export type CompanyFormFields = z.input<typeof companyFormSchema>
 
 export type Company = z.infer<typeof companySchema>
 export type HiringCompany = z.infer<typeof hiringCompanySchema>

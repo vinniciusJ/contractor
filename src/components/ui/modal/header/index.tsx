@@ -20,7 +20,7 @@ export const ModalHeader: FC<Props> = ({ children }) => {
 	}, [])
 
 	return (
-		<Stack direction="row" justifyContent="space-between" alignItems="center" gap={2} mb={2}>
+		<Stack direction="row" justifyContent="space-between" alignItems="center" gap={2}>
 			<Typography fontWeight={REGULAR_WEIGHT} color="juicy.neutral.100" fontSize={16}>
 				{children}
 			</Typography>

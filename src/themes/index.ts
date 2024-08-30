@@ -1,4 +1,4 @@
-import { createTheme, menuItemClasses, tabClasses } from '@mui/material'
+import { createTheme, formLabelClasses, menuItemClasses, tabClasses } from '@mui/material'
 
 import { COLORS } from './colors'
 import { IBM_PLEX_SANS_FONT_FAMILY, fonts } from './fonts'
@@ -54,6 +54,7 @@ export const theme = createTheme({
 		MuiButton: {
 			styleOverrides: {
 				root: {
+					fontFamily: IBM_PLEX_SANS_FONT_FAMILY,
 					textTransform: 'initial',
 					width: '100%',
 					borderRadius: 0,
@@ -75,6 +76,15 @@ export const theme = createTheme({
 							borderColor: COLORS.neutral[50],
 						},
 						'& svg': { fill: COLORS.neutral[60] },
+					},
+				},
+				{
+					props: { variant: 'contained' },
+					style: {
+						background: COLORS.secondary[60],
+						'&:hover': {
+							background: COLORS.secondary[70],
+						},
 					},
 				},
 			],
@@ -166,6 +176,37 @@ export const theme = createTheme({
 						'&:hover': {
 							background: COLORS.neutral[30],
 						},
+					},
+				},
+			},
+		},
+		MuiTextField: {
+			styleOverrides: {
+				root: {
+					background: COLORS.neutral[20],
+				},
+			},
+			defaultProps: {
+				variant: 'standard',
+			},
+		},
+		MuiFormLabel: {
+			styleOverrides: {
+				root: {
+					padding: 8,
+					[`&.${formLabelClasses.focused}`]: {
+						color: COLORS.secondary[60],
+					},
+				},
+			},
+		},
+		MuiInputBase: {
+			styleOverrides: {
+				root: {
+					padding: 8,
+					marginTop: 0,
+					'&::after': {
+						borderBottom: `2px solid ${COLORS.secondary[60]} !important`,
 					},
 				},
 			},

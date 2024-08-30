@@ -11,7 +11,7 @@ interface Props extends GridProps {
 export const FormModalContent: FC<Props> = ({ children, ...gridProps }) => {
 	return (
 		<Modal.Content>
-			<Grid container columns={4} {...gridProps}>
+			<Grid container columns={4} spacing={3} {...gridProps}>
 				{children}
 			</Grid>
 		</Modal.Content>
