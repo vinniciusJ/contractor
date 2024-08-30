@@ -10,7 +10,7 @@ interface TitleProps extends PropsWithChildren {
 
 export const PageLayoutHeader: FC<PropsWithChildren> = ({ children }) => {
 	return (
-		<Stack direction="row" justifyContent="space-between" mb={3}>
+		<Stack direction="row" justifyContent="space-between">
 			{children}
 		</Stack>
 	)
