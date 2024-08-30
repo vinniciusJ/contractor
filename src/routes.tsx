@@ -5,6 +5,7 @@ import { Navigate, createBrowserRouter } from 'react-router-dom'
 import { AppLayout } from './layouts/app'
 
 const ContractsPage = lazy(() => import('@/pages/contracts'))
+const ContractsMapPage = lazy(() => import('@/pages/contracts/sections/map'))
 const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
 const HiringCompaniesPage = lazy(() => import('@/pages/companies/sections/hiring'))
 
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
 				children: [
 					{
 						path: 'map',
-						element: <p>Map</p>,
+						element: <ContractsMapPage />,
 					},
 					{
 						path: 'list',
