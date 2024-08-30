@@ -86,16 +86,18 @@ export function Table<T extends object>({ data, items, to, columns }: Readonly<P
 				</MuiTable>
 			</TableContainer>
 
-			<TablePagination
-				count={items}
-				rowsPerPage={pageSize}
-				page={page - 1}
-				onPageChange={handlePageChange}
-				onRowsPerPageChange={handleRowPerPageChange}
-				labelRowsPerPage={'Linhas por página:'}
-				rowsPerPageOptions={[5, 10, 25, 100]}
-				labelDisplayedRows={(props) => `${props.from} a ${props.to} de ${props.count}`}
-			/>
+			{items > 0 && (
+				<TablePagination
+					count={items}
+					rowsPerPage={pageSize}
+					page={page - 1}
+					onPageChange={handlePageChange}
+					onRowsPerPageChange={handleRowPerPageChange}
+					labelRowsPerPage={'Linhas por página:'}
+					rowsPerPageOptions={[5, 10, 25, 100]}
+					labelDisplayedRows={(props) => `${props.from} a ${props.to} de ${props.count}`}
+				/>
+			)}
 		</Stack>
 	)
 }

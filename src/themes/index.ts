@@ -98,15 +98,6 @@ export const theme = createTheme({
 				variant: 'contained',
 			},
 		},
-		MuiIconButton: {
-			styleOverrides: {
-				root: {
-					'& svg': {
-						fill: COLORS.neutral[100],
-					},
-				},
-			},
-		},
 		MuiButtonGroup: {
 			variants: [
 				{
