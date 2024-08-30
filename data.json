@@ -1098,9 +1098,9 @@
 					"paymentReceipt": false
 				}
 			],
-			"executionLocal": "São Paulo,São Paulo,Brasil",
-			"latitude": -23.55052,
-			"longitude": -46.63331,
+			"executionLocal": "Fortaleza,Ceará,Brasil",
+			"latitude": -3.7172,
+			"longitude": -38.5439,
 			"contractedCompany": {
 				"id": 8,
 				"name": "NetTech Serviços",
@@ -1189,9 +1189,9 @@
 					"paymentReceipt": false
 				}
 			],
-			"executionLocal": "Campinas,São Paulo,Brasil",
-			"latitude": -22.90994,
-			"longitude": -47.06263,
+			"executionLocal": "Salvador,Bahia,Brasil",
+			"latitude": -12.9822499,
+			"longitude": -38.4812772,
 			"contractedCompany": {
 				"id": 9,
 				"name": "EletroInfra Ltda.",
@@ -1280,9 +1280,9 @@
 					"paymentReceipt": false
 				}
 			],
-			"executionLocal": "Rio de Janeiro,Rio de Janeiro,Brasil",
-			"latitude": -22.90685,
-			"longitude": -43.1729,
+			"executionLocal": "Cuiabá,Mato Grosso,Brasil",
+			"latitude": -15.6010,
+			"longitude": -56.0979,
 			"contractedCompany": {
 				"id": 10,
 				"name": "OfficeTech Ltda.",
@@ -1371,9 +1371,9 @@
 					"paymentReceipt": false
 				}
 			],
-			"executionLocal": "Brasília,Distrito Federal,Brasil",
-			"latitude": -15.79423,
-			"longitude": -47.88217,
+			"executionLocal": "Manaus,Amazonas,Brasil",
+			"latitude": -3.1190,
+			"longitude": -60.0217,
 			"contractedCompany": {
 				"id": 11,
 				"name": "LegisTec Advogados",
@@ -1462,9 +1462,9 @@
 					"paymentReceipt": false
 				}
 			],
-			"executionLocal": "Curitiba,Paraná,Brasil",
-			"latitude": -25.42895,
-			"longitude": -49.26713,
+			"executionLocal": "Belém,Pará,Brasil",
+			"latitude": -1.4554,
+			"longitude": -48.5020,
 			"contractedCompany": {
 				"id": 12,
 				"name": "SoftSolutions Ltda.",
@@ -1546,9 +1546,9 @@
 					"paymentReceipt": true
 				}
 			],
-			"executionLocal": "Porto Alegre,Rio Grande do Sul,Brasil",
-			"latitude": -30.0277,
-			"longitude": -51.2287,
+			"executionLocal": "Palmas,Tocantins,Brasil",
+			"latitude": -10.1836,
+			"longitude": -48.3339,
 			"contractedCompany": {
 				"id": 13,
 				"name": "EducaTech Ltda.",

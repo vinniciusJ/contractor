@@ -10,7 +10,9 @@ const ContractsMapPage = () => {
 	return (
 		<Map>
 			{contracts?.map((contract) => (
-				<Marker key={contract.id} position={[contract.latitude, contract.longitude]}></Marker>
+				<Marker key={contract.id} position={[contract.latitude, contract.longitude]}>
+					{' '}
+				</Marker>
 			))}
 		</Map>
 	)

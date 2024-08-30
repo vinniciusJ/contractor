@@ -10,7 +10,7 @@ interface Props {
 }
 
 // eslint-disable-next-line sonarjs/no-globals-shadowing
-export const Map = ({ children, zoom = 5 }: Props) => {
+export const Map = ({ children, zoom = 4 }: Props) => {
 	return (
 		<MapContainer center={[-10.333_333_3, -53.2]} zoom={zoom} style={{ height: '75vh' }}>
 			<TileLayer
