@@ -3,6 +3,7 @@ import { FC } from 'react'
 import { Button, Stack, Typography } from '@mui/material'
 import { Params, useParams } from 'react-router-dom'
 
+import { EmployeesTable } from '@/components/employees/table'
 import { Field } from '@/components/ui/field'
 import { GridGroup } from '@/components/ui/grid-group'
 import { useGetOne } from '@/hooks/get'
@@ -51,6 +52,8 @@ const CompanyPage: FC = () => {
 					<Typography variant="h2">Funcionários</Typography>
 					<Button variant="outlined">Cadastrar</Button>
 				</Stack>
+
+				<EmployeesTable companyType={companyType as 'hiring' | 'contracted'} companyId={Number(companyId)} />
 			</PageLayout.Content>
 		</PageLayout.Root>
 	)

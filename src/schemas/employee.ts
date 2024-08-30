@@ -21,4 +21,4 @@ export const hiringCompanyEmployeeSchema = hiringCompanySchema.extend({
 
 export type Employee = z.infer<typeof employeeSchema>
 export type ContractedCompanyEmployee = z.infer<typeof contractedCompanyEmployeeSchema>
-export type SubsidiaryCompanyEmployee = z.infer<typeof hiringCompanySchema>
+export type HiringCompanyEmployee = z.infer<typeof hiringCompanySchema>
