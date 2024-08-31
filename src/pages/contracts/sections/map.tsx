@@ -38,7 +38,7 @@ const ContractsMapPage = () => {
 								{contract.financialProgress ?? '-'}
 							</Field>
 							<Button
-								href={contract.id.toString()}
+								href={`${contract.id.toString()}/overview`}
 								size="small"
 								sx={{ textDecoration: 'none', color: '#FFF !important' }}
 							>

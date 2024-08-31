@@ -11,10 +11,14 @@ const ContractsListPage = lazy(() => import('@/pages/contracts/sections/list'))
 const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
 
 const CompanyPage = lazy(() => import('@/pages/company'))
-const ContractPage = lazy(() => import('@/pages/contract'))
 
 const HiringCompaniesSection = lazy(() => import('@/pages/companies/sections/hiring'))
 const ContractedCompaniesSection = lazy(() => import('@/pages/companies/sections/contracted'))
+
+const ContractPageLayout = lazy(() => import('@/pages/contract'))
+const ContractOverviewSection = lazy(() => import('@/pages/contract/sections/overview'))
+const ContractTypeSection = lazy(() => import('@/pages/contract/sections/contract-type'))
+const ContractPaymentSection = lazy(() => import('@/pages/contract/sections/payment'))
 
 export const router = createBrowserRouter([
 	{
@@ -43,7 +47,21 @@ export const router = createBrowserRouter([
 					},
 					{
 						path: ':contractId',
-						element: <ContractPage />,
+						element: <ContractPageLayout />,
+						children: [
+							{
+								path: 'overview',
+								element: <ContractOverviewSection />,
+							},
+							{
+								path: 'contract-type',
+								element: <ContractTypeSection />,
+							},
+							{
+								path: 'payment',
+								element: <ContractPaymentSection />,
+							},
+						],
 					},
 				],
 			},

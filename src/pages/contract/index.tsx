@@ -3,15 +3,19 @@ import { FC } from 'react'
 import { Divider, Stack, Typography } from '@mui/material'
 import { Params, useParams } from 'react-router-dom'
 
-import { CompanyOverview } from '@/components/companies/overview'
-import { ContractOverview } from '@/components/contracts/overview'
-import { EmployeeOverview } from '@/components/employees/overview'
 import Loading from '@/components/ui/loading'
 import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
 import { BaseContract, Contract } from '@/schemas/contract'
 import { PaymentMethod } from '@/schemas/payment-method'
+import { Section } from '@/types/label-value'
+
+const SECTIONS: Section[] = [
+	{ label: 'Visão Geral', value: 'overview' },
+	{ label: 'Tipo de contrato', value: 'contract-type' },
+	{ label: 'Pagamento', value: 'payment' },
+]
 
 const ContractPage: FC = () => {
 	const { contractId } = useParams<Params>()
@@ -58,31 +62,9 @@ const ContractPage: FC = () => {
 				</PageLayout.Header.Title.Root>
 			</PageLayout.Header.Root>
 
-			<PageLayout.Content>
-				<Stack gap={3}>
-					<ContractOverview contract={contract} />
+			<PageLayout.Sections sections={SECTIONS} />
 
-					<Divider />
-
-					<Typography variant="h2">Empresa contratante</Typography>
-					<CompanyOverview company={contract.subsidiaryCompany} />
-
-					<Divider />
-
-					<Typography variant="h2">Gestor do contrato</Typography>
-					<EmployeeOverview employee={contract.contractManager} />
-
-					<Divider />
-
-					<Typography variant="h2">Empresa contratada</Typography>
-					<CompanyOverview company={contract.contractedCompany} />
-
-					<Divider />
-
-					<Typography variant="h2">Representante legal</Typography>
-					<EmployeeOverview employee={contract.contractManager} />
-				</Stack>
-			</PageLayout.Content>
+			<PageLayout.Content />
 		</PageLayout.Root>
 	)
 }
