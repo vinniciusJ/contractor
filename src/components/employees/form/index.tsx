@@ -56,6 +56,9 @@ export const EmployeeForm: FC<Props> = ({ formRef, companyType: type, id }) => {
 					<Input control={form.control} label="Nome" name="name" />
 				</Grid>
 				<Grid item xs={2}>
+					<Input control={form.control} label="CPF" name="code" />
+				</Grid>
+				<Grid item xs={2}>
 					<Input control={form.control} label="E-mail" name="email" />
 				</Grid>
 				<Grid item xs={2}>

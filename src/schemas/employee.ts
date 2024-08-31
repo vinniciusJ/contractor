@@ -7,6 +7,7 @@ export const employeeSchema = z.object({
 	name: z.string(),
 	email: z.string(),
 	phone: z.string(),
+	code: z.string(),
 })
 
 export const employeeFormSchema = employeeSchema.omit({ id: true })

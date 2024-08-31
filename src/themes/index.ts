@@ -89,6 +89,9 @@ export const theme = createTheme({
 						'&:hover': {
 							background: COLORS.secondary[70],
 						},
+						'& svg': {
+							fill: COLORS.neutral[10],
+						},
 					},
 				},
 			],

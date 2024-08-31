@@ -22,6 +22,11 @@ const getEmployeesTableColumns = (companyType: Props['companyType']) => {
 			header: 'Nome',
 			cell: (props) => props.getValue(),
 		}),
+		helper.accessor('code', {
+			id: 'code',
+			header: 'CPF',
+			cell: (props) => props.getValue(),
+		}),
 		helper.accessor('email', {
 			id: 'email',
 			header: 'E-mail',

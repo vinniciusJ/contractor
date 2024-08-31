@@ -1,7 +1,9 @@
 import { FC } from 'react'
 
-import { Button } from '@mui/material'
+import { CurrencyDollar } from '@carbon/icons-react'
+import { Button, Typography } from '@mui/material'
 
+import { Link } from '@/components/ui/link'
 import { PageLayout } from '@/layouts/page'
 import { Section } from '@/types/label-value'
 
@@ -18,7 +20,11 @@ const Contracts: FC = () => {
 					<PageLayout.Header.Title.Text>Contratos</PageLayout.Header.Title.Text>
 				</PageLayout.Header.Title.Root>
 
-				<PageLayout.Header.RightElementGroup>
+				<PageLayout.Header.RightElementGroup gap={3}>
+					<Link to="/payment-methods">
+						<CurrencyDollar size={20} />
+						<Typography>Tipos de pagamento</Typography>
+					</Link>
 					<Button>Cadastrar</Button>
 				</PageLayout.Header.RightElementGroup>
 			</PageLayout.Header.Root>
