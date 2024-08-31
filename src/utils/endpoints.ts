@@ -4,7 +4,7 @@ const routes = {
 	companies: {
 		':id': {},
 	},
-	'contractual-types': {
+	'contract-types': {
 		':id': {},
 	},
 	'contracted-company-employees': {

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { CurrencyDollar } from '@carbon/icons-react'
+import { ContainerSoftware, CurrencyDollar } from '@carbon/icons-react'
 import { Button, Typography } from '@mui/material'
 
 import { Link } from '@/components/ui/link'
@@ -24,6 +24,10 @@ const Contracts: FC = () => {
 					<Link to="/payment-methods">
 						<CurrencyDollar size={20} />
 						<Typography>Tipos de pagamento</Typography>
+					</Link>
+					<Link to="/contract-types">
+						<ContainerSoftware size={20} />
+						<Typography>Tipos de contratação</Typography>
 					</Link>
 					<Button>Cadastrar</Button>
 				</PageLayout.Header.RightElementGroup>

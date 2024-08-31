@@ -12,6 +12,7 @@ const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
 
 const CompanyPage = lazy(() => import('@/pages/company'))
 const PaymentMethodsPage = lazy(() => import('@/pages/payment-methods'))
+const ContractTypesPage = lazy(() => import('@/pages/contract-type'))
 
 const HiringCompaniesSection = lazy(() => import('@/pages/companies/sections/hiring'))
 const ContractedCompaniesSection = lazy(() => import('@/pages/companies/sections/contracted'))
@@ -91,6 +92,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'payment-methods',
 				element: <PaymentMethodsPage />,
+			},
+			{
+				path: 'contract-types',
+				element: <ContractTypesPage />,
 			},
 		],
 	},

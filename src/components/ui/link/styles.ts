@@ -17,4 +17,7 @@ export const LinkContainer = styled(Link)(({ theme }) => ({
 	'&:hover': {
 		textDecoration: 'underline',
 	},
+	'&:visited': {
+		color: theme.palette.juicy.secondary[70],
+	},
 }))
