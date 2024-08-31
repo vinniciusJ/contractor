@@ -7,6 +7,7 @@ import { Modal } from '../../modal'
 import { ModalOptions, useModal } from '../../modal/provider'
 import { ModalRootProps } from '../../modal/root'
 import { FormModalProvider } from '../provider'
+import { useQueryParams } from '@/hooks/params'
 
 interface Props<T extends object> extends ModalRootProps {
 	form: UseFormReturn<T>
@@ -17,12 +18,15 @@ interface Props<T extends object> extends ModalRootProps {
 export function FormModalRootComponent<T extends object>(props: Props<T>, ref: ForwardedRef<ModalOptions>) {
 	const modalRef = useModal()
 
+	const { setQueryParams } = useQueryParams()
+
 	const onClose = useCallback(() => {
 		if (props.onClose) {
 			props.onClose()
 		}
 
 		props.form.reset()
+		setQueryParams('sort', '')
 	}, [])
 
 	const onSubmit = useCallback(async (data: T) => {
