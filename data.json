@@ -637,15 +637,30 @@
   "payment-methods": [
     {
       "id": "1",
-      "name": "Bank Transfer",
-      "installmentsNumber": 5
+      "name": "Mensal",
+      "frequency": 1
     },
     {
       "id": "2",
-      "name": "Credit Card",
-      "installmentsNumber": 3
+      "name": "bimestral",
+      "frequency": 2
+    },
+    {
+      "id": "3",
+      "name": "trimestral",
+      "frequency": 2
+    },
+    {
+      "id": "4",
+      "name": "semestral",
+      "frequency": 6
+    },
+    {
+      "id": "5",
+      "name": "anual",
+      "frequency": 12
     }
-  ],
+  ], 
   "contracts": [
     {
       "id": "1",
@@ -667,24 +682,41 @@
       "startDate": "2024-08-01T00:00:00.000Z",
       "endDate": "2024-12-31T00:00:00.000Z",
       "contractedValue": 500000,
-      "paymentMethod": {
-        "id": 1,
-        "name": "Transferência Bancária",
-        "installmentsNumber": 5
-      },
+      "paymentMethodId": "1",
       "installments": [
         {
           "id": 1,
           "value": 100000,
-          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-          "paymentDate": "2024-09-02T00:00:00.000Z",
+          "scheduledDeliveryDate": "2024-08-01T00:00:00.000Z",
+          "paymentDate": "2024-08-02T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
-          "value": 200000,
+          "value": 100000,
+          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+          "paymentDate": "2024-09-02T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 3,
+          "value": 100000,
           "scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
           "paymentDate": "2024-10-02T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 4,
+          "value": 100000,
+          "scheduledDeliveryDate": "2024-11-01T00:00:00.000Z",
+          "paymentDate": "2024-11-02T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 5,
+          "value": 100000,
+          "scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
+          "paymentDate": "2024-12-02T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -737,7 +769,7 @@
           "address": "456 Rua Verde, Bairro Sustentável"
         }
       }
-    },
+    },    
     {
       "id": "2",
       "name": "Implantação de Sistema de Segurança",
@@ -758,24 +790,20 @@
       "startDate": "2024-09-01T00:00:00.000Z",
       "endDate": "2024-11-30T00:00:00.000Z",
       "contractedValue": 300000,
-      "paymentMethod": {
-        "id": 1,
-        "name": "Cartão de Crédito",
-        "installmentsNumber": 3
-      },
+      "paymentMethodId": "2",
       "installments": [
         {
           "id": 1,
           "value": 100000,
-          "scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
-          "paymentDate": "2024-09-12T00:00:00.000Z",
+          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+          "paymentDate": "2024-09-02T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
           "value": 100000,
-          "scheduledDeliveryDate": "2024-10-10T00:00:00.000Z",
-          "paymentDate": "2024-10-12T00:00:00.000Z",
+          "scheduledDeliveryDate": "2024-11-01T00:00:00.000Z",
+          "paymentDate": "2024-11-02T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -828,58 +856,54 @@
           "address": "789 Rua da Segurança, Bairro Protegido"
         }
       }
-    },
+    }, 
     {
       "id": "3",
-      "name": "Projeto de Energia Solar",
+      "name": "Treinamento e Capacitação de Equipe",
       "contractType": "Serviço",
-      "contractObjective": "Instalação de painéis solares nas sedes.",
+      "contractObjective": "Treinamento da equipe de TI para novos sistemas e tecnologias.",
       "contractItems": [
         {
           "id": 1,
-          "name": "Compra de Painéis Solares",
-          "scheduledDate": "2024-08-15T00:00:00.000Z"
+          "name": "Curso de Atualização",
+          "scheduledDate": "2024-10-01T00:00:00.000Z"
         },
         {
           "id": 2,
-          "name": "Instalação de Painéis Solares",
-          "scheduledDate": "2024-09-01T00:00:00.000Z"
+          "name": "Workshop Prático",
+          "scheduledDate": "2024-10-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-08-01T00:00:00.000Z",
-      "endDate": "2024-11-01T00:00:00.000Z",
-      "contractedValue": 750000,
-      "paymentMethod": {
-        "id": 2,
-        "name": "Boleto Bancário",
-        "installmentsNumber": 4
-      },
+      "startDate": "2024-09-01T00:00:00.000Z",
+      "endDate": "2024-12-31T00:00:00.000Z",
+      "contractedValue": 200000,
+      "paymentMethodId": "3",
       "installments": [
         {
           "id": 1,
-          "value": 187500,
-          "scheduledDeliveryDate": "2024-08-10T00:00:00.000Z",
-          "paymentDate": "2024-08-12T00:00:00.000Z",
+          "value": 100000,
+          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+          "paymentDate": "2024-09-02T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
-          "value": 187500,
-          "scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
-          "paymentDate": "2024-09-12T00:00:00.000Z",
+          "value": 100000,
+          "scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
+          "paymentDate": "2024-12-02T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
-      "executionLocal": "Curitiba,Paraná,Brasil",
-      "latitude": -25.4296,
-      "longitude": -49.27127,
+      "executionLocal": "Belo Horizonte,Minas Gerais,Brasil",
+      "latitude": -19.91668,
+      "longitude": -43.9345,
       "contractedCompany": {
         "id": 4,
-        "name": "Energias Renováveis Ltda.",
-        "corporateName": "Energias Renováveis Ltda.",
-        "code": "ER-2024",
+        "name": "Capacitação em Tecnologia",
+        "corporateName": "Capacitação em Tecnologia Ltda.",
+        "code": "CT-2024",
         "phone": "098-765-4323",
-        "address": "123 Rua da Sustentabilidade, Bairro Ecológico"
+        "address": "1010 Rua da Capacitação, Bairro Avançado"
       },
       "subsidiaryCompany": {
         "id": 1,
@@ -892,8 +916,8 @@
       },
       "contractManager": {
         "id": 3,
-        "name": "Maria Ferreira",
-        "email": "maria.ferreira@inovadores.com",
+        "name": "Fernanda Lima",
+        "email": "fernanda.lima@inovadores.com",
         "phone": "123-456-7892",
         "subsidiaryCompany": {
           "id": 1,
@@ -907,19 +931,19 @@
       },
       "legalRepresentative": {
         "id": 4,
-        "name": "Eduardo Lima",
-        "email": "eduardo.lima@energiasrenovaveis.com",
+        "name": "Eduardo Santos",
+        "email": "eduardo.santos@capacitec.com",
         "phone": "098-765-4323",
         "contractedCompany": {
           "id": 4,
-          "name": "Energias Renováveis Ltda.",
-          "corporateName": "Energias Renováveis Ltda.",
-          "code": "ER-2024",
+          "name": "Capacitação em Tecnologia",
+          "corporateName": "Capacitação em Tecnologia Ltda.",
+          "code": "CT-2024",
           "phone": "098-765-4323",
-          "address": "123 Rua da Sustentabilidade, Bairro Ecológico"
+          "address": "1010 Rua da Capacitação, Bairro Avançado"
         }
       }
-    },
+    },    
     {
       "id": "4",
       "name": "Renovação do Parque de Máquinas",
@@ -937,27 +961,23 @@
           "scheduledDate": "2024-08-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2024-09-01T00:00:00.000Z",
-      "contractedValue": 250000,
-      "paymentMethod": {
-        "id": 3,
-        "name": "Depósito Bancário",
-        "installmentsNumber": 2
-      },
+      "startDate": "2024-09-01T00:00:00.000Z",
+      "endDate": "2025-08-31T00:00:00.000Z",
+      "contractedValue": 400000,
+      "paymentMethodId": "2",
       "installments": [
         {
           "id": 1,
-          "value": 125000,
-          "scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
-          "paymentDate": "2024-07-12T00:00:00.000Z",
+          "value": 200000,
+          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+          "paymentDate": "2024-09-02T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
-          "value": 125000,
-          "scheduledDeliveryDate": "2024-08-10T00:00:00.000Z",
-          "paymentDate": "2024-08-12T00:00:00.000Z",
+          "value": 200000,
+          "scheduledDeliveryDate": "2025-03-01T00:00:00.000Z",
+          "paymentDate": "2025-03-02T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -1028,28 +1048,17 @@
           "scheduledDate": "2024-09-10T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-08-01T00:00:00.000Z",
-      "endDate": "2024-10-01T00:00:00.000Z",
-      "contractedValue": 400000,
-      "paymentMethod": {
-        "id": 4,
-        "name": "Cheque",
-        "installmentsNumber": 4
-      },
+      "startDate": "2024-09-01T00:00:00.000Z",
+      "endDate": "2025-08-31T00:00:00.000Z",
+      "contractedValue": 300000,
+      "paymentMethodId": "4",
       "installments": [
         {
           "id": 1,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-08-15T00:00:00.000Z",
-          "paymentDate": "2024-08-16T00:00:00.000Z",
+          "value": 300000,
+          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+          "paymentDate": "2024-09-02T00:00:00.000Z",
           "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-09-15T00:00:00.000Z",
-          "paymentDate": "2024-09-16T00:00:00.000Z",
-          "paymentReceipt": false
         }
       ],
       "executionLocal": "Belo Horizonte,Minas Gerais,Brasil",
@@ -1120,33 +1129,22 @@
         }
       ],
       "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2024-09-01T00:00:00.000Z",
+      "endDate": "2025-01-01T00:00:00.000Z",
       "contractedValue": 350000,
-      "paymentMethod": {
-        "id": 3,
-        "name": "Depósito Bancário",
-        "installmentsNumber": 3
-      },
+      "paymentMethodId": "2",
       "installments": [
         {
           "id": 1,
-          "value": 116666.67,
+          "value": 175000,
           "scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
           "paymentDate": "2024-07-12T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
-          "value": 116666.67,
-          "scheduledDeliveryDate": "2024-08-10T00:00:00.000Z",
-          "paymentDate": "2024-08-12T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 3,
-          "value": 116666.67,
-          "scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
-          "paymentDate": "2024-09-12T00:00:00.000Z",
+          "value": 175000,
+          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+          "paymentDate": "2024-12-12T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -1217,27 +1215,51 @@
           "scheduledDate": "2024-10-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-09-01T00:00:00.000Z",
-      "endDate": "2024-12-01T00:00:00.000Z",
-      "contractedValue": 500000,
-      "paymentMethod": {
-        "id": 5,
-        "name": "Transferência Bancária",
-        "installmentsNumber": 4
-      },
+      "startDate": "2024-07-01T00:00:00.000Z",
+      "endDate": "2025-01-01T00:00:00.000Z",
+      "contractedValue": 350000,
+      "paymentMethodId": "1",
       "installments": [
         {
           "id": 1,
-          "value": 125000,
-          "scheduledDeliveryDate": "2024-09-15T00:00:00.000Z",
-          "paymentDate": "2024-09-16T00:00:00.000Z",
+          "value": 58333.33,
+          "scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
+          "paymentDate": "2024-07-12T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
-          "value": 125000,
-          "scheduledDeliveryDate": "2024-10-15T00:00:00.000Z",
-          "paymentDate": "2024-10-16T00:00:00.000Z",
+          "value": 58333.33,
+          "scheduledDeliveryDate": "2024-08-10T00:00:00.000Z",
+          "paymentDate": "2024-08-12T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 3,
+          "value": 58333.33,
+          "scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
+          "paymentDate": "2024-09-12T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 4,
+          "value": 58333.33,
+          "scheduledDeliveryDate": "2024-10-10T00:00:00.000Z",
+          "paymentDate": "2024-10-12T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 5,
+          "value": 58333.33,
+          "scheduledDeliveryDate": "2024-11-10T00:00:00.000Z",
+          "paymentDate": "2024-11-12T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 6,
+          "value": 58333.33,
+          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+          "paymentDate": "2024-12-12T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -1308,27 +1330,37 @@
           "scheduledDate": "2024-11-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-10-01T00:00:00.000Z",
-      "endDate": "2024-12-31T00:00:00.000Z",
-      "contractedValue": 600000,
-      "paymentMethod": {
-        "id": 6,
-        "name": "PIX",
-        "installmentsNumber": 3
-      },
+      "startDate": "2024-07-01T00:00:00.000Z",
+      "endDate": "2025-01-01T00:00:00.000Z",
+      "contractedValue": 350000,
+      "paymentMethodId": "3",
       "installments": [
         {
           "id": 1,
-          "value": 200000,
-          "scheduledDeliveryDate": "2024-10-15T00:00:00.000Z",
-          "paymentDate": "2024-10-16T00:00:00.000Z",
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
+          "paymentDate": "2024-07-12T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
-          "value": 200000,
-          "scheduledDeliveryDate": "2024-11-15T00:00:00.000Z",
-          "paymentDate": "2024-11-16T00:00:00.000Z",
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
+          "paymentDate": "2024-09-12T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 3,
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-11-10T00:00:00.000Z",
+          "paymentDate": "2024-11-12T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 4,
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+          "paymentDate": "2024-12-12T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -1399,27 +1431,16 @@
           "scheduledDate": "2024-12-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-11-01T00:00:00.000Z",
+      "startDate": "2024-07-01T00:00:00.000Z",
       "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 150000,
-      "paymentMethod": {
-        "id": 2,
-        "name": "Cartão de Crédito",
-        "installmentsNumber": 3
-      },
+      "contractedValue": 350000,
+      "paymentMethodId": "4",
       "installments": [
         {
           "id": 1,
-          "value": 50000,
-          "scheduledDeliveryDate": "2024-11-15T00:00:00.000Z",
-          "paymentDate": "2024-11-16T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 50000,
-          "scheduledDeliveryDate": "2024-12-15T00:00:00.000Z",
-          "paymentDate": "2024-12-16T00:00:00.000Z",
+          "value": 350000,
+          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+          "paymentDate": "2024-12-12T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -1490,27 +1511,16 @@
           "scheduledDate": "2024-09-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-08-01T00:00:00.000Z",
-      "endDate": "2024-12-31T00:00:00.000Z",
-      "contractedValue": 250000,
-      "paymentMethod": {
-        "id": 4,
-        "name": "Depósito Bancário",
-        "installmentsNumber": 2
-      },
+      "startDate": "2024-07-01T00:00:00.000Z",
+      "endDate": "2025-01-01T00:00:00.000Z",
+      "contractedValue": 350000,
+      "paymentMethodId": "4",
       "installments": [
         {
           "id": 1,
-          "value": 125000,
-          "scheduledDeliveryDate": "2024-08-15T00:00:00.000Z",
-          "paymentDate": "2024-08-16T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 125000,
-          "scheduledDeliveryDate": "2024-09-15T00:00:00.000Z",
-          "paymentDate": "2024-09-16T00:00:00.000Z",
+          "value": 350000,
+          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+          "paymentDate": "2024-12-12T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -1581,27 +1591,37 @@
           "scheduledDate": "2024-10-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-09-01T00:00:00.000Z",
-      "endDate": "2025-03-01T00:00:00.000Z",
-      "contractedValue": 700000,
-      "paymentMethod": {
-        "id": 7,
-        "name": "Boleto Bancário",
-        "installmentsNumber": 5
-      },
+      "startDate": "2024-07-01T00:00:00.000Z",
+      "endDate": "2025-01-01T00:00:00.000Z",
+      "contractedValue": 350000,
+      "paymentMethodId": "3",
       "installments": [
         {
           "id": 1,
-          "value": 140000,
-          "scheduledDeliveryDate": "2024-09-15T00:00:00.000Z",
-          "paymentDate": "2024-09-16T00:00:00.000Z",
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-08-01T00:00:00.000Z",
+          "paymentDate": "2024-08-03T00:00:00.000Z",
           "paymentReceipt": true
         },
         {
           "id": 2,
-          "value": 140000,
-          "scheduledDeliveryDate": "2024-10-15T00:00:00.000Z",
-          "paymentDate": "2024-10-16T00:00:00.000Z",
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+          "paymentDate": "2024-10-03T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 3,
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
+          "paymentDate": "2024-12-03T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 4,
+          "value": 87500,
+          "scheduledDeliveryDate": "2025-01-01T00:00:00.000Z",
+          "paymentDate": "2025-01-03T00:00:00.000Z",
           "paymentReceipt": false
         }
       ],
@@ -1672,21 +1692,38 @@
           "scheduledDate": "2024-07-15T00:00:00.000Z"
         }
       ],
-      "startDate": "2024-06-01T00:00:00.000Z",
-      "endDate": "2024-07-31T00:00:00.000Z",
-      "contractedValue": 100000,
-      "paymentMethod": {
-        "id": 5,
-        "name": "Pix",
-        "installmentsNumber": 1
-      },
+      "startDate": "2024-07-01T00:00:00.000Z",
+      "endDate": "2025-01-01T00:00:00.000Z",
+      "contractedValue": 350000,
+      "paymentMethodId": "3",
       "installments": [
         {
           "id": 1,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-06-15T00:00:00.000Z",
-          "paymentDate": "2024-06-16T00:00:00.000Z",
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-07-15T00:00:00.000Z",
+          "paymentDate": "2024-07-17T00:00:00.000Z",
           "paymentReceipt": true
+        },
+        {
+          "id": 2,
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-09-15T00:00:00.000Z",
+          "paymentDate": "2024-09-17T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 3,
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-11-15T00:00:00.000Z",
+          "paymentDate": "2024-11-17T00:00:00.000Z",
+          "paymentReceipt": false
+        },
+        {
+          "id": 4,
+          "value": 87500,
+          "scheduledDeliveryDate": "2024-12-15T00:00:00.000Z",
+          "paymentDate": "2024-12-17T00:00:00.000Z",
+          "paymentReceipt": false
         }
       ],
       "executionLocal": "Palmas,Tocantins,Brasil",

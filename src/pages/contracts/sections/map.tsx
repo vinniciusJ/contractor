@@ -4,10 +4,10 @@ import { Marker, Popup } from 'react-leaflet'
 import { Field } from '@/components/ui/field'
 import { Map } from '@/components/ui/map'
 import { useGetList } from '@/hooks/get'
-import { Contract } from '@/schemas/contract'
+import { BaseContract } from '@/schemas/contract'
 
 const ContractsMapPage = () => {
-	const { data: contracts } = useGetList<Contract>('contracts')
+	const { data: contracts } = useGetList<BaseContract>('contracts')
 
 	return (
 		<Map>

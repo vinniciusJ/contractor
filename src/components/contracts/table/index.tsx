@@ -4,10 +4,10 @@ import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
 
 import { Table } from '@/components/ui/table'
 import { useGetPageable } from '@/hooks/get'
-import { Contract } from '@/schemas/contract'
+import { BaseContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
-const columnHelper = createColumnHelper<Contract>()
+const columnHelper = createColumnHelper<BaseContract>()
 
 const columns = [
 	columnHelper.accessor('name', {
@@ -18,11 +18,6 @@ const columns = [
 	columnHelper.accessor('contractType', {
 		id: 'contractType',
 		header: 'Tipo do contrato',
-		cell: (props) => props.getValue(),
-	}),
-	columnHelper.accessor('paymentMethod.name', {
-		id: 'paymentMethod.name',
-		header: 'Tipo de pagamento',
 		cell: (props) => props.getValue(),
 	}),
 	columnHelper.accessor('installments', {
@@ -55,10 +50,10 @@ const columns = [
 		header: 'Data de fim',
 		cell: (props) => formatDate(props.getValue()),
 	}),
-] as ColumnDef<Contract>[]
+] as ColumnDef<BaseContract>[]
 
 export const ContractsTable: FC = () => {
-	const { data: contracts } = useGetPageable<Contract>('contracts')
+	const { data: contracts } = useGetPageable<BaseContract>('contracts')
 
 	return <Table columns={columns} data={contracts.data} items={contracts.items} />
 }

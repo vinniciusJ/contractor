@@ -6,7 +6,7 @@ import { contractedCompanyEmployeeSchema, hiringCompanyEmployeeSchema } from './
 import { installmentSchema } from './installment'
 import { paymentMethodSchema } from './payment-method'
 
-export const contractSchema = z.object({
+export const baseContractSchema = z.object({
 	id: z.number(),
 	name: z.string(),
 	contractType: z.string(),
@@ -15,7 +15,7 @@ export const contractSchema = z.object({
 	startDate: z.date(),
 	endDate: z.date(),
 	contractedValue: z.number(),
-	paymentMethod: paymentMethodSchema,
+	paymentMethodId: z.number(),
 	installments: installmentSchema.array(),
 	executionLocal: z.string(),
 	latitude: z.number(),
@@ -26,6 +26,14 @@ export const contractSchema = z.object({
 	legalRepresentative: contractedCompanyEmployeeSchema,
 	status: z.number(),
 	financialProgress: z.number(),
+})
+
+export type BaseContract = z.infer<typeof baseContractSchema>
+
+export const contractSchema = baseContractSchema.extend({
+	paymentMethodId: z.never(),
+
+	paymentMethod: paymentMethodSchema,
 })
 
 export type Contract = z.infer<typeof contractSchema>
