@@ -6,6 +6,12 @@ import { contractedCompanyEmployeeSchema, hiringCompanyEmployeeSchema } from './
 import { installmentSchema } from './installment'
 import { paymentMethodSchema } from './payment-method'
 
+const STATUS = ['EM ANDAMENTO', 'EM CONTRATAÇÃO', 'CANCELADO', 'PARALISADO'] as const
+
+export const statusSchema = z.enum(STATUS)
+
+export type Status = z.output<typeof statusSchema>
+
 export const baseContractSchema = z.object({
 	id: z.number(),
 	name: z.string(),
@@ -24,7 +30,7 @@ export const baseContractSchema = z.object({
 	subsidiaryCompany: hiringCompanySchema,
 	contractManager: hiringCompanyEmployeeSchema,
 	legalRepresentative: contractedCompanyEmployeeSchema,
-	status: z.number(),
+	status: statusSchema,
 	financialProgress: z.number(),
 })
 

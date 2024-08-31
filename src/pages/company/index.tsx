@@ -3,10 +3,9 @@ import { FC } from 'react'
 import { Button, Stack, Typography } from '@mui/material'
 import { Params, useParams } from 'react-router-dom'
 
+import { CompanyOverview } from '@/components/companies/overview'
 import { EmployeeForm } from '@/components/employees/form'
 import { EmployeesTable } from '@/components/employees/table'
-import { Field } from '@/components/ui/field'
-import { GridGroup } from '@/components/ui/grid-group'
 import { useModal } from '@/components/ui/modal/provider'
 import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
@@ -49,14 +48,7 @@ const CompanyPage: FC = () => {
 				</PageLayout.Header.Root>
 
 				<PageLayout.Content>
-					<GridGroup mb={3}>
-						<Field label="Nome">{company?.name}</Field>
-						<Field label="Razão social">{company.corporateName}</Field>
-						<Field label="CNPJ">{company.code}</Field>
-						<Field label="Telefone">{company.phone}</Field>
-						<Field label="E-mail">{company.email}</Field>
-						<Field label="Endereço">{company.email}</Field>
-					</GridGroup>
+					<CompanyOverview company={company} />
 
 					<Stack direction="row" alignItems="center" justifyContent="space-between" mb={2}>
 						<Typography variant="h2">Funcionários</Typography>
