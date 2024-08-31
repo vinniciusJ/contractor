@@ -3,6 +3,7 @@ import { FC } from 'react'
 import { Add as AddIcon } from '@carbon/icons-react'
 import { Button } from '@mui/material'
 
+import { ContractTypeForm } from '@/components/contract-type/form'
 import { ContractTypesTable } from '@/components/contract-type/table'
 import { useModal } from '@/components/ui/modal/provider'
 import { PageLayout } from '@/layouts/page'
@@ -34,6 +35,7 @@ const ContractTypes: FC = () => {
 				</PageLayout.Content>
 			</PageLayout.Root>
 
+			<ContractTypeForm formRef={contractTypeFormRef} />
 			{/* <PaymentMethodForm formRef={contractTypeFormRef} /> */}
 		</>
 	)

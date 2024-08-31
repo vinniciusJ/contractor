@@ -5,7 +5,7 @@ import { Grid } from '@mui/material'
 import { useForm } from 'react-hook-form'
 
 import { FormModal } from '@/components/ui/form-modal'
-import { Input } from '@/components/ui/inputs'
+import { Input } from '@/components/ui/inputs/input'
 import { useMutation } from '@/hooks/mutations'
 import { CompanyFormFields, companyFormSchema, companySchema } from '@/schemas/company'
 import { MutationFeedback } from '@/schemas/utils/mutations'

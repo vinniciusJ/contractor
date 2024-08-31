@@ -6,6 +6,7 @@ import { FormProvider, UseFormReturn } from 'react-hook-form'
 import { Modal } from '../../modal'
 import { ModalOptions, useModal } from '../../modal/provider'
 import { ModalRootProps } from '../../modal/root'
+import { FormModalProvider } from '../provider'
 
 interface Props<T extends object> extends ModalRootProps {
 	form: UseFormReturn<T>
@@ -41,13 +42,15 @@ export function FormModalRootComponent<T extends object>(props: Props<T>, ref: F
 	}
 
 	return (
-		<Modal.Root ref={modalRef} onClose={onClose} {...props}>
-			<FormProvider {...props.form}>
-				<form onSubmit={props.form.handleSubmit(onSubmit)}>
-					<Stack gap={3}>{props.children}</Stack>
-				</form>
-			</FormProvider>
-		</Modal.Root>
+		<FormModalProvider>
+			<Modal.Root ref={modalRef} onClose={onClose} {...props}>
+				<FormProvider {...props.form}>
+					<form onSubmit={props.form.handleSubmit(onSubmit)}>
+						<Stack gap={3}>{props.children}</Stack>
+					</form>
+				</FormProvider>
+			</Modal.Root>
+		</FormModalProvider>
 	)
 }
 

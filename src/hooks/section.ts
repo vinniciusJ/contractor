@@ -13,5 +13,5 @@ export const useSection = () => {
 	return [section, setSection] as const
 }
 
-export const useSectionValue = () => useSection()[0]
+export const useCurrentSection = () => useSection()[0]
 export const useSetSection = () => useSection()[1]
