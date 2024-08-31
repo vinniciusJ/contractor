@@ -11,6 +11,7 @@ const ContractsListPage = lazy(() => import('@/pages/contracts/sections/list'))
 const CompaniesPageLayout = lazy(() => import('@/pages/companies'))
 
 const CompanyPage = lazy(() => import('@/pages/company'))
+const ContractPage = lazy(() => import('@/pages/contract'))
 
 const HiringCompaniesSection = lazy(() => import('@/pages/companies/sections/hiring'))
 const ContractedCompaniesSection = lazy(() => import('@/pages/companies/sections/contracted'))
@@ -26,15 +27,23 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: 'contracts',
-				element: <ContractsPage />,
 				children: [
 					{
-						path: 'map',
-						element: <ContractsMapPage />,
+						element: <ContractsPage />,
+						children: [
+							{
+								path: 'map',
+								element: <ContractsMapPage />,
+							},
+							{
+								path: 'list',
+								element: <ContractsListPage />,
+							},
+						],
 					},
 					{
-						path: 'list',
-						element: <ContractsListPage />,
+						path: ':contractId',
+						element: <ContractPage />,
 					},
 				],
 			},

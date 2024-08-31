@@ -55,5 +55,5 @@ const columns = [
 export const ContractsTable: FC = () => {
 	const { data: contracts } = useGetPageable<BaseContract>('contracts')
 
-	return <Table columns={columns} data={contracts.data} items={contracts.items} />
+	return <Table columns={columns} data={contracts.data} items={contracts.items} to="/contracts/{id}" />
 }

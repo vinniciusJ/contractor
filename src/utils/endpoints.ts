@@ -25,7 +25,9 @@ const routes = {
 	'payment-methods': {
 		':id': {},
 	},
-	contracts: {},
+	contracts: {
+		':id': {},
+	},
 } as const
 
 type InferRoutes<T> = {
