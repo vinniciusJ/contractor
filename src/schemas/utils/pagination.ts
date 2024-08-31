@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 export const pageSchema = z.number().nonnegative().min(1).default(1)
-export const pageSizeSchema = z.number().nonnegative().min(5).default(5)
+export const pageSizeSchema = z.number().nonnegative().min(5).default(10)
 
 export const paginationSchema = z
 	.object({

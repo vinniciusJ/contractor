@@ -155,6 +155,7 @@
       "name": "John Doe",
       "email": "johndoe@techsolutions.com",
       "phone": "+1-800-555-0001",
+      "code": "979.916.800-70",
       "company": {
         "id": 1,
         "name": "Tech Solutions",
@@ -171,6 +172,7 @@
       "name": "Jane Smith",
       "email": "janesmith@globalenterprises.com",
       "phone": "+1-800-555-0002",
+      "code": "767.639.270-53",
       "company": {
         "id": 2,
         "name": "Global Enterprises",
@@ -187,6 +189,7 @@
       "name": "Michael Johnson",
       "email": "michaeljohnson@creativelabs.com",
       "phone": "+1-800-555-0003",
+      "code": "874.743.730-84",
       "company": {
         "id": 3,
         "name": "Creative Labs",
@@ -203,6 +206,7 @@
       "name": "Emily Davis",
       "email": "emilydavis@greenenergy.com",
       "phone": "+1-800-555-0004",
+      "code": "151.710.520-00",
       "company": {
         "id": 4,
         "name": "Green Energy",
@@ -219,6 +223,7 @@
       "name": "William Brown",
       "email": "williambrown@healthcarepartners.com",
       "phone": "+1-800-555-0005",
+      "code": "650.167.290-26",
       "company": {
         "id": 5,
         "name": "HealthCare Partners",
@@ -235,6 +240,7 @@
       "name": "Olivia Wilson",
       "email": "oliviawilson@techsolutions.com",
       "phone": "+1-800-555-0006",
+      "code": "622.451.370-86",
       "company": {
         "id": 1,
         "name": "Tech Solutions",
@@ -251,6 +257,7 @@
       "name": "James Taylor",
       "email": "jamestaylor@globalenterprises.com",
       "phone": "+1-800-555-0007",
+      "code": "705.710.790-08",
       "company": {
         "id": 2,
         "name": "Global Enterprises",
@@ -267,6 +274,7 @@
       "name": "Sophia Martinez",
       "email": "sophiamartinez@creativelabs.com",
       "phone": "+1-800-555-0008",
+      "code": "068.887.900-45",
       "company": {
         "id": 3,
         "name": "Creative Labs",
@@ -283,6 +291,7 @@
       "name": "Daniel Anderson",
       "email": "danielanderson@greenenergy.com",
       "phone": "+1-800-555-0009",
+      "code": "958.180.350-50",
       "company": {
         "id": 4,
         "name": "Green Energy",
@@ -299,6 +308,7 @@
       "name": "Ava Thomas",
       "email": "avathomas@healthcarepartners.com",
       "phone": "+1-800-555-0010",
+      "code": "794.544.490-36",
       "company": {
         "id": 5,
         "name": "HealthCare Partners",
@@ -315,62 +325,16 @@
       "name": "Gabriel",
       "email": "gabriel@obregon.com",
       "phone": "5659898",
-      "company": [
-        {
-          "id": "1",
-          "name": "Tech Solutions",
-          "corporateName": "Tech Solutions Inc.",
-          "code": "TS1234",
-          "phone": "+1-800-555-1234",
-          "email": "contact@techsolutions.com",
-          "address": "123 Innovation Drive, Tech City, TC 12345"
-        },
-        {
-          "id": "2",
-          "name": "Global Enterprises",
-          "corporateName": "Global Enterprises Ltd.",
-          "code": "GE5678",
-          "phone": "+1-800-555-5678",
-          "email": "info@globalenterprises.com",
-          "address": "456 Market Street, Global City, GC 67890"
-        },
-        {
-          "id": "3",
-          "name": "Creative Labs",
-          "corporateName": "Creative Labs LLC",
-          "code": "CL9101",
-          "phone": "+1-800-555-9101",
-          "email": "support@creativelabs.com",
-          "address": "789 Art Avenue, Creative Town, CT 91011"
-        },
-        {
-          "id": "4",
-          "name": "Green Energy",
-          "corporateName": "Green Energy Solutions Co.",
-          "code": "GE1122",
-          "phone": "+1-800-555-1122",
-          "email": "sales@greenenergy.com",
-          "address": "321 Eco Way, Green City, GC 11223"
-        },
-        {
-          "id": "5",
-          "name": "HealthCare Partners",
-          "corporateName": "HealthCare Partners Group",
-          "code": "HP3344",
-          "phone": "+1-800-555-3344",
-          "email": "contact@healthcarepartners.com",
-          "address": "654 Wellness Boulevard, Health City, HC 33445"
-        },
-        {
-          "id": "c133",
-          "name": "Lorem",
-          "corporateName": "Lorem",
-          "code": "Lorem",
-          "phone": "Lorem",
-          "email": "lorem@email.com",
-          "address": "Lorem"
-        }
-      ]
+      "code": "679.054.390-20",
+      "company": {
+        "id": "1",
+        "name": "Tech Solutions",
+        "corporateName": "Tech Solutions Inc.",
+        "code": "TS1234",
+        "phone": "+1-800-555-1234",
+        "email": "contact@techsolutions.com",
+        "address": "123 Innovation Drive, Tech City, TC 12345"
+      }
     }
   ],
   "hiring-company-employees": [
@@ -379,6 +343,7 @@
       "name": "Alice Johnson",
       "email": "alice.johnson@techinnovators.com",
       "phone": "+1-555-001-1234",
+      "code": "354.126.960-07",
       "company": {
         "id": "1",
         "name": "Tech Innovators",
@@ -396,6 +361,7 @@
       "name": "Bob Smith",
       "email": "bob.smith@globalsolutions.com",
       "phone": "+1-555-002-2345",
+      "code": "789.739.760-28",
       "company": {
         "id": "2",
         "name": "Global Solutions",
@@ -412,6 +378,7 @@
       "name": "Carol Williams",
       "email": "carol.williams@ecoventures.com",
       "phone": "+1-555-003-3456",
+      "code": "065.067.340-94",
       "company": {
         "id": "3",
         "name": "Eco Ventures",
@@ -428,6 +395,7 @@
       "name": "David Brown",
       "email": "david.brown@healthtech.com",
       "phone": "+1-555-004-4567",
+      "code": "217.231.120-03",
       "company": {
         "id": "4",
         "name": "HealthTech",
@@ -444,6 +412,7 @@
       "name": "Eve Davis",
       "email": "eve.davis@fintech.com",
       "phone": "+1-555-005-5678",
+      "code": "297.094.520-70",
       "company": {
         "id": "5",
         "name": "FinTech Partners",
@@ -460,6 +429,7 @@
       "name": "Frank Miller",
       "email": "frank.miller@techinnovators.com",
       "phone": "+1-555-006-6789",
+      "code": "905.076.540-80",
       "company": {
         "id": "1",
         "name": "Tech Innovators",
@@ -477,6 +447,7 @@
       "name": "Grace Lee",
       "email": "grace.lee@globalsolutions.com",
       "phone": "+1-555-007-7890",
+      "code": "397.618.400-42",
       "company": {
         "id": "2",
         "name": "Global Solutions",
@@ -493,6 +464,7 @@
       "name": "Henry Wilson",
       "email": "henry.wilson@ecoventures.com",
       "phone": "+1-555-008-8901",
+      "code": "821.889.730-54",
       "company": {
         "id": "3",
         "name": "Eco Ventures",
@@ -509,6 +481,7 @@
       "name": "Irene Martinez",
       "email": "irene.martinez@healthtech.com",
       "phone": "+1-555-009-9012",
+      "code": "039.457.240-82",
       "company": {
         "id": "4",
         "name": "HealthTech",
@@ -525,6 +498,7 @@
       "name": "Jack Anderson",
       "email": "jack.anderson@fintech.com",
       "phone": "+1-555-010-0123",
+      "code": "114.094.210-74",
       "company": {
         "id": "5",
         "name": "FinTech Partners",
@@ -541,81 +515,17 @@
       "name": "John Doe",
       "email": "john.doe@email.com",
       "phone": "459880987",
-      "company": [
-        {
-          "id": "1",
-          "name": "Tech Innovators",
-          "corporateName": "Tech Innovators Ltd.",
-          "code": "TI-001",
-          "phone": "+1-555-123-4567",
-          "email": "contact@techinnovators.com",
-          "address": "123 Innovation Drive, Silicon Valley, CA",
-          "matrix": true
-        },
-        {
-          "id": "2",
-          "name": "Global Solutions",
-          "corporateName": "Global Solutions Inc.",
-          "code": "GS-002",
-          "phone": "+1-555-234-5678",
-          "email": "info@globalsolutions.com",
-          "address": "456 Global Ave, New York, NY"
-        },
-        {
-          "id": "3",
-          "name": "Eco Ventures",
-          "corporateName": "Eco Ventures LLC",
-          "code": "EV-003",
-          "phone": "+1-555-345-6789",
-          "email": "support@ecoventures.com",
-          "address": "789 Green Street, Portland, OR"
-        },
-        {
-          "id": "4",
-          "name": "HealthTech",
-          "corporateName": "HealthTech Corporation",
-          "code": "HT-004",
-          "phone": "+1-555-456-7890",
-          "email": "contact@healthtech.com",
-          "address": "101 Wellness Blvd, Austin, TX"
-        },
-        {
-          "id": "5",
-          "name": "FinTech Partners",
-          "corporateName": "FinTech Partners Ltd.",
-          "code": "FP-005",
-          "phone": "+1-555-567-8901",
-          "email": "partners@fintech.com",
-          "address": "202 Finance Lane, Chicago, IL"
-        },
-        {
-          "id": "8757",
-          "name": "Lorem",
-          "corporateName": "Lorem",
-          "code": "Lorem",
-          "phone": "Lorem",
-          "email": "lorem@email.com",
-          "address": "Lorem"
-        },
-        {
-          "id": "1d28",
-          "name": "Ipsum",
-          "corporateName": "Ipsum",
-          "code": "Ipsum",
-          "phone": "Ipsum",
-          "email": "ipsum@email.com",
-          "address": "Ipsum"
-        },
-        {
-          "id": "9582",
-          "name": "Dolor",
-          "corporateName": "Dolor",
-          "code": "Dolor",
-          "phone": "Dolor",
-          "email": "dolor@email.com",
-          "address": "Dolor"
-        }
-      ]
+      "code": "025.487.940-32",
+      "company": {
+        "id": "1",
+        "name": "Tech Innovators",
+        "corporateName": "Tech Innovators Ltd.",
+        "code": "TI-001",
+        "phone": "+1-555-123-4567",
+        "email": "contact@techinnovators.com",
+        "address": "123 Innovation Drive, Silicon Valley, CA",
+        "matrix": true
+      }
     }
   ],
   "installments": [
@@ -642,25 +552,30 @@
     },
     {
       "id": "2",
-      "name": "bimestral",
+      "name": "Bimestral",
       "frequency": 2
     },
     {
       "id": "3",
-      "name": "trimestral",
+      "name": "Trimestral",
       "frequency": 2
     },
     {
       "id": "4",
-      "name": "semestral",
+      "name": "Semestral",
       "frequency": 6
     },
     {
       "id": "5",
-      "name": "anual",
+      "name": "Anual",
       "frequency": 12
+    },
+    {
+      "id": "5fb9",
+      "name": "Bianual",
+      "frequency": 24
     }
-  ], 
+  ],
   "contracts": [
     {
       "id": "1",
@@ -769,7 +684,7 @@
           "address": "456 Rua Verde, Bairro Sustentável"
         }
       }
-    },    
+    },
     {
       "id": "2",
       "name": "Implantação de Sistema de Segurança",
@@ -856,7 +771,7 @@
           "address": "789 Rua da Segurança, Bairro Protegido"
         }
       }
-    }, 
+    },
     {
       "id": "3",
       "name": "Treinamento e Capacitação de Equipe",
@@ -943,7 +858,7 @@
           "address": "1010 Rua da Capacitação, Bairro Avançado"
         }
       }
-    },    
+    },
     {
       "id": "4",
       "name": "Renovação do Parque de Máquinas",
