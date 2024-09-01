@@ -4,6 +4,7 @@ import { Add as AddIcon, Edit as EditIcon } from '@carbon/icons-react'
 import { Button, Divider, Stack, Typography } from '@mui/material'
 import { Params, useParams } from 'react-router-dom'
 
+import { ContractTypeForm } from '@/components/contract-type/form'
 import { ContractTypeContractItemsForm } from '@/components/contract-type/form/contract-items'
 import { Box } from '@/components/ui/box'
 import { Field } from '@/components/ui/field'
@@ -38,6 +39,7 @@ const ContractTypePage: FC = () => {
 	const { data: contractType } = useGetOne<ContractType>(withEndpoint`contract-types/${contractTypeId}`)
 
 	const contractItemFormRef = useModal()
+	const contractTypeFormRef = useModal()
 
 	if (!contractType) {
 		return null
@@ -55,7 +57,11 @@ const ContractTypePage: FC = () => {
 					</PageLayout.Header.Title.Root>
 
 					<PageLayout.Header.RightElementGroup>
-						<Button variant="outlined" startIcon={<EditIcon size={20} />}>
+						<Button
+							variant="outlined"
+							startIcon={<EditIcon size={20} />}
+							onClick={() => contractTypeFormRef.current?.openModal()}
+						>
 							Editar
 						</Button>
 					</PageLayout.Header.RightElementGroup>
@@ -103,6 +109,7 @@ const ContractTypePage: FC = () => {
 				</PageLayout.Content>
 			</PageLayout.Root>
 
+			<ContractTypeForm formRef={contractTypeFormRef} id={contractTypeId} />
 			<ContractTypeContractItemsForm formRef={contractItemFormRef} contractType={contractType} />
 		</>
 	)

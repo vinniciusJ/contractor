@@ -29,9 +29,16 @@ const UPDATE_FEEDBACK: MutationFeedback = {
 
 const contractItemTypesOptions = optionsParser.parse(CONTRACT_TYPE_ITEM_TYPE_LABELS)
 
-export const ContractTypeContractItemsForm: FC<Props> = ({ formRef, contractType }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getContractItemById = async (contractType: ContractType, contractItemId: any) => {
+	return contractType.contractItems.find((item) => item.id === contractItemId) as ContractItemFormFields
+}
+
+export const ContractTypeContractItemsForm: FC<Props> = ({ formRef, id, contractType }) => {
 	const form = useForm<ContractItemFormFields>({
-		defaultValues: getSchemaDefault(contractItemFormSchema),
+		defaultValues: id
+			? async () => getContractItemById(contractType, id)
+			: getSchemaDefault(contractItemFormSchema),
 		resolver: zodResolver(contractItemFormSchema),
 	})
 
@@ -42,9 +49,16 @@ export const ContractTypeContractItemsForm: FC<Props> = ({ formRef, contractType
 
 	const submitForm = useCallback(
 		async (data: ContractItemFormFields) => {
+			if (id) {
+				await mutation.mutateAsync({
+					...contractType,
+					contractItems: contractType.contractItems.map((item) => (item.id === id ? data : item)),
+				})
+			}
+
 			await mutation.mutateAsync({ ...contractType, contractItems: [...contractType.contractItems, data] })
 		},
-		[contractType]
+		[contractType, id]
 	)
 
 	return (
