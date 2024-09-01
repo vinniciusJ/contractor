@@ -10,7 +10,7 @@ export const contractItemSchema = z.object({
 	finishedDate: z.date().nullable(),
 })
 
-export const contractItemFormSchema = contractItemSchema.omit({ id: true })
+export const contractItemFormSchema = contractItemSchema.omit({ id: true, finishedDate: true })
 
 export type ContractItemFormFields = z.input<typeof contractItemSchema>
 export type ContractItem = z.infer<typeof contractItemSchema>

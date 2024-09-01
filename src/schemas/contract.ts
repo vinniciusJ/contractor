@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 import { contractedCompanySchema, hiringCompanySchema } from './company'
-import { contractItemSchema } from './contract-item'
+import { contractItemFormSchema, contractItemSchema } from './contract-item'
 import { contractTypeSchema } from './contractual-type'
 import { contractedCompanyEmployeeSchema, hiringCompanyEmployeeSchema } from './employee'
 import { installmentSchema } from './installment'
@@ -17,7 +17,7 @@ export const contractFormSchema = z.object({
 	name: z.string(),
 	contractTypeId: z.number(),
 	contractObjective: z.string(),
-	contractItems: contractItemSchema.array(),
+	contractItems: contractItemFormSchema.array(),
 	startDate: z.date(),
 	endDate: z.date(),
 	contractedValue: z.number(),
@@ -44,6 +44,7 @@ export const apiContractSchema = contractFormSchema.extend({
 	legalRepresentativeId: z.never(),
 
 	installments: installmentSchema.array(),
+	contractItems: contractItemSchema.array(),
 
 	contractType: contractTypeSchema,
 	contractedCompany: contractedCompanySchema,
