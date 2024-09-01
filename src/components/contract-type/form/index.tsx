@@ -8,11 +8,14 @@ import { FormModal } from '@/components/ui/form-modal'
 import { ArrayInput } from '@/components/ui/inputs/array-input'
 import { DateInput } from '@/components/ui/inputs/date'
 import { Input } from '@/components/ui/inputs/input'
+import { Select } from '@/components/ui/inputs/select'
 import { useMutation } from '@/hooks/mutations'
 import { contractItemFormSchema } from '@/schemas/contract-item'
 import { ContractTypeFormFields, contractTypeFormSchema } from '@/schemas/contractual-type'
+import { optionsParser } from '@/schemas/utils/form'
 import { MutationFeedback } from '@/schemas/utils/mutations'
 import { FormProps } from '@/types/form'
+import { CONTRACT_TYPE_ITEM_TYPE_LABELS } from '@/utils/constants/labels'
 import { getSchemaDefault } from '@/utils/schema'
 
 const CREATE_FEEDBACK: MutationFeedback = {
@@ -24,6 +27,8 @@ const UPDATE_FEEDBACK: MutationFeedback = {
 	success: 'Empresa cadastrada com sucesso',
 	error: 'Houve um erro durante o cadastro da empresa',
 }
+
+const contractItemTypesOptions = optionsParser.parse(CONTRACT_TYPE_ITEM_TYPE_LABELS)
 
 export const ContractTypeForm: FC<FormProps> = ({ formRef, id }) => {
 	const form = useForm<ContractTypeFormFields>({
@@ -41,7 +46,7 @@ export const ContractTypeForm: FC<FormProps> = ({ formRef, id }) => {
 	}, [])
 
 	return (
-		<FormModal.Root form={form} onSubmit={submitForm} ref={formRef}>
+		<FormModal.Root form={form} onSubmit={submitForm} ref={formRef} width="50vw">
 			<FormModal.Header>Forma de pagamento</FormModal.Header>
 
 			<FormModal.Stepper steps={['Visão geral', 'Itens contratuais']} />
@@ -64,6 +69,13 @@ export const ContractTypeForm: FC<FormProps> = ({ formRef, id }) => {
 						renderInput={(name) => (
 							<>
 								<Input control={form.control} label="Nome" name={`${name}.name`} />
+
+								<Select
+									control={form.control}
+									label="Tipo"
+									name={`${name}.type`}
+									options={contractItemTypesOptions}
+								/>
 
 								<DateInput
 									control={form.control}
