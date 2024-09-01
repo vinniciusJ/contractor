@@ -6,19 +6,19 @@ import { Field } from '@/components/ui/field'
 import FilePreview from '@/components/ui/file-preview'
 import { GridGroup } from '@/components/ui/grid-group'
 import { useGetOne } from '@/hooks/get'
-import { BaseContract } from '@/schemas/contract'
+import { APIContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
 const ContractPaymentSection = () => {
 	const { contractId } = useParams()
 
-	const { data: contract } = useGetOne<BaseContract>(`contracts/${contractId}`)
+	const { data: contract } = useGetOne<APIContract>(`contracts/${contractId}`)
 
 	if (!contract) return null
 
 	return (
 		<>
-			<Field label="Tipo de pagamento">{contract.contractType}</Field>
+			<Field label="Tipo de pagamento">{contract.contractTypeId}</Field>
 
 			<Divider />
 

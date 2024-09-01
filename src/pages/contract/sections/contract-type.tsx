@@ -5,20 +5,20 @@ import { Box } from '@/components/ui/box'
 import { Field } from '@/components/ui/field'
 import { GridGroup } from '@/components/ui/grid-group'
 import { useGetOne } from '@/hooks/get'
-import { BaseContract } from '@/schemas/contract'
+import { APIContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
 const ContractTypeSection = () => {
 	const { contractId } = useParams()
 
-	const { data: contract } = useGetOne<BaseContract>(`contracts/${contractId}`)
+	const { data: contract } = useGetOne<APIContract>(`contracts/${contractId}`)
 
 	if (!contract) return null
 
 	return (
 		<>
 			<GridGroup>
-				<Field label="Tipo de pagamento">{contract.contractType}</Field>
+				<Field label="Tipo de pagamento">{contract.contractTypeId}</Field>
 				<Field xs={3} label="Objeto do contrato">
 					{contract.contractObjective}
 				</Field>
