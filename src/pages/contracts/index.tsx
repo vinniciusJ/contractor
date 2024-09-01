@@ -21,11 +21,11 @@ const Contracts: FC = () => {
 				</PageLayout.Header.Title.Root>
 
 				<PageLayout.Header.RightElementGroup gap={3}>
-					<Link to="/payment-methods">
+					<Link to="payment-methods">
 						<CurrencyDollar size={20} />
 						<Typography>Tipos de pagamento</Typography>
 					</Link>
-					<Link to="/contract-types">
+					<Link to="contract-types">
 						<ContainerSoftware size={20} />
 						<Typography>Tipos de contratação</Typography>
 					</Link>

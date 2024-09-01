@@ -1,5 +1,5 @@
-import { format } from 'date-fns'
+import { format, fromUnixTime } from 'date-fns'
 
-export const formatDate = (date: string | number | Date) => {
-	return format(date, 'dd/MM/yyyy')
+export const formatDate = (date: number | Date | string) => {
+	return format(typeof date === 'string' ? new Date(date) : fromUnixTime(Number(date)), 'dd/MM/yyyy')
 }

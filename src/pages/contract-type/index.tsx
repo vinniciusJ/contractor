@@ -1,44 +1,76 @@
 import { FC } from 'react'
 
-import { Add as AddIcon } from '@carbon/icons-react'
-import { Button } from '@mui/material'
+import { Add as AddIcon, Edit as EditIcon } from '@carbon/icons-react'
+import { Button, Divider, Stack, Typography } from '@mui/material'
+import { Params, useParams } from 'react-router-dom'
 
-import { ContractTypeForm } from '@/components/contract-type/form'
-import { ContractTypesTable } from '@/components/contract-type/table'
-import { useModal } from '@/components/ui/modal/provider'
+import { Box } from '@/components/ui/box'
+import { Field } from '@/components/ui/field'
+import { GridGroup } from '@/components/ui/grid-group'
+import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
+import { ContractType } from '@/schemas/contractual-type'
+import { CONTRACT_TYPE_ITEM_TYPE_LABELS } from '@/utils/constants/labels'
+import { formatDate } from '@/utils/date'
+import { withEndpoint } from '@/utils/query'
 
-const ContractTypes: FC = () => {
-	const contractTypeFormRef = useModal()
+const ContractTypePage: FC = () => {
+	const { contractTypeId } = useParams<Params<'contractTypeId'>>()
+
+	const { data: contractType } = useGetOne<ContractType>(withEndpoint`contract-types/${Number(contractTypeId)}`)
+
+	if (!contractType) {
+		return null
+	}
 
 	return (
-		<>
-			<PageLayout.Root>
-				<PageLayout.Header.Root>
-					<PageLayout.Header.Title.Root>
-						<PageLayout.Header.Title.GoBackButton />
-						<PageLayout.Header.Title.Text>Tipos de contratação</PageLayout.Header.Title.Text>
-					</PageLayout.Header.Title.Root>
+		<PageLayout.Root>
+			<PageLayout.Header.Root>
+				<PageLayout.Header.Title.Root>
+					<PageLayout.Header.Title.GoBackButton />
+					<PageLayout.Header.Title.Text>Tipo de contratação - {contractTypeId}</PageLayout.Header.Title.Text>
+				</PageLayout.Header.Title.Root>
 
-					<PageLayout.Header.RightElementGroup>
-						<Button
-							startIcon={<AddIcon size={20} />}
-							onClick={() => contractTypeFormRef.current?.openModal()}
-						>
-							Cadastrar
-						</Button>
-					</PageLayout.Header.RightElementGroup>
-				</PageLayout.Header.Root>
+				<PageLayout.Header.RightElementGroup>
+					<Button variant="outlined" startIcon={<EditIcon size={20} />}>
+						Editar
+					</Button>
+				</PageLayout.Header.RightElementGroup>
+			</PageLayout.Header.Root>
 
-				<PageLayout.Content>
-					<ContractTypesTable />
-				</PageLayout.Content>
-			</PageLayout.Root>
+			<PageLayout.Content>
+				<GridGroup>
+					<Field label="Nome">{contractType.name}</Field>
 
-			<ContractTypeForm formRef={contractTypeFormRef} />
-			{/* <PaymentMethodForm formRef={contractTypeFormRef} /> */}
-		</>
+					<Field label="Objetivo do contrato" xs={3}>
+						{contractType.contractObjective}
+					</Field>
+				</GridGroup>
+
+				<Divider />
+
+				<Stack direction="row" alignItems="center" justifyContent="space-between">
+					<Typography variant="h2">Items contratuais</Typography>
+					<Button variant="outlined" startIcon={<AddIcon size={20} />}>
+						Adicionar item
+					</Button>
+				</Stack>
+
+				<Stack gap={2}>
+					{contractType.contractItems.map((item) => (
+						<Box key={item.id}>
+							<GridGroup columns={4}>
+								<Field label="Nome">{item.name}</Field>
+								<Field label="Tipo do item">{CONTRACT_TYPE_ITEM_TYPE_LABELS[item.type]}</Field>
+								<Field label="Data prevista de conclusão">{formatDate(item.scheduledDate)}</Field>
+								<Field label="Data de conclusão">{formatDate(item.scheduledDate)}</Field>
+							</GridGroup>
+						</Box>
+					))}
+				</Stack>
+			</PageLayout.Content>
+		</PageLayout.Root>
 	)
 }
 
-export default ContractTypes
+export default ContractTypePage

@@ -9,7 +9,7 @@ interface Props extends PropsWithChildren {
 
 export const PageLayoutContent: FC<Props> = ({ children, ...context }) => {
 	if (children) {
-		return <Stack>{children}</Stack>
+		return <Stack gap={3}>{children}</Stack>
 	}
 
 	return <Outlet context={context} />

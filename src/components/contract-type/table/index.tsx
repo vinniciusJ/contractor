@@ -28,5 +28,5 @@ export const ContractTypesTable: FC = () => {
 		data: { data: contractTypes, items },
 	} = useGetPageable<ContractType>('contract-types')
 
-	return <Table columns={columns} data={contractTypes} items={items} />
+	return <Table columns={columns} data={contractTypes} items={items} to="{id}" />
 }

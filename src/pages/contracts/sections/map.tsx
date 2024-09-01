@@ -5,6 +5,7 @@ import { Field } from '@/components/ui/field'
 import { Map } from '@/components/ui/map'
 import { useGetList } from '@/hooks/get'
 import { BaseContract } from '@/schemas/contract'
+import { formatDate } from '@/utils/date'
 
 const ContractsMapPage = () => {
 	const { data: contracts } = useGetList<BaseContract>('contracts')
@@ -27,10 +28,9 @@ const ContractsMapPage = () => {
 							<Field component="stack" label="Valor">
 								{contract.contractedValue}
 							</Field>
-							<Field
-								component="stack"
-								label="Período"
-							>{`${contract.startDate} - ${contract.endDate}`}</Field>
+							<Field component="stack" label="Período">
+								{formatDate(contract.startDate)} - {formatDate(contract.endDate)}
+							</Field>
 							<Field component="stack" label="Status de execução">
 								{contract.status ?? '-'}
 							</Field>
