@@ -31,7 +31,7 @@ const ContractOverviewSection = () => {
 			<Divider />
 
 			<Typography variant="h2">Empresa contratada</Typography>
-			<CompanyOverview company={contract.contractedCompanyId} />
+			<CompanyOverview company={contract.contractedCompany} />
 
 			<Divider />
 

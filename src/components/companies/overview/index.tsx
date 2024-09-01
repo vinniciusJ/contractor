@@ -7,6 +7,8 @@ interface Props {
 }
 
 export const CompanyOverview = ({ company }: Props) => {
+	if (!company) return null
+
 	return (
 		<GridGroup>
 			<Field label="Nome">{company?.name}</Field>
