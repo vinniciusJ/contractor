@@ -221,12 +221,5 @@ export const theme = createTheme({
 				},
 			},
 		},
-		MuiStep: {
-			styleOverrides: {
-				completed: {
-					background: COLORS.secondary[60],
-				},
-			},
-		},
 	},
 })

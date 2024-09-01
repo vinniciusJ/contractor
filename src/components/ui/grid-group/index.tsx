@@ -8,7 +8,7 @@ interface Props extends GridProps {
 
 export const GridGroup: FC<Props> = ({ title, children, ...gridProps }) => {
 	return (
-		<Stack gap={4}>
+		<Stack gap={4} width="100%">
 			{title ? <Typography variant="h2">{title}</Typography> : null}
 
 			<Grid container columns={4} columnSpacing={15} rowSpacing={4} {...gridProps}>

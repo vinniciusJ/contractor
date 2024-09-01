@@ -8,13 +8,29 @@ import { ContractTypeContractItemsForm } from '@/components/contract-type/form/c
 import { Box } from '@/components/ui/box'
 import { Field } from '@/components/ui/field'
 import { GridGroup } from '@/components/ui/grid-group'
+import { MenuOptionsButton } from '@/components/ui/menu-options-button'
 import { useModal } from '@/components/ui/modal/provider'
 import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
+import { ContractItem } from '@/schemas/contract-item'
 import { ContractType } from '@/schemas/contractual-type'
 import { CONTRACT_TYPE_ITEM_TYPE_LABELS } from '@/utils/constants/labels'
 import { formatDate } from '@/utils/date'
 import { withEndpoint } from '@/utils/query'
+
+const getContractItemsOptions = (item: ContractItem) => {
+	const options = [
+		{ label: 'Concluir item', dispatch: console.log },
+		{ label: 'Editar item', dispatch: console.log },
+		{ label: 'Remover item', dispatch: console.log },
+	]
+
+	if (item.finishedDate) {
+		options.shift()
+	}
+
+	return options
+}
 
 const ContractTypePage: FC = () => {
 	const { contractTypeId } = useParams<Params<'contractTypeId'>>()
@@ -70,13 +86,17 @@ const ContractTypePage: FC = () => {
 
 					<Stack gap={2}>
 						{contractType.contractItems.map((item) => (
-							<Box key={item.id}>
+							<Box key={item.id} direction="row" alignItems="center" justifyContent="space-between">
 								<GridGroup columns={4}>
 									<Field label="Nome">{item.name}</Field>
 									<Field label="Tipo do item">{CONTRACT_TYPE_ITEM_TYPE_LABELS[item.type]}</Field>
 									<Field label="Data prevista de conclusão">{formatDate(item.scheduledDate)}</Field>
-									<Field label="Data de conclusão">{formatDate(item.scheduledDate)}</Field>
+									<Field label="Data de conclusão">
+										{item.finishedDate ? formatDate(item.finishedDate) : '-'}
+									</Field>
 								</GridGroup>
+
+								<MenuOptionsButton options={getContractItemsOptions(item)} />
 							</Box>
 						))}
 					</Stack>
