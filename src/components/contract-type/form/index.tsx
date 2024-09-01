@@ -16,6 +16,7 @@ import { optionsParser } from '@/schemas/utils/form'
 import { MutationFeedback } from '@/schemas/utils/mutations'
 import { FormProps } from '@/types/form'
 import { CONTRACT_TYPE_ITEM_TYPE_LABELS } from '@/utils/constants/labels'
+import { get } from '@/utils/form'
 import { getSchemaDefault } from '@/utils/schema'
 
 const CREATE_FEEDBACK: MutationFeedback = {
@@ -28,22 +29,37 @@ const UPDATE_FEEDBACK: MutationFeedback = {
 	error: 'Houve um erro durante o cadastro da empresa',
 }
 
-const contractItemTypesOptions = optionsParser.parse(CONTRACT_TYPE_ITEM_TYPE_LABELS)
+const ITEMS_OPTIONS = optionsParser.parse(CONTRACT_TYPE_ITEM_TYPE_LABELS)
+const FORM_DEFAULT_VALUES = getSchemaDefault(contractTypeFormSchema)
 
 export const ContractTypeForm: FC<FormProps> = ({ formRef, id }) => {
 	const form = useForm<ContractTypeFormFields>({
-		defaultValues: getSchemaDefault(contractTypeFormSchema),
+		defaultValues: id ? async () => get(`contract-types/${id}`) : FORM_DEFAULT_VALUES,
 		resolver: zodResolver(contractTypeFormSchema),
 	})
 
-	const mutation = useMutation<ContractTypeFormFields>('contract-types', {
-		method: id ? 'PUT' : 'POST',
-		feedback: id ? UPDATE_FEEDBACK : CREATE_FEEDBACK,
+	const createMutation = useMutation<ContractTypeFormFields>('contract-types', {
+		method: 'POST',
+		feedback: CREATE_FEEDBACK,
 	})
 
-	const submitForm = useCallback(async (data: ContractTypeFormFields) => {
-		await mutation.mutateAsync(data)
-	}, [])
+	const updateMutation = useMutation<ContractTypeFormFields>(`contract-types/${id}`, {
+		method: 'PUT',
+		feedback: UPDATE_FEEDBACK,
+	})
+
+	const submitForm = useCallback(
+		async (data: ContractTypeFormFields) => {
+			if (id) {
+				await updateMutation.mutateAsync(data)
+			}
+
+			await createMutation.mutateAsync(data)
+		},
+		[id]
+	)
+
+	console.log(form.formState.errors)
 
 	return (
 		<FormModal.Root form={form} onSubmit={submitForm} ref={formRef} width="50vw">
@@ -74,7 +90,7 @@ export const ContractTypeForm: FC<FormProps> = ({ formRef, id }) => {
 									control={form.control}
 									label="Tipo"
 									name={`${name}.type`}
-									options={contractItemTypesOptions}
+									options={ITEMS_OPTIONS}
 								/>
 
 								<DateInput
