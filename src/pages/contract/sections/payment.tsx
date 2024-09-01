@@ -18,7 +18,7 @@ const ContractPaymentSection = () => {
 
 	return (
 		<>
-			<Field label="Tipo de pagamento">{contract.contractTypeId}</Field>
+			<Field label="Tipo de pagamento">Bimestral</Field>
 
 			<Divider />
 

@@ -50,7 +50,7 @@ const CompanyPage: FC = () => {
 				<PageLayout.Content>
 					<CompanyOverview company={company} />
 
-					<Stack direction="row" alignItems="center" justifyContent="space-between" mb={2}>
+					<Stack direction="row" alignItems="center" justifyContent="space-between">
 						<Typography variant="h2">Funcionários</Typography>
 						<Button variant="outlined" onClick={() => employeeFormRef.current?.openModal()}>
 							Cadastrar

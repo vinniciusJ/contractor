@@ -1,12 +1,12 @@
-import { Divider, Typography } from '@mui/material'
+import { Add as AddIcon } from '@carbon/icons-react'
+import { Button, Divider, Stack, Typography } from '@mui/material'
 import { useParams } from 'react-router-dom'
 
-import { Box } from '@/components/ui/box'
+import { ContractItems } from '@/components/contract-items'
 import { Field } from '@/components/ui/field'
 import { GridGroup } from '@/components/ui/grid-group'
 import { useGetOne } from '@/hooks/get'
 import { APIContract } from '@/schemas/contract'
-import { formatDate } from '@/utils/date'
 
 const ContractTypeSection = () => {
 	const { contractId } = useParams()
@@ -18,7 +18,7 @@ const ContractTypeSection = () => {
 	return (
 		<>
 			<GridGroup>
-				<Field label="Tipo de pagamento">{contract.contractTypeId}</Field>
+				<Field label="Tipo de pagamento">{contract.name}</Field>
 				<Field xs={3} label="Objeto do contrato">
 					{contract.contractObjective}
 				</Field>
@@ -26,16 +26,15 @@ const ContractTypeSection = () => {
 
 			<Divider />
 
-			<Typography variant="h2">Entregas/serviços</Typography>
-			{contract.contractItems.map((item) => (
-				<Box key={item.id}>
-					<GridGroup columns={3}>
-						<Field label="Nome">{item.name}</Field>
-						<Field label="Data prevista de conclusão">{formatDate(item.scheduledDate)}</Field>
-						<Field label="Data de conclusão">{formatDate(item.scheduledDate)}</Field>
-					</GridGroup>
-				</Box>
-			))}
+			<Stack direction="row" alignItems="center" justifyContent="space-between">
+				<Typography variant="h2">Items contratuais</Typography>
+
+				<Button variant="outlined" startIcon={<AddIcon size={20} />} onClick={console.log}>
+					Adicionar item
+				</Button>
+			</Stack>
+
+			<ContractItems items={contract.contractItems} />
 		</>
 	)
 }
