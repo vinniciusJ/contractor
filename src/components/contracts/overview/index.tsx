@@ -1,10 +1,10 @@
 import { Field } from '@/components/ui/field'
 import { GridGroup } from '@/components/ui/grid-group'
-import { BaseContract } from '@/schemas/contract'
+import { APIContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
 interface Props {
-	contract: BaseContract
+	contract: APIContract
 }
 
 export const ContractOverview = ({ contract }: Props) => {

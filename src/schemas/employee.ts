@@ -26,4 +26,4 @@ export type Employee = z.infer<typeof employeeSchema>
 export type EmployeeFormFields = z.input<typeof employeeFormSchema> & { company: Company }
 
 export type ContractedCompanyEmployee = z.infer<typeof contractedCompanyEmployeeSchema>
-export type HiringCompanyEmployee = z.infer<typeof hiringCompanySchema>
+export type HiringCompanyEmployee = z.infer<typeof hiringCompanyEmployeeSchema>

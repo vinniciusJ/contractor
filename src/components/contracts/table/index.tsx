@@ -4,10 +4,10 @@ import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
 
 import { Table } from '@/components/ui/table'
 import { useGetPageable } from '@/hooks/get'
-import { BaseContract } from '@/schemas/contract'
+import { APIContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
-const columnHelper = createColumnHelper<BaseContract>()
+const columnHelper = createColumnHelper<APIContract>()
 
 const columns = [
 	columnHelper.accessor('name', {
@@ -50,10 +50,10 @@ const columns = [
 		header: 'Data de fim',
 		cell: (props) => formatDate(props.getValue()),
 	}),
-] as ColumnDef<BaseContract>[]
+] as ColumnDef<APIContract>[]
 
 export const ContractsTable: FC = () => {
-	const { data: contracts } = useGetPageable<BaseContract>('contracts')
+	const { data: contracts } = useGetPageable<APIContract>('contracts')
 
 	return <Table columns={columns} data={contracts.data} items={contracts.items} to="/contracts/{id}/overview" />
 }

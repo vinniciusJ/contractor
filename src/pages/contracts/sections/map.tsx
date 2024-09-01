@@ -4,11 +4,11 @@ import { Marker, Popup } from 'react-leaflet'
 import { Field } from '@/components/ui/field'
 import { Map } from '@/components/ui/map'
 import { useGetList } from '@/hooks/get'
-import { BaseContract } from '@/schemas/contract'
+import { APIContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
 const ContractsMapPage = () => {
-	const { data: contracts } = useGetList<BaseContract>('contracts')
+	const { data: contracts } = useGetList<APIContract>('contracts')
 
 	return (
 		<Map>
@@ -20,7 +20,7 @@ const ContractsMapPage = () => {
 								{contract.name}
 							</Field>
 							<Field component="stack" label="Tipo de contrato">
-								{contract.contractType}
+								{contract.contractTypeId}
 							</Field>
 							<Field component="stack" label="Local de execução">
 								{contract.executionLocal}

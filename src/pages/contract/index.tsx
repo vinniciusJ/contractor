@@ -7,7 +7,7 @@ import Loading from '@/components/ui/loading'
 import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
-import { BaseContract, Contract } from '@/schemas/contract'
+import { APIContract, Contract } from '@/schemas/contract'
 import { PaymentMethod } from '@/schemas/payment-method'
 import { Section } from '@/types/label-value'
 
@@ -20,13 +20,13 @@ const SECTIONS: Section[] = [
 const ContractPage: FC = () => {
 	const { contractId } = useParams<Params>()
 
-	const { data, isLoading } = useGetOne<BaseContract>(`contracts/${contractId}`)
+	const { data, isLoading } = useGetOne<APIContract>(`contracts/${contractId}`)
 	const { data: paymentMethod } = useGetOne<PaymentMethod>(`payment-methods/${data?.paymentMethodId}`)
 
 	const contract: Contract = {
 		...data,
-		paymentMethod: paymentMethod as PaymentMethod,
-	} as Contract
+		paymentMethod: paymentMethod,
+	} as unknown as Contract
 
 	if (isLoading) {
 		return <Loading />
