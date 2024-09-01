@@ -18,10 +18,7 @@ export const ContractTypeStep = () => {
 		name: 'contractItems',
 	})
 
-	const addContractItem = useCallback(
-		() => append({ name: '', scheduledDate: new Date(), type: 'DELIVERY' }),
-		[append]
-	)
+	const addContractItem = useCallback(() => append({ name: '', scheduledDate: '', type: 'DELIVERY' }), [append])
 
 	return (
 		<FormModal.StepContent step={1} columns={2}>
