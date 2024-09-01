@@ -5,7 +5,6 @@ import { contractItemFormSchema, contractItemSchema } from './contract-item'
 import { contractTypeSchema } from './contractual-type'
 import { contractedCompanyEmployeeSchema, hiringCompanyEmployeeSchema } from './employee'
 import { installmentSchema } from './installment'
-import { paymentMethodSchema } from './payment-method'
 
 const STATUS = ['EM ANDAMENTO', 'EM CONTRATAÇÃO', 'CANCELADO', 'PARALISADO'] as const
 
@@ -58,8 +57,6 @@ export type APIContract = z.infer<typeof apiContractSchema>
 
 export const contractSchema = contractFormSchema.extend({
 	paymentMethodId: z.never(),
-
-	paymentMethod: paymentMethodSchema,
 })
 
 export type Contract = z.infer<typeof contractSchema>
