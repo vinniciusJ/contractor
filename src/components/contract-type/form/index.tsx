@@ -59,11 +59,9 @@ export const ContractTypeForm: FC<FormProps> = ({ formRef, id }) => {
 		[id]
 	)
 
-	console.log(form.formState.errors)
-
 	return (
 		<FormModal.Root form={form} onSubmit={submitForm} ref={formRef} width="50vw">
-			<FormModal.Header>Forma de pagamento</FormModal.Header>
+			<FormModal.Header>Tipos de contratação</FormModal.Header>
 
 			<FormModal.Stepper steps={['Visão geral', 'Itens contratuais']} />
 

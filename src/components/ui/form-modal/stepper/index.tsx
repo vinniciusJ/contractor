@@ -1,7 +1,5 @@
 import { FC, useEffect } from 'react'
 
-import { Stack } from '@mui/material'
-
 import { Stepper } from '../../stepper'
 import { useFormModal } from '../provider'
 
@@ -16,9 +14,5 @@ export const FormModalSteps: FC<Props> = ({ steps }) => {
 		setSteps(steps)
 	}, [steps])
 
-	return (
-		<Stack mt={1} mb={3}>
-			<Stepper steps={steps} />
-		</Stack>
-	)
+	return <Stepper steps={steps} sx={{ mb: 1 }} />
 }

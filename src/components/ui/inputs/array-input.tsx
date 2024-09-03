@@ -38,8 +38,9 @@ export function ArrayInput<T extends object>(props: Readonly<ArrayInputProps<T>>
 				sx={{ width: '100%' }}
 				variant={'contained'}
 				onClick={() => append(defaultValue as Parameters<typeof append>['0'])}
+				startIcon={<AddIcon size={20} />}
 			>
-				<AddIcon size={16} />
+				Adicionar item
 			</Button>
 		</Stack>
 	)

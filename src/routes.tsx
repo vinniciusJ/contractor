@@ -22,6 +22,7 @@ const ContractPageLayout = lazy(() => import('@/pages/contract'))
 const ContractOverviewSection = lazy(() => import('@/pages/contract/sections/overview'))
 const ContractTypeSection = lazy(() => import('@/pages/contract/sections/contract-type'))
 const ContractPaymentSection = lazy(() => import('@/pages/contract/sections/payment'))
+const LoginPage = lazy(() => import('@/pages/login'))
 
 export const router = createBrowserRouter([
 	{
@@ -108,5 +109,9 @@ export const router = createBrowserRouter([
 				],
 			},
 		],
+	},
+	{
+		path: '/login',
+		element: <LoginPage />,
 	},
 ])

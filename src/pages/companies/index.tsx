@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
 import { CompanyForm } from '@/components/companies/form'
+import { MenuOptionsButton } from '@/components/ui/menu-options-button'
 import { useModal } from '@/components/ui/modal/provider'
-import { SplitButton } from '@/components/ui/split-button'
 import { PageLayout } from '@/layouts/page'
 import { Section } from '@/types/label-value'
 
@@ -24,7 +24,7 @@ const CompaniesPage: FC = () => {
 					</PageLayout.Header.Title.Root>
 
 					<PageLayout.Header.RightElementGroup>
-						<SplitButton
+						<MenuOptionsButton
 							options={[
 								{
 									label: 'Cadastrar contratante',
@@ -35,7 +35,9 @@ const CompaniesPage: FC = () => {
 									dispatch: () => contractedCompanyFormRef.current?.openModal(),
 								},
 							]}
-						/>
+						>
+							Cadastrar
+						</MenuOptionsButton>
 					</PageLayout.Header.RightElementGroup>
 				</PageLayout.Header.Root>
 
