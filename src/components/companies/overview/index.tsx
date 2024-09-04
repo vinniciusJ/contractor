@@ -16,9 +16,7 @@ export const CompanyOverview = ({ company }: Props) => {
 			<Field label="CNPJ">{company.code}</Field>
 			<Field label="Telefone">{company.phone}</Field>
 			<Field label="E-mail">{company.email}</Field>
-			<Field label="Endereço" xs={2}>
-				{company.address}
-			</Field>
+			<Field label="Endereço">{company.address}</Field>
 		</GridGroup>
 	)
 }

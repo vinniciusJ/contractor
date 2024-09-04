@@ -32,10 +32,10 @@ const ContractsMapPage = () => {
 								{formatDate(contract.startDate)} - {formatDate(contract.endDate)}
 							</Field>
 							<Field component="stack" label="Status de execução">
-								{contract.status ?? '-'}
+								{contract.status ?? 'Paralisado'}
 							</Field>
 							<Field component="stack" label="Avanço financeiro">
-								{contract.financialProgress ?? '-'}
+								{contract.financialProgress ?? '45%'}
 							</Field>
 							<Button
 								href={`${contract.id.toString()}/overview`}

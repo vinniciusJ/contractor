@@ -49,8 +49,8 @@ export const PageLayoutGoBackButton: FC = () => {
 	const navigate = useNavigate()
 
 	return (
-		<IconButton size="small" onClick={() => navigate(-1)}>
-			<ArrowLeft />
+		<IconButton onClick={() => navigate(-1)}>
+			<ArrowLeft size={20} />
 		</IconButton>
 	)
 }

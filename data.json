@@ -1,1770 +1,1579 @@
 {
-  "contract-types": [
-    {
-      "name": "Amet consecteturo",
-      "contractObjective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "contractItems": [
-        {
-          "name": "Amet consectetur",
-          "type": "DELIVERY",
-          "scheduledDate": "2024-09-01"
-        },
-        {
-          "name": "Lorem ipsum",
-          "type": "SERVICE",
-          "scheduledDate": "2024-09-15"
-        },
-        {
-          "name": "Dolor sit amet",
-          "type": "DELIVERY",
-          "scheduledDate": "2024-09-01"
-        },
-        {
-          "name": "Ipsum",
-          "type": "DELIVERY",
-          "scheduledDate": "2024-09-01"
-        },
-        {
-          "name": "Dolor",
-          "type": "SERVICE",
-          "scheduledDate": "2024-09-19"
-        }
-      ],
-      "id": "1"
-    },
-    {
-      "id": "7313",
-      "name": "",
-      "contractObjective": "",
-      "contractItems": []
-    },
-    {
-      "id": "9029",
-      "name": "Lorem",
-      "contractObjective": "Lorem",
-      "contractItems": [
-        {
-          "name": "Lorem",
-          "scheduledDate": "2003-09-22T03:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "id": "52de",
-      "name": "Ipsum",
-      "contractObjective": "Ipsum",
-      "contractItems": [
-        {
-          "name": "Ipsum",
-          "scheduledDate": "2004-01-27T02:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "id": "33fb",
-      "name": "Amet consecteturo",
-      "contractObjective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "contractItems": [
-        {
-          "name": "Amet consectetur",
-          "type": "DELIVERY",
-          "scheduledDate": "2024-09-01"
-        },
-        {
-          "name": "Lorem ipsum",
-          "type": "SERVICE",
-          "scheduledDate": "2024-09-15"
-        },
-        {
-          "name": "Dolor sit amet",
-          "type": "DELIVERY",
-          "scheduledDate": "2024-09-01"
-        },
-        {
-          "name": "Ipsum",
-          "type": "DELIVERY",
-          "scheduledDate": "2024-09-01"
-        },
-        {
-          "name": "Dolor",
-          "type": "SERVICE",
-          "scheduledDate": "2024-09-19"
-        }
-      ]
-    }
-  ],
-  "hiring-companies": [
-    {
-      "id": "1",
-      "name": "Tech Innovators",
-      "corporateName": "Tech Innovators Ltd.",
-      "code": "TI-001",
-      "phone": "+1-555-123-4567",
-      "email": "contact@techinnovators.com",
-      "address": "123 Innovation Drive, Silicon Valley, CA",
-      "matrix": true
-    },
-    {
-      "id": "2",
-      "name": "Global Solutions",
-      "corporateName": "Global Solutions Inc.",
-      "code": "GS-002",
-      "phone": "+1-555-234-5678",
-      "email": "info@globalsolutions.com",
-      "address": "456 Global Ave, New York, NY"
-    },
-    {
-      "id": "3",
-      "name": "Eco Ventures",
-      "corporateName": "Eco Ventures LLC",
-      "code": "EV-003",
-      "phone": "+1-555-345-6789",
-      "email": "support@ecoventures.com",
-      "address": "789 Green Street, Portland, OR"
-    },
-    {
-      "id": "4",
-      "name": "HealthTech",
-      "corporateName": "HealthTech Corporation",
-      "code": "HT-004",
-      "phone": "+1-555-456-7890",
-      "email": "contact@healthtech.com",
-      "address": "101 Wellness Blvd, Austin, TX"
-    },
-    {
-      "id": "5",
-      "name": "FinTech Partners",
-      "corporateName": "FinTech Partners Ltd.",
-      "code": "FP-005",
-      "phone": "+1-555-567-8901",
-      "email": "partners@fintech.com",
-      "address": "202 Finance Lane, Chicago, IL"
-    },
-    {
-      "id": "8757",
-      "name": "Lorem",
-      "corporateName": "Lorem",
-      "code": "Lorem",
-      "phone": "Lorem",
-      "email": "lorem@email.com",
-      "address": "Lorem"
-    },
-    {
-      "id": "1d28",
-      "name": "Ipsum",
-      "corporateName": "Ipsum",
-      "code": "Ipsum",
-      "phone": "Ipsum",
-      "email": "ipsum@email.com",
-      "address": "Ipsum"
-    },
-    {
-      "id": "9582",
-      "name": "Dolor",
-      "corporateName": "Dolor",
-      "code": "Dolor",
-      "phone": "Dolor",
-      "email": "dolor@email.com",
-      "address": "Dolor"
-    }
-  ],
-  "contracted-companies": [
-    {
-      "id": "1",
-      "name": "Tech Solutions",
-      "corporateName": "Tech Solutions Inc.",
-      "code": "TS1234",
-      "phone": "+1-800-555-1234",
-      "email": "contact@techsolutions.com",
-      "address": "123 Innovation Drive, Tech City, TC 12345"
-    },
-    {
-      "id": "2",
-      "name": "Global Enterprises",
-      "corporateName": "Global Enterprises Ltd.",
-      "code": "GE5678",
-      "phone": "+1-800-555-5678",
-      "email": "info@globalenterprises.com",
-      "address": "456 Market Street, Global City, GC 67890"
-    },
-    {
-      "id": "3",
-      "name": "Creative Labs",
-      "corporateName": "Creative Labs LLC",
-      "code": "CL9101",
-      "phone": "+1-800-555-9101",
-      "email": "support@creativelabs.com",
-      "address": "789 Art Avenue, Creative Town, CT 91011"
-    },
-    {
-      "id": "4",
-      "name": "Green Energy",
-      "corporateName": "Green Energy Solutions Co.",
-      "code": "GE1122",
-      "phone": "+1-800-555-1122",
-      "email": "sales@greenenergy.com",
-      "address": "321 Eco Way, Green City, GC 11223"
-    },
-    {
-      "id": "5",
-      "name": "HealthCare Partners",
-      "corporateName": "HealthCare Partners Group",
-      "code": "HP3344",
-      "phone": "+1-800-555-3344",
-      "email": "contact@healthcarepartners.com",
-      "address": "654 Wellness Boulevard, Health City, HC 33445"
-    },
-    {
-      "id": "c133",
-      "name": "Lorem",
-      "corporateName": "Lorem",
-      "code": "Lorem",
-      "phone": "Lorem",
-      "email": "lorem@email.com",
-      "address": "Lorem"
-    }
-  ],
-  "contracted-company-employees": [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "email": "johndoe@techsolutions.com",
-      "phone": "+1-800-555-0001",
-      "code": "979.916.800-70",
-      "company": {
-        "id": 1,
-        "name": "Tech Solutions",
-        "corporateName": "Tech Solutions Inc.",
-        "code": "TS1234",
-        "phone": "+1-800-555-1234",
-        "email": "contact@techsolutions.com",
-        "address": "123 Innovation Drive, Tech City, TC 12345"
-      },
-      "isLegalRepresentative": true
-    },
-    {
-      "id": 2,
-      "name": "Jane Smith",
-      "email": "janesmith@globalenterprises.com",
-      "phone": "+1-800-555-0002",
-      "code": "767.639.270-53",
-      "company": {
-        "id": 2,
-        "name": "Global Enterprises",
-        "corporateName": "Global Enterprises Ltd.",
-        "code": "GE5678",
-        "phone": "+1-800-555-5678",
-        "email": "info@globalenterprises.com",
-        "address": "456 Market Street, Global City, GC 67890"
-      },
-      "isLegalRepresentative": false
-    },
-    {
-      "id": 3,
-      "name": "Michael Johnson",
-      "email": "michaeljohnson@creativelabs.com",
-      "phone": "+1-800-555-0003",
-      "code": "874.743.730-84",
-      "company": {
-        "id": 3,
-        "name": "Creative Labs",
-        "corporateName": "Creative Labs LLC",
-        "code": "CL9101",
-        "phone": "+1-800-555-9101",
-        "email": "support@creativelabs.com",
-        "address": "789 Art Avenue, Creative Town, CT 91011"
-      },
-      "isLegalRepresentative": true
-    },
-    {
-      "id": 4,
-      "name": "Emily Davis",
-      "email": "emilydavis@greenenergy.com",
-      "phone": "+1-800-555-0004",
-      "code": "151.710.520-00",
-      "company": {
-        "id": 4,
-        "name": "Green Energy",
-        "corporateName": "Green Energy Solutions Co.",
-        "code": "GE1122",
-        "phone": "+1-800-555-1122",
-        "email": "sales@greenenergy.com",
-        "address": "321 Eco Way, Green City, GC 11223"
-      },
-      "isLegalRepresentative": false
-    },
-    {
-      "id": 5,
-      "name": "William Brown",
-      "email": "williambrown@healthcarepartners.com",
-      "phone": "+1-800-555-0005",
-      "code": "650.167.290-26",
-      "company": {
-        "id": 5,
-        "name": "HealthCare Partners",
-        "corporateName": "HealthCare Partners Group",
-        "code": "HP3344",
-        "phone": "+1-800-555-3344",
-        "email": "contact@healthcarepartners.com",
-        "address": "654 Wellness Boulevard, Health City, HC 33445"
-      },
-      "isLegalRepresentative": true
-    },
-    {
-      "id": 6,
-      "name": "Olivia Wilson",
-      "email": "oliviawilson@techsolutions.com",
-      "phone": "+1-800-555-0006",
-      "code": "622.451.370-86",
-      "company": {
-        "id": 1,
-        "name": "Tech Solutions",
-        "corporateName": "Tech Solutions Inc.",
-        "code": "TS1234",
-        "phone": "+1-800-555-1234",
-        "email": "contact@techsolutions.com",
-        "address": "123 Innovation Drive, Tech City, TC 12345"
-      },
-      "isLegalRepresentative": false
-    },
-    {
-      "id": 7,
-      "name": "James Taylor",
-      "email": "jamestaylor@globalenterprises.com",
-      "phone": "+1-800-555-0007",
-      "code": "705.710.790-08",
-      "company": {
-        "id": 2,
-        "name": "Global Enterprises",
-        "corporateName": "Global Enterprises Ltd.",
-        "code": "GE5678",
-        "phone": "+1-800-555-5678",
-        "email": "info@globalenterprises.com",
-        "address": "456 Market Street, Global City, GC 67890"
-      },
-      "isLegalRepresentative": true
-    },
-    {
-      "id": 8,
-      "name": "Sophia Martinez",
-      "email": "sophiamartinez@creativelabs.com",
-      "phone": "+1-800-555-0008",
-      "code": "068.887.900-45",
-      "company": {
-        "id": 3,
-        "name": "Creative Labs",
-        "corporateName": "Creative Labs LLC",
-        "code": "CL9101",
-        "phone": "+1-800-555-9101",
-        "email": "support@creativelabs.com",
-        "address": "789 Art Avenue, Creative Town, CT 91011"
-      },
-      "isLegalRepresentative": false
-    },
-    {
-      "id": 9,
-      "name": "Daniel Anderson",
-      "email": "danielanderson@greenenergy.com",
-      "phone": "+1-800-555-0009",
-      "code": "958.180.350-50",
-      "company": {
-        "id": 4,
-        "name": "Green Energy",
-        "corporateName": "Green Energy Solutions Co.",
-        "code": "GE1122",
-        "phone": "+1-800-555-1122",
-        "email": "sales@greenenergy.com",
-        "address": "321 Eco Way, Green City, GC 11223"
-      },
-      "isLegalRepresentative": true
-    },
-    {
-      "id": 10,
-      "name": "Ava Thomas",
-      "email": "avathomas@healthcarepartners.com",
-      "phone": "+1-800-555-0010",
-      "code": "794.544.490-36",
-      "company": {
-        "id": 5,
-        "name": "HealthCare Partners",
-        "corporateName": "HealthCare Partners Group",
-        "code": "HP3344",
-        "phone": "+1-800-555-3344",
-        "email": "contact@healthcarepartners.com",
-        "address": "654 Wellness Boulevard, Health City, HC 33445"
-      },
-      "isLegalRepresentative": false
-    },
-    {
-      "id": "2433",
-      "name": "Gabriel",
-      "email": "gabriel@obregon.com",
-      "phone": "5659898",
-      "code": "679.054.390-20",
-      "company": {
-        "id": "1",
-        "name": "Tech Solutions",
-        "corporateName": "Tech Solutions Inc.",
-        "code": "TS1234",
-        "phone": "+1-800-555-1234",
-        "email": "contact@techsolutions.com",
-        "address": "123 Innovation Drive, Tech City, TC 12345"
-      }
-    }
-  ],
-  "hiring-company-employees": [
-    {
-      "id": 1,
-      "name": "Alice Johnson",
-      "email": "alice.johnson@techinnovators.com",
-      "phone": "+1-555-001-1234",
-      "code": "354.126.960-07",
-      "company": {
-        "id": "1",
-        "name": "Tech Innovators",
-        "corporateName": "Tech Innovators Ltd.",
-        "code": "TI-001",
-        "phone": "+1-555-123-4567",
-        "email": "contact@techinnovators.com",
-        "address": "123 Innovation Drive, Silicon Valley, CA",
-        "matrix": true
-      },
-      "isProjectManager": true
-    },
-    {
-      "id": 2,
-      "name": "Bob Smith",
-      "email": "bob.smith@globalsolutions.com",
-      "phone": "+1-555-002-2345",
-      "code": "789.739.760-28",
-      "company": {
-        "id": "2",
-        "name": "Global Solutions",
-        "corporateName": "Global Solutions Inc.",
-        "code": "GS-002",
-        "phone": "+1-555-234-5678",
-        "email": "info@globalsolutions.com",
-        "address": "456 Global Ave, New York, NY"
-      },
-      "isProjectManager": false
-    },
-    {
-      "id": 3,
-      "name": "Carol Williams",
-      "email": "carol.williams@ecoventures.com",
-      "phone": "+1-555-003-3456",
-      "code": "065.067.340-94",
-      "company": {
-        "id": "3",
-        "name": "Eco Ventures",
-        "corporateName": "Eco Ventures LLC",
-        "code": "EV-003",
-        "phone": "+1-555-345-6789",
-        "email": "support@ecoventures.com",
-        "address": "789 Green Street, Portland, OR"
-      },
-      "isProjectManager": true
-    },
-    {
-      "id": 4,
-      "name": "David Brown",
-      "email": "david.brown@healthtech.com",
-      "phone": "+1-555-004-4567",
-      "code": "217.231.120-03",
-      "company": {
-        "id": "4",
-        "name": "HealthTech",
-        "corporateName": "HealthTech Corporation",
-        "code": "HT-004",
-        "phone": "+1-555-456-7890",
-        "email": "contact@healthtech.com",
-        "address": "101 Wellness Blvd, Austin, TX"
-      },
-      "isProjectManager": false
-    },
-    {
-      "id": 5,
-      "name": "Eve Davis",
-      "email": "eve.davis@fintech.com",
-      "phone": "+1-555-005-5678",
-      "code": "297.094.520-70",
-      "company": {
-        "id": "5",
-        "name": "FinTech Partners",
-        "corporateName": "FinTech Partners Ltd.",
-        "code": "FP-005",
-        "phone": "+1-555-567-8901",
-        "email": "partners@fintech.com",
-        "address": "202 Finance Lane, Chicago, IL"
-      },
-      "isProjectManager": true
-    },
-    {
-      "id": 6,
-      "name": "Frank Miller",
-      "email": "frank.miller@techinnovators.com",
-      "phone": "+1-555-006-6789",
-      "code": "905.076.540-80",
-      "company": {
-        "id": "1",
-        "name": "Tech Innovators",
-        "corporateName": "Tech Innovators Ltd.",
-        "code": "TI-001",
-        "phone": "+1-555-123-4567",
-        "email": "contact@techinnovators.com",
-        "address": "123 Innovation Drive, Silicon Valley, CA",
-        "matrix": true
-      },
-      "isProjectManager": false
-    },
-    {
-      "id": 7,
-      "name": "Grace Lee",
-      "email": "grace.lee@globalsolutions.com",
-      "phone": "+1-555-007-7890",
-      "code": "397.618.400-42",
-      "company": {
-        "id": "2",
-        "name": "Global Solutions",
-        "corporateName": "Global Solutions Inc.",
-        "code": "GS-002",
-        "phone": "+1-555-234-5678",
-        "email": "info@globalsolutions.com",
-        "address": "456 Global Ave, New York, NY"
-      },
-      "isProjectManager": true
-    },
-    {
-      "id": 8,
-      "name": "Henry Wilson",
-      "email": "henry.wilson@ecoventures.com",
-      "phone": "+1-555-008-8901",
-      "code": "821.889.730-54",
-      "company": {
-        "id": "3",
-        "name": "Eco Ventures",
-        "corporateName": "Eco Ventures LLC",
-        "code": "EV-003",
-        "phone": "+1-555-345-6789",
-        "email": "support@ecoventures.com",
-        "address": "789 Green Street, Portland, OR"
-      },
-      "isProjectManager": false
-    },
-    {
-      "id": 9,
-      "name": "Irene Martinez",
-      "email": "irene.martinez@healthtech.com",
-      "phone": "+1-555-009-9012",
-      "code": "039.457.240-82",
-      "company": {
-        "id": "4",
-        "name": "HealthTech",
-        "corporateName": "HealthTech Corporation",
-        "code": "HT-004",
-        "phone": "+1-555-456-7890",
-        "email": "contact@healthtech.com",
-        "address": "101 Wellness Blvd, Austin, TX"
-      },
-      "isProjectManager": true
-    },
-    {
-      "id": 10,
-      "name": "Jack Anderson",
-      "email": "jack.anderson@fintech.com",
-      "phone": "+1-555-010-0123",
-      "code": "114.094.210-74",
-      "company": {
-        "id": "5",
-        "name": "FinTech Partners",
-        "corporateName": "FinTech Partners Ltd.",
-        "code": "FP-005",
-        "phone": "+1-555-567-8901",
-        "email": "partners@fintech.com",
-        "address": "202 Finance Lane, Chicago, IL"
-      },
-      "isProjectManager": false
-    },
-    {
-      "id": "6224",
-      "name": "John Doe",
-      "email": "john.doe@email.com",
-      "phone": "459880987",
-      "code": "025.487.940-32",
-      "company": {
-        "id": "1",
-        "name": "Tech Innovators",
-        "corporateName": "Tech Innovators Ltd.",
-        "code": "TI-001",
-        "phone": "+1-555-123-4567",
-        "email": "contact@techinnovators.com",
-        "address": "123 Innovation Drive, Silicon Valley, CA",
-        "matrix": true
-      }
-    }
-  ],
-  "installments": [
-    {
-      "id": "1",
-      "value": 100000,
-      "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-      "paymentDate": "2024-09-02T00:00:00.000Z",
-      "paymentReceipt": true
-    },
-    {
-      "id": "2",
-      "value": 200000,
-      "scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
-      "paymentDate": "2024-10-02T00:00:00.000Z",
-      "paymentReceipt": false
-    }
-  ],
-  "payment-methods": [
-    {
-      "id": "1",
-      "name": "Mensal",
-      "frequency": 1
-    },
-    {
-      "id": "2",
-      "name": "Bimestral",
-      "frequency": 2
-    },
-    {
-      "id": "3",
-      "name": "Trimestral",
-      "frequency": 2
-    },
-    {
-      "id": "4",
-      "name": "Semestral",
-      "frequency": 6
-    },
-    {
-      "id": "5",
-      "name": "Anual",
-      "frequency": 12
-    },
-    {
-      "id": "5fb9",
-      "name": "Bianual",
-      "frequency": 24
-    }
-  ],
-  "contracts": [
-    {
-      "id": "1",
-      "name": "Atualização de Infraestrutura de TI",
-      "contractType": "Serviço",
-      "contractObjective": "Atualização da infraestrutura de TI em todas as filiais.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Instalação de Servidor",
-          "scheduledDate": "2024-09-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Configuração de Rede",
-          "scheduledDate": "2024-09-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-08-01T00:00:00.000Z",
-      "endDate": "2024-12-31T00:00:00.000Z",
-      "contractedValue": 500000,
-      "paymentMethodId": "1",
-      "installments": [
-        {
-          "id": 1,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-08-01T00:00:00.000Z",
-          "paymentDate": "2024-08-02T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-          "paymentDate": "2024-09-02T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 3,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
-          "paymentDate": "2024-10-02T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 4,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-11-01T00:00:00.000Z",
-          "paymentDate": "2024-11-02T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 5,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
-          "paymentDate": "2024-12-02T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "São Paulo,São Paulo,Brasil",
-      "latitude": -23.55052,
-      "longitude": -46.63331,
-      "contractedCompany": {
-        "id": 2,
-        "name": "Soluções Energéticas Verdes",
-        "corporateName": "Soluções Energéticas Verdes Ltda.",
-        "code": "SEV-2024",
-        "phone": "098-765-4321",
-        "address": "456 Rua Verde, Bairro Sustentável"
-      },
-      "subsidiaryCompany": {
-        "id": 1,
-        "name": "Inovadores em Tecnologia",
-        "corporateName": "Inovadores em Tecnologia Ltda.",
-        "code": "IT-2024",
-        "phone": "123-456-7890",
-        "address": "123 Rua da Tecnologia, Cidade da Inovação",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 1,
-        "name": "Alice Smith",
-        "email": "alice.smith@inovadores.com",
-        "phone": "123-456-7890",
-        "subsidiaryCompany": {
-          "id": 1,
-          "name": "Inovadores em Tecnologia",
-          "corporateName": "Inovadores em Tecnologia Ltda.",
-          "code": "IT-2024",
-          "phone": "123-456-7890",
-          "address": "123 Rua da Tecnologia, Cidade da Inovação",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 2,
-        "name": "Bob Johnson",
-        "email": "bob.johnson@solucoesverdes.com",
-        "phone": "098-765-4321",
-        "contractedCompany": {
-          "id": 2,
-          "name": "Soluções Energéticas Verdes",
-          "corporateName": "Soluções Energéticas Verdes Ltda.",
-          "code": "SEV-2024",
-          "phone": "098-765-4321",
-          "address": "456 Rua Verde, Bairro Sustentável"
-        }
-      }
-    },
-    {
-      "id": "2",
-      "name": "Implantação de Sistema de Segurança",
-      "contractType": "Serviço",
-      "contractObjective": "Instalação de um novo sistema de segurança nas unidades.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Instalação de Câmeras",
-          "scheduledDate": "2024-10-05T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Configuração de Alarme",
-          "scheduledDate": "2024-10-20T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-09-01T00:00:00.000Z",
-      "endDate": "2024-11-30T00:00:00.000Z",
-      "contractedValue": 300000,
-      "paymentMethodId": "2",
-      "installments": [
-        {
-          "id": 1,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-          "paymentDate": "2024-09-02T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-11-01T00:00:00.000Z",
-          "paymentDate": "2024-11-02T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Rio de Janeiro,Rio de Janeiro,Brasil",
-      "latitude": -22.90685,
-      "longitude": -43.1729,
-      "contractedCompany": {
-        "id": 3,
-        "name": "Segurança Total",
-        "corporateName": "Segurança Total Ltda.",
-        "code": "ST-2024",
-        "phone": "098-765-4322",
-        "address": "789 Rua da Segurança, Bairro Protegido"
-      },
-      "subsidiaryCompany": {
-        "id": 1,
-        "name": "Inovadores em Tecnologia",
-        "corporateName": "Inovadores em Tecnologia Ltda.",
-        "code": "IT-2024",
-        "phone": "123-456-7890",
-        "address": "123 Rua da Tecnologia, Cidade da Inovação",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 2,
-        "name": "Carlos Pereira",
-        "email": "carlos.pereira@inovadores.com",
-        "phone": "123-456-7891",
-        "subsidiaryCompany": {
-          "id": 1,
-          "name": "Inovadores em Tecnologia",
-          "corporateName": "Inovadores em Tecnologia Ltda.",
-          "code": "IT-2024",
-          "phone": "123-456-7890",
-          "address": "123 Rua da Tecnologia, Cidade da Inovação",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 3,
-        "name": "Daniela Souza",
-        "email": "daniela.souza@segurancatotal.com",
-        "phone": "098-765-4322",
-        "contractedCompany": {
-          "id": 3,
-          "name": "Segurança Total",
-          "corporateName": "Segurança Total Ltda.",
-          "code": "ST-2024",
-          "phone": "098-765-4322",
-          "address": "789 Rua da Segurança, Bairro Protegido"
-        }
-      }
-    },
-    {
-      "id": "3",
-      "name": "Treinamento e Capacitação de Equipe",
-      "contractType": "Serviço",
-      "contractObjective": "Treinamento da equipe de TI para novos sistemas e tecnologias.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Curso de Atualização",
-          "scheduledDate": "2024-10-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Workshop Prático",
-          "scheduledDate": "2024-10-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-09-01T00:00:00.000Z",
-      "endDate": "2024-12-31T00:00:00.000Z",
-      "contractedValue": 200000,
-      "paymentMethodId": "3",
-      "installments": [
-        {
-          "id": 1,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-          "paymentDate": "2024-09-02T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 100000,
-          "scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
-          "paymentDate": "2024-12-02T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Belo Horizonte,Minas Gerais,Brasil",
-      "latitude": -19.91668,
-      "longitude": -43.9345,
-      "contractedCompany": {
-        "id": 4,
-        "name": "Capacitação em Tecnologia",
-        "corporateName": "Capacitação em Tecnologia Ltda.",
-        "code": "CT-2024",
-        "phone": "098-765-4323",
-        "address": "1010 Rua da Capacitação, Bairro Avançado"
-      },
-      "subsidiaryCompany": {
-        "id": 1,
-        "name": "Inovadores em Tecnologia",
-        "corporateName": "Inovadores em Tecnologia Ltda.",
-        "code": "IT-2024",
-        "phone": "123-456-7890",
-        "address": "123 Rua da Tecnologia, Cidade da Inovação",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 3,
-        "name": "Fernanda Lima",
-        "email": "fernanda.lima@inovadores.com",
-        "phone": "123-456-7892",
-        "subsidiaryCompany": {
-          "id": 1,
-          "name": "Inovadores em Tecnologia",
-          "corporateName": "Inovadores em Tecnologia Ltda.",
-          "code": "IT-2024",
-          "phone": "123-456-7890",
-          "address": "123 Rua da Tecnologia, Cidade da Inovação",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 4,
-        "name": "Eduardo Santos",
-        "email": "eduardo.santos@capacitec.com",
-        "phone": "098-765-4323",
-        "contractedCompany": {
-          "id": 4,
-          "name": "Capacitação em Tecnologia",
-          "corporateName": "Capacitação em Tecnologia Ltda.",
-          "code": "CT-2024",
-          "phone": "098-765-4323",
-          "address": "1010 Rua da Capacitação, Bairro Avançado"
-        }
-      }
-    },
-    {
-      "id": "4",
-      "name": "Renovação do Parque de Máquinas",
-      "contractType": "Compra",
-      "contractObjective": "Aquisição de novos equipamentos de escritório.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Compra de Computadores",
-          "scheduledDate": "2024-08-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Compra de Impressoras",
-          "scheduledDate": "2024-08-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-09-01T00:00:00.000Z",
-      "endDate": "2025-08-31T00:00:00.000Z",
-      "contractedValue": 400000,
-      "paymentMethodId": "2",
-      "installments": [
-        {
-          "id": 1,
-          "value": 200000,
-          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-          "paymentDate": "2024-09-02T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 200000,
-          "scheduledDeliveryDate": "2025-03-01T00:00:00.000Z",
-          "paymentDate": "2025-03-02T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Brasília,Distrito Federal,Brasil",
-      "latitude": -15.79423,
-      "longitude": -47.88217,
-      "contractedCompany": {
-        "id": 5,
-        "name": "TecnoHardware Ltda.",
-        "corporateName": "TecnoHardware Ltda.",
-        "code": "TH-2024",
-        "phone": "098-765-4324",
-        "address": "456 Rua da Tecnologia, Bairro Inovador"
-      },
-      "subsidiaryCompany": {
-        "id": 1,
-        "name": "Inovadores em Tecnologia",
-        "corporateName": "Inovadores em Tecnologia Ltda.",
-        "code": "IT-2024",
-        "phone": "123-456-7890",
-        "address": "123 Rua da Tecnologia, Cidade da Inovação",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 4,
-        "name": "João Santos",
-        "email": "joao.santos@inovadores.com",
-        "phone": "123-456-7893",
-        "subsidiaryCompany": {
-          "id": 1,
-          "name": "Inovadores em Tecnologia",
-          "corporateName": "Inovadores em Tecnologia Ltda.",
-          "code": "IT-2024",
-          "phone": "123-456-7890",
-          "address": "123 Rua da Tecnologia, Cidade da Inovação",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 5,
-        "name": "Carla Costa",
-        "email": "carla.costa@tecnohardware.com",
-        "phone": "098-765-4324",
-        "contractedCompany": {
-          "id": 5,
-          "name": "TecnoHardware Ltda.",
-          "corporateName": "TecnoHardware Ltda.",
-          "code": "TH-2024",
-          "phone": "098-765-4324",
-          "address": "456 Rua da Tecnologia, Bairro Inovador"
-        }
-      }
-    },
-    {
-      "id": "5",
-      "name": "Reforma do Escritório Central",
-      "contractType": "Serviço",
-      "contractObjective": "Realizar a reforma completa do escritório central.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Reforma do Piso",
-          "scheduledDate": "2024-09-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Pintura das Paredes",
-          "scheduledDate": "2024-09-10T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-09-01T00:00:00.000Z",
-      "endDate": "2025-08-31T00:00:00.000Z",
-      "contractedValue": 300000,
-      "paymentMethodId": "4",
-      "installments": [
-        {
-          "id": 1,
-          "value": 300000,
-          "scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
-          "paymentDate": "2024-09-02T00:00:00.000Z",
-          "paymentReceipt": true
-        }
-      ],
-      "executionLocal": "Belo Horizonte,Minas Gerais,Brasil",
-      "latitude": -19.9245,
-      "longitude": -43.93524,
-      "contractedCompany": {
-        "id": 6,
-        "name": "Construtora Confiável",
-        "corporateName": "Construtora Confiável Ltda.",
-        "code": "CC-2024",
-        "phone": "098-765-4325",
-        "address": "789 Rua da Construção, Bairro Planejado"
-      },
-      "subsidiaryCompany": {
-        "id": 1,
-        "name": "Inovadores em Tecnologia",
-        "corporateName": "Inovadores em Tecnologia Ltda.",
-        "code": "IT-2024",
-        "phone": "123-456-7890",
-        "address": "123 Rua da Tecnologia, Cidade da Inovação",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 5,
-        "name": "Fernanda Lima",
-        "email": "fernanda.lima@inovadores.com",
-        "phone": "123-456-7894",
-        "subsidiaryCompany": {
-          "id": 1,
-          "name": "Inovadores em Tecnologia",
-          "corporateName": "Inovadores em Tecnologia Ltda.",
-          "code": "IT-2024",
-          "phone": "123-456-7890",
-          "address": "123 Rua da Tecnologia, Cidade da Inovação",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 6,
-        "name": "Pedro Almeida",
-        "email": "pedro.almeida@confiavel.com",
-        "phone": "098-765-4325",
-        "contractedCompany": {
-          "id": 6,
-          "name": "Construtora Confiável",
-          "corporateName": "Construtora Confiável Ltda.",
-          "code": "CC-2024",
-          "phone": "098-765-4325",
-          "address": "789 Rua da Construção, Bairro Planejado"
-        }
-      }
-    },
-    {
-      "id": "6",
-      "name": "Fornecimento de Equipamentos de TI",
-      "contractType": "Compra",
-      "contractObjective": "Aquisição de servidores e periféricos de TI.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Compra de Servidores",
-          "scheduledDate": "2024-08-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Compra de Roteadores",
-          "scheduledDate": "2024-08-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 350000,
-      "paymentMethodId": "2",
-      "installments": [
-        {
-          "id": 1,
-          "value": 175000,
-          "scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
-          "paymentDate": "2024-07-12T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 175000,
-          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
-          "paymentDate": "2024-12-12T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Porto Alegre,Rio Grande do Sul,Brasil",
-      "latitude": -30.03465,
-      "longitude": -51.2177,
-      "contractedCompany": {
-        "id": 7,
-        "name": "Tecnologia Avançada Ltda.",
-        "corporateName": "Tecnologia Avançada Ltda.",
-        "code": "TA-2024",
-        "phone": "098-765-4326",
-        "address": "987 Rua da Inovação, Bairro Tecnológico"
-      },
-      "subsidiaryCompany": {
-        "id": 1,
-        "name": "Inovadores em Tecnologia",
-        "corporateName": "Inovadores em Tecnologia Ltda.",
-        "code": "IT-2024",
-        "phone": "123-456-7890",
-        "address": "123 Rua da Tecnologia, Cidade da Inovação",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 6,
-        "name": "Gabriel Souza",
-        "email": "gabriel.souza@inovadores.com",
-        "phone": "123-456-7895",
-        "subsidiaryCompany": {
-          "id": 1,
-          "name": "Inovadores em Tecnologia",
-          "corporateName": "Inovadores em Tecnologia Ltda.",
-          "code": "IT-2024",
-          "phone": "123-456-7890",
-          "address": "123 Rua da Tecnologia, Cidade da Inovação",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 7,
-        "name": "Ricardo Fernandes",
-        "email": "ricardo.fernandes@tecnologiaavancada.com",
-        "phone": "098-765-4326",
-        "contractedCompany": {
-          "id": 7,
-          "name": "Tecnologia Avançada Ltda.",
-          "corporateName": "Tecnologia Avançada Ltda.",
-          "code": "TA-2024",
-          "phone": "098-765-4326",
-          "address": "987 Rua da Inovação, Bairro Tecnológico"
-        }
-      }
-    },
-    {
-      "id": "7",
-      "name": "Implementação de Rede de Dados",
-      "contractType": "Serviço",
-      "contractObjective": "Instalação de infraestrutura de rede em nova sede.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Instalação de Cabos de Rede",
-          "scheduledDate": "2024-10-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Configuração de Switches",
-          "scheduledDate": "2024-10-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 350000,
-      "paymentMethodId": "1",
-      "installments": [
-        {
-          "id": 1,
-          "value": 58333.33,
-          "scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
-          "paymentDate": "2024-07-12T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 58333.33,
-          "scheduledDeliveryDate": "2024-08-10T00:00:00.000Z",
-          "paymentDate": "2024-08-12T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 3,
-          "value": 58333.33,
-          "scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
-          "paymentDate": "2024-09-12T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 4,
-          "value": 58333.33,
-          "scheduledDeliveryDate": "2024-10-10T00:00:00.000Z",
-          "paymentDate": "2024-10-12T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 5,
-          "value": 58333.33,
-          "scheduledDeliveryDate": "2024-11-10T00:00:00.000Z",
-          "paymentDate": "2024-11-12T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 6,
-          "value": 58333.33,
-          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
-          "paymentDate": "2024-12-12T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Fortaleza,Ceará,Brasil",
-      "latitude": -3.7172,
-      "longitude": -38.5439,
-      "contractedCompany": {
-        "id": 8,
-        "name": "NetTech Serviços",
-        "corporateName": "NetTech Serviços de TI Ltda.",
-        "code": "NT-2024",
-        "phone": "098-765-4327",
-        "address": "123 Avenida Paulista, Centro Tecnológico"
-      },
-      "subsidiaryCompany": {
-        "id": 2,
-        "name": "Empreendimentos Digitais",
-        "corporateName": "Empreendimentos Digitais Ltda.",
-        "code": "ED-2024",
-        "phone": "123-456-7896",
-        "address": "456 Rua da Transformação, Cidade Digital",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 7,
-        "name": "Renata Oliveira",
-        "email": "renata.oliveira@empreendimentos.com",
-        "phone": "123-456-7897",
-        "subsidiaryCompany": {
-          "id": 2,
-          "name": "Empreendimentos Digitais",
-          "corporateName": "Empreendimentos Digitais Ltda.",
-          "code": "ED-2024",
-          "phone": "123-456-7896",
-          "address": "456 Rua da Transformação, Cidade Digital",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 8,
-        "name": "Lucas Carvalho",
-        "email": "lucas.carvalho@nettech.com",
-        "phone": "098-765-4327",
-        "contractedCompany": {
-          "id": 8,
-          "name": "NetTech Serviços",
-          "corporateName": "NetTech Serviços de TI Ltda.",
-          "code": "NT-2024",
-          "phone": "098-765-4327",
-          "address": "123 Avenida Paulista, Centro Tecnológico"
-        }
-      }
-    },
-    {
-      "id": "8",
-      "name": "Expansão da Rede de Energia",
-      "contractType": "Serviço",
-      "contractObjective": "Expansão da rede elétrica para novas instalações.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Instalação de Postes de Energia",
-          "scheduledDate": "2024-11-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Ligação de Cabos de Alta Tensão",
-          "scheduledDate": "2024-11-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 350000,
-      "paymentMethodId": "3",
-      "installments": [
-        {
-          "id": 1,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
-          "paymentDate": "2024-07-12T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
-          "paymentDate": "2024-09-12T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 3,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-11-10T00:00:00.000Z",
-          "paymentDate": "2024-11-12T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 4,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
-          "paymentDate": "2024-12-12T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Salvador,Bahia,Brasil",
-      "latitude": -12.9822499,
-      "longitude": -38.4812772,
-      "contractedCompany": {
-        "id": 9,
-        "name": "EletroInfra Ltda.",
-        "corporateName": "EletroInfra Ltda.",
-        "code": "EI-2024",
-        "phone": "098-765-4328",
-        "address": "789 Rua das Indústrias, Bairro Industrial"
-      },
-      "subsidiaryCompany": {
-        "id": 3,
-        "name": "Infraestrutura Tecnológica",
-        "corporateName": "Infraestrutura Tecnológica Ltda.",
-        "code": "ITL-2024",
-        "phone": "123-456-7898",
-        "address": "123 Avenida do Progresso, Cidade Industrial",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 8,
-        "name": "Tiago Costa",
-        "email": "tiago.costa@infraestrutura.com",
-        "phone": "123-456-7899",
-        "subsidiaryCompany": {
-          "id": 3,
-          "name": "Infraestrutura Tecnológica",
-          "corporateName": "Infraestrutura Tecnológica Ltda.",
-          "code": "ITL-2024",
-          "phone": "123-456-7898",
-          "address": "123 Avenida do Progresso, Cidade Industrial",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 9,
-        "name": "Rafael Lima",
-        "email": "rafael.lima@eletroinfra.com",
-        "phone": "098-765-4328",
-        "contractedCompany": {
-          "id": 9,
-          "name": "EletroInfra Ltda.",
-          "corporateName": "EletroInfra Ltda.",
-          "code": "EI-2024",
-          "phone": "098-765-4328",
-          "address": "789 Rua das Indústrias, Bairro Industrial"
-        }
-      }
-    },
-    {
-      "id": "9",
-      "name": "Aquisição de Mobiliário",
-      "contractType": "Compra",
-      "contractObjective": "Compra de novos móveis para escritório.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Compra de Mesas",
-          "scheduledDate": "2024-12-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Compra de Cadeiras",
-          "scheduledDate": "2024-12-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 350000,
-      "paymentMethodId": "4",
-      "installments": [
-        {
-          "id": 1,
-          "value": 350000,
-          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
-          "paymentDate": "2024-12-12T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Cuiabá,Mato Grosso,Brasil",
-      "latitude": -15.601,
-      "longitude": -56.0979,
-      "contractedCompany": {
-        "id": 10,
-        "name": "OfficeTech Ltda.",
-        "corporateName": "OfficeTech Móveis Ltda.",
-        "code": "OT-2024",
-        "phone": "098-765-4329",
-        "address": "456 Rua do Trabalho, Centro Comercial"
-      },
-      "subsidiaryCompany": {
-        "id": 4,
-        "name": "Empresas Inovadoras",
-        "corporateName": "Empresas Inovadoras Ltda.",
-        "code": "EI-2024",
-        "phone": "123-456-7890",
-        "address": "789 Rua do Sucesso, Bairro Empresarial",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 9,
-        "name": "Fernanda Gomes",
-        "email": "fernanda.gomes@empresasinovadoras.com",
-        "phone": "123-456-7891",
-        "subsidiaryCompany": {
-          "id": 4,
-          "name": "Empresas Inovadoras",
-          "corporateName": "Empresas Inovadoras Ltda.",
-          "code": "EI-2024",
-          "phone": "123-456-7890",
-          "address": "789 Rua do Sucesso, Bairro Empresarial",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 10,
-        "name": "Marcos Silva",
-        "email": "marcos.silva@officetech.com",
-        "phone": "098-765-4329",
-        "contractedCompany": {
-          "id": 10,
-          "name": "OfficeTech Ltda.",
-          "corporateName": "OfficeTech Móveis Ltda.",
-          "code": "OT-2024",
-          "phone": "098-765-4329",
-          "address": "456 Rua do Trabalho, Centro Comercial"
-        }
-      }
-    },
-    {
-      "id": "10",
-      "name": "Serviços de Consultoria Jurídica",
-      "contractType": "Serviço",
-      "contractObjective": "Consultoria para adequação à nova legislação.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Revisão de Contratos",
-          "scheduledDate": "2024-09-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Elaboração de Termos Jurídicos",
-          "scheduledDate": "2024-09-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 350000,
-      "paymentMethodId": "4",
-      "installments": [
-        {
-          "id": 1,
-          "value": 350000,
-          "scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
-          "paymentDate": "2024-12-12T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Manaus,Amazonas,Brasil",
-      "latitude": -3.119,
-      "longitude": -60.0217,
-      "contractedCompany": {
-        "id": 11,
-        "name": "LegisTec Advogados",
-        "corporateName": "LegisTec Advogados Associados",
-        "code": "LT-2024",
-        "phone": "098-765-4330",
-        "address": "123 Rua da Justiça, Bairro Jurídico"
-      },
-      "subsidiaryCompany": {
-        "id": 5,
-        "name": "Serviços Corporativos",
-        "corporateName": "Serviços Corporativos Ltda.",
-        "code": "SC-2024",
-        "phone": "123-456-7892",
-        "address": "456 Rua dos Empresários, Bairro Administrativo",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 10,
-        "name": "Juliana Mendes",
-        "email": "juliana.mendes@corporativos.com",
-        "phone": "123-456-7893",
-        "subsidiaryCompany": {
-          "id": 5,
-          "name": "Serviços Corporativos",
-          "corporateName": "Serviços Corporativos Ltda.",
-          "code": "SC-2024",
-          "phone": "123-456-7892",
-          "address": "456 Rua dos Empresários, Bairro Administrativo",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 11,
-        "name": "Ana Paula Souza",
-        "email": "ana.souza@legistec.com",
-        "phone": "098-765-4330",
-        "contractedCompany": {
-          "id": 11,
-          "name": "LegisTec Advogados",
-          "corporateName": "LegisTec Advogados Associados",
-          "code": "LT-2024",
-          "phone": "098-765-4330",
-          "address": "123 Rua da Justiça, Bairro Jurídico"
-        }
-      }
-    },
-    {
-      "id": "11",
-      "name": "Desenvolvimento de Software Personalizado",
-      "contractType": "Serviço",
-      "contractObjective": "Criação de um sistema de gestão interna sob medida.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Desenvolvimento de Frontend",
-          "scheduledDate": "2024-10-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Desenvolvimento de Backend",
-          "scheduledDate": "2024-10-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 350000,
-      "paymentMethodId": "3",
-      "installments": [
-        {
-          "id": 1,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-08-01T00:00:00.000Z",
-          "paymentDate": "2024-08-03T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
-          "paymentDate": "2024-10-03T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 3,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
-          "paymentDate": "2024-12-03T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 4,
-          "value": 87500,
-          "scheduledDeliveryDate": "2025-01-01T00:00:00.000Z",
-          "paymentDate": "2025-01-03T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Belém,Pará,Brasil",
-      "latitude": -1.4554,
-      "longitude": -48.502,
-      "contractedCompany": {
-        "id": 12,
-        "name": "SoftSolutions Ltda.",
-        "corporateName": "SoftSolutions Desenvolvimento Ltda.",
-        "code": "SS-2024",
-        "phone": "098-765-4331",
-        "address": "789 Rua da Inovação, Bairro Tecnológico"
-      },
-      "subsidiaryCompany": {
-        "id": 6,
-        "name": "Tecnologia & Inovação",
-        "corporateName": "Tecnologia & Inovação Ltda.",
-        "code": "TI-2024",
-        "phone": "123-456-7894",
-        "address": "123 Avenida da Tecnologia, Cidade do Futuro",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 11,
-        "name": "Rodrigo Ferreira",
-        "email": "rodrigo.ferreira@tecnologiainovacao.com",
-        "phone": "123-456-7895",
-        "subsidiaryCompany": {
-          "id": 6,
-          "name": "Tecnologia & Inovação",
-          "corporateName": "Tecnologia & Inovação Ltda.",
-          "code": "TI-2024",
-          "phone": "123-456-7894",
-          "address": "123 Avenida da Tecnologia, Cidade do Futuro",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 12,
-        "name": "Carlos Augusto",
-        "email": "carlos.augusto@softsolutions.com",
-        "phone": "098-765-4331",
-        "contractedCompany": {
-          "id": 12,
-          "name": "SoftSolutions Ltda.",
-          "corporateName": "SoftSolutions Desenvolvimento Ltda.",
-          "code": "SS-2024",
-          "phone": "098-765-4331",
-          "address": "789 Rua da Inovação, Bairro Tecnológico"
-        }
-      }
-    },
-    {
-      "id": "12",
-      "name": "Treinamento de Equipes",
-      "contractType": "Serviço",
-      "contractObjective": "Capacitação em novas ferramentas de produtividade.",
-      "contractItems": [
-        {
-          "id": 1,
-          "name": "Curso de Ferramentas de Gestão",
-          "scheduledDate": "2024-07-01T00:00:00.000Z"
-        },
-        {
-          "id": 2,
-          "name": "Workshop de Produtividade",
-          "scheduledDate": "2024-07-15T00:00:00.000Z"
-        }
-      ],
-      "startDate": "2024-07-01T00:00:00.000Z",
-      "endDate": "2025-01-01T00:00:00.000Z",
-      "contractedValue": 350000,
-      "paymentMethodId": "3",
-      "installments": [
-        {
-          "id": 1,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-07-15T00:00:00.000Z",
-          "paymentDate": "2024-07-17T00:00:00.000Z",
-          "paymentReceipt": true
-        },
-        {
-          "id": 2,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-09-15T00:00:00.000Z",
-          "paymentDate": "2024-09-17T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 3,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-11-15T00:00:00.000Z",
-          "paymentDate": "2024-11-17T00:00:00.000Z",
-          "paymentReceipt": false
-        },
-        {
-          "id": 4,
-          "value": 87500,
-          "scheduledDeliveryDate": "2024-12-15T00:00:00.000Z",
-          "paymentDate": "2024-12-17T00:00:00.000Z",
-          "paymentReceipt": false
-        }
-      ],
-      "executionLocal": "Palmas,Tocantins,Brasil",
-      "latitude": -10.1836,
-      "longitude": -48.3339,
-      "contractedCompany": {
-        "id": 13,
-        "name": "EducaTech Ltda.",
-        "corporateName": "EducaTech Treinamentos Ltda.",
-        "code": "ET-2024",
-        "phone": "098-765-4332",
-        "address": "456 Rua do Conhecimento, Bairro Universitário"
-      },
-      "subsidiaryCompany": {
-        "id": 7,
-        "name": "Academia Corporativa",
-        "corporateName": "Academia Corporativa Ltda.",
-        "code": "AC-2024",
-        "phone": "123-456-7896",
-        "address": "789 Rua do Aprendizado, Bairro Educacional",
-        "matrix": true
-      },
-      "contractManager": {
-        "id": 12,
-        "name": "Mariana Oliveira",
-        "email": "mariana.oliveira@academiacorporativa.com",
-        "phone": "123-456-7897",
-        "subsidiaryCompany": {
-          "id": 7,
-          "name": "Academia Corporativa",
-          "corporateName": "Academia Corporativa Ltda.",
-          "code": "AC-2024",
-          "phone": "123-456-7896",
-          "address": "789 Rua do Aprendizado, Bairro Educacional",
-          "matrix": true
-        }
-      },
-      "legalRepresentative": {
-        "id": 13,
-        "name": "José Ricardo",
-        "email": "jose.ricardo@educatech.com",
-        "phone": "098-765-4332",
-        "contractedCompany": {
-          "id": 13,
-          "name": "EducaTech Ltda.",
-          "corporateName": "EducaTech Treinamentos Ltda.",
-          "code": "ET-2024",
-          "phone": "098-765-4332",
-          "address": "456 Rua do Conhecimento, Bairro Universitário"
-        }
-      }
-    }
-  ]
+	"contract-types": [
+		{
+			"name": "Amet consecteturo",
+			"contractObjective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"contractItems": [
+				{
+					"name": "Amet consectetur",
+					"type": "DELIVERY",
+					"scheduledDate": "2024-09-01"
+				},
+				{
+					"name": "Lorem ipsum",
+					"type": "SERVICE",
+					"scheduledDate": "2024-09-15"
+				},
+				{
+					"name": "Dolor sit amet",
+					"type": "DELIVERY",
+					"scheduledDate": "2024-09-01"
+				},
+				{
+					"name": "Ipsum",
+					"type": "DELIVERY",
+					"scheduledDate": "2024-09-01"
+				},
+				{
+					"name": "Dolor",
+					"type": "SERVICE",
+					"scheduledDate": "2024-09-19"
+				}
+			],
+			"id": "1"
+		},
+		{
+			"id": "7313",
+			"name": "",
+			"contractObjective": "",
+			"contractItems": []
+		},
+		{
+			"id": "9029",
+			"name": "Lorem",
+			"contractObjective": "Lorem",
+			"contractItems": [
+				{
+					"name": "Lorem",
+					"scheduledDate": "2003-09-22T03:00:00.000Z"
+				}
+			]
+		},
+		{
+			"id": "52de",
+			"name": "Ipsum",
+			"contractObjective": "Ipsum",
+			"contractItems": [
+				{
+					"name": "Ipsum",
+					"scheduledDate": "2004-01-27T02:00:00.000Z"
+				}
+			]
+		},
+		{
+			"id": "33fb",
+			"name": "Amet consecteturo",
+			"contractObjective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"contractItems": [
+				{
+					"name": "Amet consectetur",
+					"type": "DELIVERY",
+					"scheduledDate": "2024-09-01"
+				},
+				{
+					"name": "Lorem ipsum",
+					"type": "SERVICE",
+					"scheduledDate": "2024-09-15"
+				},
+				{
+					"name": "Dolor sit amet",
+					"type": "DELIVERY",
+					"scheduledDate": "2024-09-01"
+				},
+				{
+					"name": "Ipsum",
+					"type": "DELIVERY",
+					"scheduledDate": "2024-09-01"
+				},
+				{
+					"name": "Dolor",
+					"type": "SERVICE",
+					"scheduledDate": "2024-09-19"
+				}
+			]
+		}
+	],
+	"hiring-companies": [
+		{
+			"id": "1",
+			"name": "Lorem",
+			"corporateName": "Lorem Ltda.",
+			"code": "89.861.783/0001-01",
+			"phone": "(68) 2685-5758",
+			"email": "contact@lorem.com",
+			"address": "Rua das Flores, 123, Apto 45, Jardim das Acácias, São Paulo - SP, CEP: 01234-567",
+			"matrix": true
+		},
+		{
+			"id": "2",
+			"name": "Ipsum",
+			"corporateName": "Ipsum Inc.",
+			"code": "52.634.595/0001-30",
+			"phone": "(69) 2352-2628",
+			"email": "info@ipsum.com",
+			"address": "Avenida Paulista, 1500, Sala 201, Bela Vista, São Paulo - SP, CEP: 01310-200"
+		},
+		{
+			"id": "3",
+			"name": "Dolor",
+			"corporateName": "Dolor LLC",
+			"code": "77.639.134/0001-81",
+			"phone": "(16) 2077-8368",
+			"email": "support@dolor.com",
+			"address": "Estrada do Campo, S/N, Zona Rural, Fazenda Paraíso, Piracicaba - SP, CEP: 13400-970"
+		},
+		{
+			"id": "4",
+			"name": "Sit",
+			"corporateName": "Sit Corporation",
+			"code": "09.382.807/0001-00",
+			"phone": "(67) 2381-8124",
+			"email": "contact@sit.com",
+			"address": "Alameda dos Pinheiros, 45, Casa 12, Condomínio Vila Verde, Campinas - SP, CEP: 13087-765"
+		},
+		{
+			"id": "5",
+			"name": "Amet",
+			"corporateName": "Amet Ltd.",
+			"code": "86.092.960/0001-44",
+			"phone": "(79) 3139-8084",
+			"email": "contact@amet.com",
+			"address": "Rua Central, 250, Centro, Monte Alegre do Sul - SP, CEP: 13910-000"
+		}
+	],
+	"contracted-companies": [
+		{
+			"id": "1",
+			"name": "Consectur",
+			"corporateName": "Consectur Inc.",
+			"code": "79.155.498/0001-11",
+			"phone": "(77) 3435-2333",
+			"email": "contact@consectur.com",
+			"address": "Rua Dom Pedro II, 210, Fundos, Centro, Salvador - BA, CEP: 40050-350"
+		},
+		{
+			"id": "2",
+			"name": "Adipiscing",
+			"corporateName": "Adipiscing Ltd.",
+			"code": "77.861.869/0001-55",
+			"phone": "(68) 2924-0523",
+			"email": "info@adipiscing.com",
+			"address": "Avenida das Nações Unidas, 3001, Conjunto 15, Brooklin, São Paulo - SP, CEP: 04578-000"
+		},
+		{
+			"id": "3",
+			"name": "Elit",
+			"corporateName": "Elit LLC",
+			"code": "43.480.383/0001-55",
+			"phone": "(83) 3352-5352",
+			"email": "support@elit.com",
+			"address": "Rua Santos Dumont, 55, Casa 6, Vila Aeroporto, Fortaleza - CE, CEP: 60410-340"
+		},
+		{
+			"id": "4",
+			"name": "Sed",
+			"corporateName": "Sed Co.",
+			"code": "16.745.656/0001-73",
+			"phone": "(84) 3702-2679",
+			"email": "sales@sed.com",
+			"address": "Avenida Brasil, 4500, Bloco C, Apto 32, Jardim América, Rio de Janeiro - RJ, CEP: 21030-000"
+		},
+		{
+			"id": "5",
+			"name": "Eiusmod ",
+			"corporateName": "Eiusmod Group",
+			"code": "77.640.034/0001-75",
+			"phone": "(71) 2023-1887",
+			"email": "contact@eiusmod.com",
+			"address": "Rua dos Andradas, 987, Sala 304, Centro Histórico, Porto Alegre - RS, CEP: 90020-007"
+		}
+	],
+	"contracted-company-employees": [
+		{
+			"id": 1,
+			"name": "John Doe",
+			"email": "johndoe@consectur.com",
+			"phone": "(95) 3880-5533",
+			"code": "979.916.800-70",
+			"company": {
+				"id": "1"
+			},
+			"isLegalRepresentative": true
+		},
+		{
+			"id": 2,
+			"name": "Jane Smith",
+			"email": "janesmith@adipscing.com",
+			"phone": "(95) 2441-1719",
+			"code": "767.639.270-53",
+			"company": {
+				"id": "2"
+			},
+			"isLegalRepresentative": false
+		},
+		{
+			"id": 3,
+			"name": "Michael Johnson",
+			"email": "michaeljohnson@elit.com",
+			"phone": "(99) 3100-2871",
+			"code": "874.743.730-84",
+			"company": {
+				"id": "3"
+			},
+			"isLegalRepresentative": true
+		},
+		{
+			"id": 4,
+			"name": "Emily Davis",
+			"email": "emilydavis@sed.com",
+			"phone": "(13) 2791-6871",
+			"code": "151.710.520-00",
+			"company": {
+				"id": "4"
+			},
+			"isLegalRepresentative": false
+		},
+		{
+			"id": 5,
+			"name": "William Brown",
+			"email": "williambrown@eiusmod.com",
+			"phone": "(79) 3538-2862",
+			"code": "650.167.290-26",
+			"company": {
+				"id": "5"
+			},
+			"isLegalRepresentative": true
+		},
+		{
+			"id": 6,
+			"name": "Olivia Wilson",
+			"email": "oliviawilson@consectur.com",
+			"phone": "(27) 2442-2477",
+			"code": "622.451.370-86",
+			"company": {
+				"id": "1"
+			},
+			"isLegalRepresentative": false
+		},
+		{
+			"id": 7,
+			"name": "James Taylor",
+			"email": "jamestaylor@adipiscing.com",
+			"phone": "(55) 2773-2928",
+			"code": "705.710.790-08",
+			"company": {
+				"id": "2"
+			},
+			"isLegalRepresentative": true
+		},
+		{
+			"id": 8,
+			"name": "Sophia Martinez",
+			"email": "sophiamartinez@elit.com",
+			"phone": "(82) 2717-6386",
+			"code": "068.887.900-45",
+			"company": {
+				"id": "3"
+			},
+			"isLegalRepresentative": false
+		},
+		{
+			"id": 9,
+			"name": "Daniel Anderson",
+			"email": "danielanderson@sed.com",
+			"phone": "(99) 3531-1211",
+			"code": "958.180.350-50",
+			"company": {
+				"id": "4"
+			},
+			"isLegalRepresentative": true
+		},
+		{
+			"id": 10,
+			"name": "Ava Thomas",
+			"email": "avathomas@eiusmod.com",
+			"phone": "(83) 3942-3435",
+			"code": "794.544.490-36",
+			"company": {
+				"id": "5"
+			},
+			"isLegalRepresentative": false
+		}
+	],
+	"hiring-company-employees": [
+		{
+			"id": 1,
+			"name": "Alice Johnson",
+			"email": "alice.johnson@lorem.com",
+			"phone": "+1-555-001-1234",
+			"code": "354.126.960-07",
+			"company": {
+				"id": "1"
+			},
+			"isProjectManager": true
+		},
+		{
+			"id": 2,
+			"name": "Bob Smith",
+			"email": "bob.smith@ipsum.com",
+			"phone": "+1-555-002-2345",
+			"code": "789.739.760-28",
+			"company": {
+				"id": "2"
+			},
+			"isProjectManager": false
+		},
+		{
+			"id": 3,
+			"name": "Carol Williams",
+			"email": "carol.williams@dolor.com",
+			"phone": "+1-555-003-3456",
+			"code": "065.067.340-94",
+			"company": {
+				"id": "3"
+			},
+			"isProjectManager": true
+		},
+		{
+			"id": 4,
+			"name": "David Brown",
+			"email": "david.brown@sit.com",
+			"phone": "+1-555-004-4567",
+			"code": "217.231.120-03",
+			"company": {
+				"id": "4"
+			},
+			"isProjectManager": false
+		},
+		{
+			"id": 5,
+			"name": "Eve Davis",
+			"email": "eve.davis@amet.com",
+			"phone": "+1-555-005-5678",
+			"code": "297.094.520-70",
+			"company": {
+				"id": "5"
+			},
+			"isProjectManager": true
+		},
+		{
+			"id": 6,
+			"name": "Frank Miller",
+			"email": "frank.miller@lorem.com",
+			"phone": "+1-555-006-6789",
+			"code": "905.076.540-80",
+			"company": {
+				"id": "1"
+			},
+			"isProjectManager": false
+		},
+		{
+			"id": 7,
+			"name": "Grace Lee",
+			"email": "grace.lee@ipsum.com",
+			"phone": "+1-555-007-7890",
+			"code": "397.618.400-42",
+			"company": {
+				"id": "2"
+			},
+			"isProjectManager": true
+		},
+		{
+			"id": 8,
+			"name": "Henry Wilson",
+			"email": "henry.wilson@dolor.com",
+			"phone": "+1-555-008-8901",
+			"code": "821.889.730-54",
+			"company": {
+				"id": "3"
+			},
+			"isProjectManager": false
+		},
+		{
+			"id": 9,
+			"name": "Irene Martinez",
+			"email": "irene.martinez@sit.com",
+			"phone": "+1-555-009-9012",
+			"code": "039.457.240-82",
+			"company": {
+				"id": "4"
+			},
+			"isProjectManager": true
+		},
+		{
+			"id": 10,
+			"name": "Jack Anderson",
+			"email": "jack.anderson@amet.com",
+			"phone": "+1-555-010-0123",
+			"code": "114.094.210-74",
+			"company": {
+				"id": "5"
+			},
+			"isProjectManager": false
+		}
+	],
+	"installments": [
+		{
+			"id": "1",
+			"value": 100000,
+			"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+			"paymentDate": "2024-09-02T00:00:00.000Z",
+			"paymentReceipt": true
+		},
+		{
+			"id": "2",
+			"value": 200000,
+			"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+			"paymentDate": "2024-10-02T00:00:00.000Z",
+			"paymentReceipt": false
+		}
+	],
+	"payment-methods": [
+		{
+			"id": "1",
+			"name": "Mensal",
+			"frequency": 1
+		},
+		{
+			"id": "2",
+			"name": "Bimestral",
+			"frequency": 2
+		},
+		{
+			"id": "3",
+			"name": "Trimestral",
+			"frequency": 2
+		},
+		{
+			"id": "4",
+			"name": "Semestral",
+			"frequency": 6
+		},
+		{
+			"id": "5",
+			"name": "Anual",
+			"frequency": 12
+		},
+		{
+			"id": "5fb9",
+			"name": "Bianual",
+			"frequency": 24
+		}
+	],
+	"contracts": [
+		{
+			"id": "1",
+			"name": "Atualização de Infraestrutura de TI",
+			"contractType": "Serviço",
+			"contractObjective": "Atualização da infraestrutura de TI em todas as filiais.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Instalação de Servidor",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Configuração de Rede",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-08-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 500000,
+			"paymentMethodId": "1",
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-08-01T00:00:00.000Z",
+					"paymentDate": "2024-08-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 3,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-02T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 4,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-11-01T00:00:00.000Z",
+					"paymentDate": "2024-11-02T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 5,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
+					"paymentDate": "2024-12-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "São Paulo,São Paulo,Brasil",
+			"latitude": -23.55052,
+			"longitude": -46.63331,
+			"contractedCompany": {
+				"id": 2,
+				"name": "Soluções Energéticas Verdes",
+				"corporateName": "Soluções Energéticas Verdes Ltda.",
+				"code": "SEV-2024",
+				"phone": "098-765-4321",
+				"address": "456 Rua Verde, Bairro Sustentável"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Inovadores em Tecnologia",
+				"corporateName": "Inovadores em Tecnologia Ltda.",
+				"code": "IT-2024",
+				"phone": "123-456-7890",
+				"address": "123 Rua da Tecnologia, Cidade da Inovação",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 1,
+				"name": "Alice Smith",
+				"email": "alice.smith@inovadores.com",
+				"phone": "123-456-7890",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Inovadores em Tecnologia",
+					"corporateName": "Inovadores em Tecnologia Ltda.",
+					"code": "IT-2024",
+					"phone": "123-456-7890",
+					"address": "123 Rua da Tecnologia, Cidade da Inovação",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 2,
+				"name": "Bob Johnson",
+				"email": "bob.johnson@solucoesverdes.com",
+				"phone": "098-765-4321",
+				"contractedCompany": {
+					"id": 2,
+					"name": "Soluções Energéticas Verdes",
+					"corporateName": "Soluções Energéticas Verdes Ltda.",
+					"code": "SEV-2024",
+					"phone": "098-765-4321",
+					"address": "456 Rua Verde, Bairro Sustentável"
+				}
+			}
+		},
+		{
+			"id": "2",
+			"name": "Implantação de Sistema de Segurança",
+			"contractType": "Serviço",
+			"contractObjective": "Instalação de um novo sistema de segurança nas unidades.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Instalação de Câmeras",
+					"scheduledDate": "2024-10-05T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Configuração de Alarme",
+					"scheduledDate": "2024-10-20T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-09-01T00:00:00.000Z",
+			"endDate": "2024-11-30T00:00:00.000Z",
+			"contractedValue": 300000,
+			"paymentMethodId": "2",
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-11-01T00:00:00.000Z",
+					"paymentDate": "2024-11-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Rio de Janeiro,Rio de Janeiro,Brasil",
+			"latitude": -22.90685,
+			"longitude": -43.1729,
+			"contractedCompany": {
+				"id": 3,
+				"name": "Segurança Total",
+				"corporateName": "Segurança Total Ltda.",
+				"code": "ST-2024",
+				"phone": "098-765-4322",
+				"address": "789 Rua da Segurança, Bairro Protegido"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Inovadores em Tecnologia",
+				"corporateName": "Inovadores em Tecnologia Ltda.",
+				"code": "IT-2024",
+				"phone": "123-456-7890",
+				"address": "123 Rua da Tecnologia, Cidade da Inovação",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 2,
+				"name": "Carlos Pereira",
+				"email": "carlos.pereira@inovadores.com",
+				"phone": "123-456-7891",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Inovadores em Tecnologia",
+					"corporateName": "Inovadores em Tecnologia Ltda.",
+					"code": "IT-2024",
+					"phone": "123-456-7890",
+					"address": "123 Rua da Tecnologia, Cidade da Inovação",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 3,
+				"name": "Daniela Souza",
+				"email": "daniela.souza@segurancatotal.com",
+				"phone": "098-765-4322",
+				"contractedCompany": {
+					"id": 3,
+					"name": "Segurança Total",
+					"corporateName": "Segurança Total Ltda.",
+					"code": "ST-2024",
+					"phone": "098-765-4322",
+					"address": "789 Rua da Segurança, Bairro Protegido"
+				}
+			}
+		},
+		{
+			"id": "3",
+			"name": "Treinamento e Capacitação de Equipe",
+			"contractType": "Serviço",
+			"contractObjective": "Treinamento da equipe de TI para novos sistemas e tecnologias.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Curso de Atualização",
+					"scheduledDate": "2024-10-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Workshop Prático",
+					"scheduledDate": "2024-10-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-09-01T00:00:00.000Z",
+			"endDate": "2024-12-31T00:00:00.000Z",
+			"contractedValue": 200000,
+			"paymentMethodId": "3",
+			"installments": [
+				{
+					"id": 1,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 100000,
+					"scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
+					"paymentDate": "2024-12-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Belo Horizonte,Minas Gerais,Brasil",
+			"latitude": -19.91668,
+			"longitude": -43.9345,
+			"contractedCompany": {
+				"id": 4,
+				"name": "Capacitação em Tecnologia",
+				"corporateName": "Capacitação em Tecnologia Ltda.",
+				"code": "CT-2024",
+				"phone": "098-765-4323",
+				"address": "1010 Rua da Capacitação, Bairro Avançado"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Inovadores em Tecnologia",
+				"corporateName": "Inovadores em Tecnologia Ltda.",
+				"code": "IT-2024",
+				"phone": "123-456-7890",
+				"address": "123 Rua da Tecnologia, Cidade da Inovação",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 3,
+				"name": "Fernanda Lima",
+				"email": "fernanda.lima@inovadores.com",
+				"phone": "123-456-7892",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Inovadores em Tecnologia",
+					"corporateName": "Inovadores em Tecnologia Ltda.",
+					"code": "IT-2024",
+					"phone": "123-456-7890",
+					"address": "123 Rua da Tecnologia, Cidade da Inovação",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 4,
+				"name": "Eduardo Santos",
+				"email": "eduardo.santos@capacitec.com",
+				"phone": "098-765-4323",
+				"contractedCompany": {
+					"id": 4,
+					"name": "Capacitação em Tecnologia",
+					"corporateName": "Capacitação em Tecnologia Ltda.",
+					"code": "CT-2024",
+					"phone": "098-765-4323",
+					"address": "1010 Rua da Capacitação, Bairro Avançado"
+				}
+			}
+		},
+		{
+			"id": "4",
+			"name": "Renovação do Parque de Máquinas",
+			"contractType": "Compra",
+			"contractObjective": "Aquisição de novos equipamentos de escritório.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Compra de Computadores",
+					"scheduledDate": "2024-08-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Compra de Impressoras",
+					"scheduledDate": "2024-08-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-09-01T00:00:00.000Z",
+			"endDate": "2025-08-31T00:00:00.000Z",
+			"contractedValue": 400000,
+			"paymentMethodId": "2",
+			"installments": [
+				{
+					"id": 1,
+					"value": 200000,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 200000,
+					"scheduledDeliveryDate": "2025-03-01T00:00:00.000Z",
+					"paymentDate": "2025-03-02T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Brasília,Distrito Federal,Brasil",
+			"latitude": -15.79423,
+			"longitude": -47.88217,
+			"contractedCompany": {
+				"id": 5,
+				"name": "TecnoHardware Ltda.",
+				"corporateName": "TecnoHardware Ltda.",
+				"code": "TH-2024",
+				"phone": "098-765-4324",
+				"address": "456 Rua da Tecnologia, Bairro Inovador"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Inovadores em Tecnologia",
+				"corporateName": "Inovadores em Tecnologia Ltda.",
+				"code": "IT-2024",
+				"phone": "123-456-7890",
+				"address": "123 Rua da Tecnologia, Cidade da Inovação",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 4,
+				"name": "João Santos",
+				"email": "joao.santos@inovadores.com",
+				"phone": "123-456-7893",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Inovadores em Tecnologia",
+					"corporateName": "Inovadores em Tecnologia Ltda.",
+					"code": "IT-2024",
+					"phone": "123-456-7890",
+					"address": "123 Rua da Tecnologia, Cidade da Inovação",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 5,
+				"name": "Carla Costa",
+				"email": "carla.costa@tecnohardware.com",
+				"phone": "098-765-4324",
+				"contractedCompany": {
+					"id": 5,
+					"name": "TecnoHardware Ltda.",
+					"corporateName": "TecnoHardware Ltda.",
+					"code": "TH-2024",
+					"phone": "098-765-4324",
+					"address": "456 Rua da Tecnologia, Bairro Inovador"
+				}
+			}
+		},
+		{
+			"id": "5",
+			"name": "Reforma do Escritório Central",
+			"contractType": "Serviço",
+			"contractObjective": "Realizar a reforma completa do escritório central.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Reforma do Piso",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Pintura das Paredes",
+					"scheduledDate": "2024-09-10T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-09-01T00:00:00.000Z",
+			"endDate": "2025-08-31T00:00:00.000Z",
+			"contractedValue": 300000,
+			"paymentMethodId": "4",
+			"installments": [
+				{
+					"id": 1,
+					"value": 300000,
+					"scheduledDeliveryDate": "2024-09-01T00:00:00.000Z",
+					"paymentDate": "2024-09-02T00:00:00.000Z",
+					"paymentReceipt": true
+				}
+			],
+			"executionLocal": "Belo Horizonte,Minas Gerais,Brasil",
+			"latitude": -19.9245,
+			"longitude": -43.93524,
+			"contractedCompany": {
+				"id": 6,
+				"name": "Construtora Confiável",
+				"corporateName": "Construtora Confiável Ltda.",
+				"code": "CC-2024",
+				"phone": "098-765-4325",
+				"address": "789 Rua da Construção, Bairro Planejado"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Inovadores em Tecnologia",
+				"corporateName": "Inovadores em Tecnologia Ltda.",
+				"code": "IT-2024",
+				"phone": "123-456-7890",
+				"address": "123 Rua da Tecnologia, Cidade da Inovação",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 5,
+				"name": "Fernanda Lima",
+				"email": "fernanda.lima@inovadores.com",
+				"phone": "123-456-7894",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Inovadores em Tecnologia",
+					"corporateName": "Inovadores em Tecnologia Ltda.",
+					"code": "IT-2024",
+					"phone": "123-456-7890",
+					"address": "123 Rua da Tecnologia, Cidade da Inovação",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 6,
+				"name": "Pedro Almeida",
+				"email": "pedro.almeida@confiavel.com",
+				"phone": "098-765-4325",
+				"contractedCompany": {
+					"id": 6,
+					"name": "Construtora Confiável",
+					"corporateName": "Construtora Confiável Ltda.",
+					"code": "CC-2024",
+					"phone": "098-765-4325",
+					"address": "789 Rua da Construção, Bairro Planejado"
+				}
+			}
+		},
+		{
+			"id": "6",
+			"name": "Fornecimento de Equipamentos de TI",
+			"contractType": "Compra",
+			"contractObjective": "Aquisição de servidores e periféricos de TI.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Compra de Servidores",
+					"scheduledDate": "2024-08-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Compra de Roteadores",
+					"scheduledDate": "2024-08-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-07-01T00:00:00.000Z",
+			"endDate": "2025-01-01T00:00:00.000Z",
+			"contractedValue": 350000,
+			"paymentMethodId": "2",
+			"installments": [
+				{
+					"id": 1,
+					"value": 175000,
+					"scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
+					"paymentDate": "2024-07-12T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 175000,
+					"scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+					"paymentDate": "2024-12-12T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Porto Alegre,Rio Grande do Sul,Brasil",
+			"latitude": -30.03465,
+			"longitude": -51.2177,
+			"contractedCompany": {
+				"id": 7,
+				"name": "Tecnologia Avançada Ltda.",
+				"corporateName": "Tecnologia Avançada Ltda.",
+				"code": "TA-2024",
+				"phone": "098-765-4326",
+				"address": "987 Rua da Inovação, Bairro Tecnológico"
+			},
+			"subsidiaryCompany": {
+				"id": 1,
+				"name": "Inovadores em Tecnologia",
+				"corporateName": "Inovadores em Tecnologia Ltda.",
+				"code": "IT-2024",
+				"phone": "123-456-7890",
+				"address": "123 Rua da Tecnologia, Cidade da Inovação",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 6,
+				"name": "Gabriel Souza",
+				"email": "gabriel.souza@inovadores.com",
+				"phone": "123-456-7895",
+				"subsidiaryCompany": {
+					"id": 1,
+					"name": "Inovadores em Tecnologia",
+					"corporateName": "Inovadores em Tecnologia Ltda.",
+					"code": "IT-2024",
+					"phone": "123-456-7890",
+					"address": "123 Rua da Tecnologia, Cidade da Inovação",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 7,
+				"name": "Ricardo Fernandes",
+				"email": "ricardo.fernandes@tecnologiaavancada.com",
+				"phone": "098-765-4326",
+				"contractedCompany": {
+					"id": 7,
+					"name": "Tecnologia Avançada Ltda.",
+					"corporateName": "Tecnologia Avançada Ltda.",
+					"code": "TA-2024",
+					"phone": "098-765-4326",
+					"address": "987 Rua da Inovação, Bairro Tecnológico"
+				}
+			}
+		},
+		{
+			"id": "7",
+			"name": "Implementação de Rede de Dados",
+			"contractType": "Serviço",
+			"contractObjective": "Instalação de infraestrutura de rede em nova sede.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Instalação de Cabos de Rede",
+					"scheduledDate": "2024-10-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Configuração de Switches",
+					"scheduledDate": "2024-10-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-07-01T00:00:00.000Z",
+			"endDate": "2025-01-01T00:00:00.000Z",
+			"contractedValue": 350000,
+			"paymentMethodId": "1",
+			"installments": [
+				{
+					"id": 1,
+					"value": 58333.33,
+					"scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
+					"paymentDate": "2024-07-12T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 58333.33,
+					"scheduledDeliveryDate": "2024-08-10T00:00:00.000Z",
+					"paymentDate": "2024-08-12T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 3,
+					"value": 58333.33,
+					"scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
+					"paymentDate": "2024-09-12T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 4,
+					"value": 58333.33,
+					"scheduledDeliveryDate": "2024-10-10T00:00:00.000Z",
+					"paymentDate": "2024-10-12T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 5,
+					"value": 58333.33,
+					"scheduledDeliveryDate": "2024-11-10T00:00:00.000Z",
+					"paymentDate": "2024-11-12T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 6,
+					"value": 58333.33,
+					"scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+					"paymentDate": "2024-12-12T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Fortaleza,Ceará,Brasil",
+			"latitude": -3.7172,
+			"longitude": -38.5439,
+			"contractedCompany": {
+				"id": 8,
+				"name": "NetTech Serviços",
+				"corporateName": "NetTech Serviços de TI Ltda.",
+				"code": "NT-2024",
+				"phone": "098-765-4327",
+				"address": "123 Avenida Paulista, Centro Tecnológico"
+			},
+			"subsidiaryCompany": {
+				"id": 2,
+				"name": "Empreendimentos Digitais",
+				"corporateName": "Empreendimentos Digitais Ltda.",
+				"code": "ED-2024",
+				"phone": "123-456-7896",
+				"address": "456 Rua da Transformação, Cidade Digital",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 7,
+				"name": "Renata Oliveira",
+				"email": "renata.oliveira@empreendimentos.com",
+				"phone": "123-456-7897",
+				"subsidiaryCompany": {
+					"id": 2,
+					"name": "Empreendimentos Digitais",
+					"corporateName": "Empreendimentos Digitais Ltda.",
+					"code": "ED-2024",
+					"phone": "123-456-7896",
+					"address": "456 Rua da Transformação, Cidade Digital",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 8,
+				"name": "Lucas Carvalho",
+				"email": "lucas.carvalho@nettech.com",
+				"phone": "098-765-4327",
+				"contractedCompany": {
+					"id": 8,
+					"name": "NetTech Serviços",
+					"corporateName": "NetTech Serviços de TI Ltda.",
+					"code": "NT-2024",
+					"phone": "098-765-4327",
+					"address": "123 Avenida Paulista, Centro Tecnológico"
+				}
+			}
+		},
+		{
+			"id": "8",
+			"name": "Expansão da Rede de Energia",
+			"contractType": "Serviço",
+			"contractObjective": "Expansão da rede elétrica para novas instalações.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Instalação de Postes de Energia",
+					"scheduledDate": "2024-11-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Ligação de Cabos de Alta Tensão",
+					"scheduledDate": "2024-11-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-07-01T00:00:00.000Z",
+			"endDate": "2025-01-01T00:00:00.000Z",
+			"contractedValue": 350000,
+			"paymentMethodId": "3",
+			"installments": [
+				{
+					"id": 1,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-07-10T00:00:00.000Z",
+					"paymentDate": "2024-07-12T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-09-10T00:00:00.000Z",
+					"paymentDate": "2024-09-12T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 3,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-11-10T00:00:00.000Z",
+					"paymentDate": "2024-11-12T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 4,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+					"paymentDate": "2024-12-12T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Salvador,Bahia,Brasil",
+			"latitude": -12.9822499,
+			"longitude": -38.4812772,
+			"contractedCompany": {
+				"id": 9,
+				"name": "EletroInfra Ltda.",
+				"corporateName": "EletroInfra Ltda.",
+				"code": "EI-2024",
+				"phone": "098-765-4328",
+				"address": "789 Rua das Indústrias, Bairro Industrial"
+			},
+			"subsidiaryCompany": {
+				"id": 3,
+				"name": "Infraestrutura Tecnológica",
+				"corporateName": "Infraestrutura Tecnológica Ltda.",
+				"code": "ITL-2024",
+				"phone": "123-456-7898",
+				"address": "123 Avenida do Progresso, Cidade Industrial",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 8,
+				"name": "Tiago Costa",
+				"email": "tiago.costa@infraestrutura.com",
+				"phone": "123-456-7899",
+				"subsidiaryCompany": {
+					"id": 3,
+					"name": "Infraestrutura Tecnológica",
+					"corporateName": "Infraestrutura Tecnológica Ltda.",
+					"code": "ITL-2024",
+					"phone": "123-456-7898",
+					"address": "123 Avenida do Progresso, Cidade Industrial",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 9,
+				"name": "Rafael Lima",
+				"email": "rafael.lima@eletroinfra.com",
+				"phone": "098-765-4328",
+				"contractedCompany": {
+					"id": 9,
+					"name": "EletroInfra Ltda.",
+					"corporateName": "EletroInfra Ltda.",
+					"code": "EI-2024",
+					"phone": "098-765-4328",
+					"address": "789 Rua das Indústrias, Bairro Industrial"
+				}
+			}
+		},
+		{
+			"id": "9",
+			"name": "Aquisição de Mobiliário",
+			"contractType": "Compra",
+			"contractObjective": "Compra de novos móveis para escritório.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Compra de Mesas",
+					"scheduledDate": "2024-12-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Compra de Cadeiras",
+					"scheduledDate": "2024-12-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-07-01T00:00:00.000Z",
+			"endDate": "2025-01-01T00:00:00.000Z",
+			"contractedValue": 350000,
+			"paymentMethodId": "4",
+			"installments": [
+				{
+					"id": 1,
+					"value": 350000,
+					"scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+					"paymentDate": "2024-12-12T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Cuiabá,Mato Grosso,Brasil",
+			"latitude": -15.601,
+			"longitude": -56.0979,
+			"contractedCompany": {
+				"id": 10,
+				"name": "OfficeTech Ltda.",
+				"corporateName": "OfficeTech Móveis Ltda.",
+				"code": "OT-2024",
+				"phone": "098-765-4329",
+				"address": "456 Rua do Trabalho, Centro Comercial"
+			},
+			"subsidiaryCompany": {
+				"id": 4,
+				"name": "Empresas Inovadoras",
+				"corporateName": "Empresas Inovadoras Ltda.",
+				"code": "EI-2024",
+				"phone": "123-456-7890",
+				"address": "789 Rua do Sucesso, Bairro Empresarial",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 9,
+				"name": "Fernanda Gomes",
+				"email": "fernanda.gomes@empresasinovadoras.com",
+				"phone": "123-456-7891",
+				"subsidiaryCompany": {
+					"id": 4,
+					"name": "Empresas Inovadoras",
+					"corporateName": "Empresas Inovadoras Ltda.",
+					"code": "EI-2024",
+					"phone": "123-456-7890",
+					"address": "789 Rua do Sucesso, Bairro Empresarial",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 10,
+				"name": "Marcos Silva",
+				"email": "marcos.silva@officetech.com",
+				"phone": "098-765-4329",
+				"contractedCompany": {
+					"id": 10,
+					"name": "OfficeTech Ltda.",
+					"corporateName": "OfficeTech Móveis Ltda.",
+					"code": "OT-2024",
+					"phone": "098-765-4329",
+					"address": "456 Rua do Trabalho, Centro Comercial"
+				}
+			}
+		},
+		{
+			"id": "10",
+			"name": "Serviços de Consultoria Jurídica",
+			"contractType": "Serviço",
+			"contractObjective": "Consultoria para adequação à nova legislação.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Revisão de Contratos",
+					"scheduledDate": "2024-09-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Elaboração de Termos Jurídicos",
+					"scheduledDate": "2024-09-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-07-01T00:00:00.000Z",
+			"endDate": "2025-01-01T00:00:00.000Z",
+			"contractedValue": 350000,
+			"paymentMethodId": "4",
+			"installments": [
+				{
+					"id": 1,
+					"value": 350000,
+					"scheduledDeliveryDate": "2024-12-10T00:00:00.000Z",
+					"paymentDate": "2024-12-12T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Manaus,Amazonas,Brasil",
+			"latitude": -3.119,
+			"longitude": -60.0217,
+			"contractedCompany": {
+				"id": 11,
+				"name": "LegisTec Advogados",
+				"corporateName": "LegisTec Advogados Associados",
+				"code": "LT-2024",
+				"phone": "098-765-4330",
+				"address": "123 Rua da Justiça, Bairro Jurídico"
+			},
+			"subsidiaryCompany": {
+				"id": 5,
+				"name": "Serviços Corporativos",
+				"corporateName": "Serviços Corporativos Ltda.",
+				"code": "SC-2024",
+				"phone": "123-456-7892",
+				"address": "456 Rua dos Empresários, Bairro Administrativo",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 10,
+				"name": "Juliana Mendes",
+				"email": "juliana.mendes@corporativos.com",
+				"phone": "123-456-7893",
+				"subsidiaryCompany": {
+					"id": 5,
+					"name": "Serviços Corporativos",
+					"corporateName": "Serviços Corporativos Ltda.",
+					"code": "SC-2024",
+					"phone": "123-456-7892",
+					"address": "456 Rua dos Empresários, Bairro Administrativo",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 11,
+				"name": "Ana Paula Souza",
+				"email": "ana.souza@legistec.com",
+				"phone": "098-765-4330",
+				"contractedCompany": {
+					"id": 11,
+					"name": "LegisTec Advogados",
+					"corporateName": "LegisTec Advogados Associados",
+					"code": "LT-2024",
+					"phone": "098-765-4330",
+					"address": "123 Rua da Justiça, Bairro Jurídico"
+				}
+			}
+		},
+		{
+			"id": "11",
+			"name": "Desenvolvimento de Software Personalizado",
+			"contractType": "Serviço",
+			"contractObjective": "Criação de um sistema de gestão interna sob medida.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Desenvolvimento de Frontend",
+					"scheduledDate": "2024-10-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Desenvolvimento de Backend",
+					"scheduledDate": "2024-10-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-07-01T00:00:00.000Z",
+			"endDate": "2025-01-01T00:00:00.000Z",
+			"contractedValue": 350000,
+			"paymentMethodId": "3",
+			"installments": [
+				{
+					"id": 1,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-08-01T00:00:00.000Z",
+					"paymentDate": "2024-08-03T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-10-01T00:00:00.000Z",
+					"paymentDate": "2024-10-03T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 3,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-12-01T00:00:00.000Z",
+					"paymentDate": "2024-12-03T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 4,
+					"value": 87500,
+					"scheduledDeliveryDate": "2025-01-01T00:00:00.000Z",
+					"paymentDate": "2025-01-03T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Belém,Pará,Brasil",
+			"latitude": -1.4554,
+			"longitude": -48.502,
+			"contractedCompany": {
+				"id": 12,
+				"name": "SoftSolutions Ltda.",
+				"corporateName": "SoftSolutions Desenvolvimento Ltda.",
+				"code": "SS-2024",
+				"phone": "098-765-4331",
+				"address": "789 Rua da Inovação, Bairro Tecnológico"
+			},
+			"subsidiaryCompany": {
+				"id": 6,
+				"name": "Tecnologia & Inovação",
+				"corporateName": "Tecnologia & Inovação Ltda.",
+				"code": "TI-2024",
+				"phone": "123-456-7894",
+				"address": "123 Avenida da Tecnologia, Cidade do Futuro",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 11,
+				"name": "Rodrigo Ferreira",
+				"email": "rodrigo.ferreira@tecnologiainovacao.com",
+				"phone": "123-456-7895",
+				"subsidiaryCompany": {
+					"id": 6,
+					"name": "Tecnologia & Inovação",
+					"corporateName": "Tecnologia & Inovação Ltda.",
+					"code": "TI-2024",
+					"phone": "123-456-7894",
+					"address": "123 Avenida da Tecnologia, Cidade do Futuro",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 12,
+				"name": "Carlos Augusto",
+				"email": "carlos.augusto@softsolutions.com",
+				"phone": "098-765-4331",
+				"contractedCompany": {
+					"id": 12,
+					"name": "SoftSolutions Ltda.",
+					"corporateName": "SoftSolutions Desenvolvimento Ltda.",
+					"code": "SS-2024",
+					"phone": "098-765-4331",
+					"address": "789 Rua da Inovação, Bairro Tecnológico"
+				}
+			}
+		},
+		{
+			"id": "12",
+			"name": "Treinamento de Equipes",
+			"contractType": "Serviço",
+			"contractObjective": "Capacitação em novas ferramentas de produtividade.",
+			"contractItems": [
+				{
+					"id": 1,
+					"name": "Curso de Ferramentas de Gestão",
+					"scheduledDate": "2024-07-01T00:00:00.000Z"
+				},
+				{
+					"id": 2,
+					"name": "Workshop de Produtividade",
+					"scheduledDate": "2024-07-15T00:00:00.000Z"
+				}
+			],
+			"startDate": "2024-07-01T00:00:00.000Z",
+			"endDate": "2025-01-01T00:00:00.000Z",
+			"contractedValue": 350000,
+			"paymentMethodId": "3",
+			"installments": [
+				{
+					"id": 1,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-07-15T00:00:00.000Z",
+					"paymentDate": "2024-07-17T00:00:00.000Z",
+					"paymentReceipt": true
+				},
+				{
+					"id": 2,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-09-15T00:00:00.000Z",
+					"paymentDate": "2024-09-17T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 3,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-11-15T00:00:00.000Z",
+					"paymentDate": "2024-11-17T00:00:00.000Z",
+					"paymentReceipt": false
+				},
+				{
+					"id": 4,
+					"value": 87500,
+					"scheduledDeliveryDate": "2024-12-15T00:00:00.000Z",
+					"paymentDate": "2024-12-17T00:00:00.000Z",
+					"paymentReceipt": false
+				}
+			],
+			"executionLocal": "Palmas,Tocantins,Brasil",
+			"latitude": -10.1836,
+			"longitude": -48.3339,
+			"contractedCompany": {
+				"id": 13,
+				"name": "EducaTech Ltda.",
+				"corporateName": "EducaTech Treinamentos Ltda.",
+				"code": "ET-2024",
+				"phone": "098-765-4332",
+				"address": "456 Rua do Conhecimento, Bairro Universitário"
+			},
+			"subsidiaryCompany": {
+				"id": 7,
+				"name": "Academia Corporativa",
+				"corporateName": "Academia Corporativa Ltda.",
+				"code": "AC-2024",
+				"phone": "123-456-7896",
+				"address": "789 Rua do Aprendizado, Bairro Educacional",
+				"matrix": true
+			},
+			"contractManager": {
+				"id": 12,
+				"name": "Mariana Oliveira",
+				"email": "mariana.oliveira@academiacorporativa.com",
+				"phone": "123-456-7897",
+				"subsidiaryCompany": {
+					"id": 7,
+					"name": "Academia Corporativa",
+					"corporateName": "Academia Corporativa Ltda.",
+					"code": "AC-2024",
+					"phone": "123-456-7896",
+					"address": "789 Rua do Aprendizado, Bairro Educacional",
+					"matrix": true
+				}
+			},
+			"legalRepresentative": {
+				"id": 13,
+				"name": "José Ricardo",
+				"email": "jose.ricardo@educatech.com",
+				"phone": "098-765-4332",
+				"contractedCompany": {
+					"id": 13,
+					"name": "EducaTech Ltda.",
+					"corporateName": "EducaTech Treinamentos Ltda.",
+					"code": "ET-2024",
+					"phone": "098-765-4332",
+					"address": "456 Rua do Conhecimento, Bairro Universitário"
+				}
+			}
+		}
+	]
 }

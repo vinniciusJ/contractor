@@ -1,4 +1,5 @@
-import { Divider, Typography } from '@mui/material'
+import { DocumentAdd as DocumentIcon } from '@carbon/icons-react'
+import { Button, Divider, Typography } from '@mui/material'
 import { useParams } from 'react-router-dom'
 
 import { Box } from '@/components/ui/box'
@@ -24,24 +25,31 @@ const ContractPaymentSection = () => {
 
 			<Typography variant="h2">Parcelas</Typography>
 			{contract.installments.map((installment) => (
-				<Box key={installment.id}>
+				<Box key={installment.id} gap={4}>
 					<GridGroup columns={3}>
 						<Field label="Valor">{installment.value}</Field>
 						<Field label="Data prevista de pagamento">
 							{formatDate(installment.scheduledDeliveryDate)}
 						</Field>
 						<Field label="Data de pagamento">{formatDate(installment.paymentDate)}</Field>
-						<Field label="Comprovante" xs={3}>
-							<FilePreview
-								file={
-									{
-										name: 'comprovante-TED.png',
-										size: 2048,
-									} as File
-								}
-							/>
-						</Field>
+						{installment.paymentReceipt ? (
+							<Field label="Comprovante" xs={3}>
+								<FilePreview
+									file={
+										{
+											name: 'comprovante-TED.png',
+											size: 2048,
+										} as File
+									}
+								/>
+							</Field>
+						) : null}
 					</GridGroup>
+					{installment.paymentReceipt ? null : (
+						<Button variant="outlined" startIcon={<DocumentIcon size={20} />}>
+							Adicionar comprovante de pagamento
+						</Button>
+					)}
 				</Box>
 			))}
 		</>

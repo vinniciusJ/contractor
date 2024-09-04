@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC } from 'react'
 
 import { Button, Stack, Typography } from '@mui/material'
@@ -7,6 +8,7 @@ import { CompanyOverview } from '@/components/companies/overview'
 import { EmployeeForm } from '@/components/employees/form'
 import { EmployeesTable } from '@/components/employees/table'
 import { useModal } from '@/components/ui/modal/provider'
+import { Tag } from '@/components/ui/tag'
 import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
 import { Company, HiringCompany } from '@/schemas/company'
@@ -44,6 +46,12 @@ const CompanyPage: FC = () => {
 						<PageLayout.Header.Title.Text>
 							Empresa {companyType === 'hiring' ? 'contrante' : 'contratada'} - {params.companyId}
 						</PageLayout.Header.Title.Text>
+
+						{companyType === 'hiring' && (company as any).matrix ? (
+							<Tag bgcolor="juicy.primary.20" color="juicy.primary.60" justifyContent="flex-end" ml={1}>
+								Matriz
+							</Tag>
+						) : null}
 					</PageLayout.Header.Title.Root>
 				</PageLayout.Header.Root>
 

@@ -1,4 +1,11 @@
-import { ToggleButton, ToggleButtonProps, styled, toggleButtonClasses } from '@mui/material'
+import {
+	IconButton,
+	IconButtonProps,
+	ToggleButton,
+	ToggleButtonProps,
+	styled,
+	toggleButtonClasses,
+} from '@mui/material'
 
 import { MEDIUM_WEIGHT } from '@/utils/constants'
 
@@ -30,5 +37,11 @@ export const OptionButton = styled(ToggleButton)<ToggleButtonProps>(({ theme }) 
 			height: '100%',
 			backgroundColor: theme.palette.juicy.secondary[50],
 		},
+	},
+}))
+
+export const LogoutButton = styled(IconButton)<IconButtonProps>(({ theme }) => ({
+	'& svg': {
+		fill: theme.palette.juicy.neutral[60],
 	},
 }))

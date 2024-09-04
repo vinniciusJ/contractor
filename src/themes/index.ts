@@ -221,5 +221,17 @@ export const theme = createTheme({
 				},
 			},
 		},
+		MuiAvatar: {
+			styleOverrides: {
+				root: {
+					color: COLORS.secondary[60],
+					background: COLORS.secondary[10],
+					fontSize: 16,
+					fontWeight: REGULAR_WEIGHT,
+					width: 36,
+					height: 36,
+				},
+			},
+		},
 	},
 })
