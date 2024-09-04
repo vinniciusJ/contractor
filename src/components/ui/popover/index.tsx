@@ -67,3 +67,8 @@ const PopoverComponent: ForwardRefRenderFunction<PopoverOptions, Props> = (
 export const usePopover = () => useRef<PopoverOptions>(null)
 
 export const Popover = forwardRef(PopoverComponent)
+
+export const openPopover = (ref: React.RefObject<PopoverOptions>) => (element: HTMLElement) =>
+	ref.current?.openPopover(element)
+
+export const closePopover = (ref: React.RefObject<PopoverOptions>) => () => ref.current?.closePopover()

@@ -4,12 +4,18 @@ import { Divider, Stack, Typography } from '@mui/material'
 import { Params, useParams } from 'react-router-dom'
 
 import Loading from '@/components/ui/loading'
+import { ActionOption, MenuOptionsButton } from '@/components/ui/menu-options-button'
 import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
 import { APIContract, Contract } from '@/schemas/contract'
 import { PaymentMethod } from '@/schemas/payment-method'
 import { Section } from '@/types/label-value'
+
+const ContractOptions: ActionOption[] = [
+	{ label: 'Editar contrato', dispatch: console.log },
+	{ label: 'Excluir contrato', dispatch: console.log },
+]
 
 const SECTIONS: Section[] = [
 	{ label: 'Visão Geral', value: 'overview' },
@@ -45,7 +51,7 @@ const ContractPage: FC = () => {
 					<PageLayout.Header.Title.Text>Contrato {contractId}</PageLayout.Header.Title.Text>
 
 					<Stack gap={1} direction="row" alignItems="center">
-						<StatusTag status="PARALISADO" />
+						<StatusTag status={contract.status} />
 						<Divider orientation="vertical" />
 						<Typography fontSize={12} fontWeight={500}>
 							Avanço financeiro:
@@ -55,11 +61,14 @@ const ContractPage: FC = () => {
 								fontWeight={600}
 								color={(theme) => theme.palette.juicy.secondary[60]}
 							>
-								45%
+								{contract.financialProgress}
 							</Typography>
 						</Typography>
 					</Stack>
 				</PageLayout.Header.Title.Root>
+				<PageLayout.Header.RightElementGroup>
+					<MenuOptionsButton options={ContractOptions} />
+				</PageLayout.Header.RightElementGroup>
 			</PageLayout.Header.Root>
 
 			<PageLayout.Sections sections={SECTIONS} />

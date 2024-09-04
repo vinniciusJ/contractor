@@ -18,7 +18,7 @@ const columns = createColumns<ContractType>((helper) => [
 	}),
 	helper.accessor('contractItems', {
 		id: 'contractItems',
-		header: 'Items contratuais',
+		header: 'Itens contratuais',
 		cell: (props) => props.getValue().length,
 	}),
 ])

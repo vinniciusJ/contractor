@@ -13,6 +13,8 @@ import {
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { useNavigate } from 'react-router-dom'
 
+import { FilteringButton } from './filtering-button'
+import { SortingButton } from './sorting-button'
 import { usePagination } from '@/hooks/pagination'
 import { interpolate } from '@/utils/interpolate'
 
@@ -64,6 +66,8 @@ export function Table<T extends object>({ data, items, to, columns }: Readonly<P
 								{headerGroup.headers.map((header) => (
 									<TableCell key={header.id}>
 										{flexRender(header.column.columnDef.header, header.getContext())}
+										{header.column.getCanSort() && <SortingButton column={header.column} />}
+										{header.column.getCanFilter() && <FilteringButton />}
 									</TableCell>
 								))}
 							</TableRow>

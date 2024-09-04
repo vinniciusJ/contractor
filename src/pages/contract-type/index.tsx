@@ -61,7 +61,7 @@ const ContractTypePage: FC = () => {
 					<Divider />
 
 					<Stack direction="row" alignItems="center" justifyContent="space-between">
-						<Typography variant="h2">Items contratuais</Typography>
+						<Typography variant="h2">Itens contratuais</Typography>
 
 						<Button
 							variant="outlined"

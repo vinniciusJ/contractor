@@ -55,7 +55,7 @@ export const apiContractSchema = contractFormSchema.extend({
 
 export type APIContract = z.infer<typeof apiContractSchema>
 
-export const contractSchema = contractFormSchema.extend({
+export const contractSchema = apiContractSchema.extend({
 	paymentMethodId: z.never(),
 })
 

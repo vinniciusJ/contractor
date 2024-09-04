@@ -3,6 +3,7 @@ import { Marker, Popup } from 'react-leaflet'
 
 import { Field } from '@/components/ui/field'
 import { Map } from '@/components/ui/map'
+import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetList } from '@/hooks/get'
 import { APIContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
@@ -32,10 +33,10 @@ const ContractsMapPage = () => {
 								{formatDate(contract.startDate)} - {formatDate(contract.endDate)}
 							</Field>
 							<Field component="stack" label="Status de execução">
-								{contract.status ?? 'Paralisado'}
+								<StatusTag status={contract.status} />
 							</Field>
 							<Field component="stack" label="Avanço financeiro">
-								{contract.financialProgress ?? '45%'}
+								{contract.financialProgress}
 							</Field>
 							<Button
 								href={`${contract.id.toString()}/overview`}

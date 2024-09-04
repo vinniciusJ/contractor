@@ -46,6 +46,7 @@ const getEmployeesTableColumns = (companyType: Props['companyType']) => {
 						Sim
 					</Tag>
 				),
+			enableSorting: false,
 		}),
 	])
 }

@@ -3,6 +3,7 @@ import { FC } from 'react'
 import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
 
 import { Table } from '@/components/ui/table'
+import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetPageable } from '@/hooks/get'
 import { APIContract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
@@ -20,35 +21,34 @@ const columns = [
 		header: 'Tipo do contrato',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('installments', {
-		id: 'installments',
-		header: 'Parcelas',
-		cell: (props) => props.getValue().length,
+	columnHelper.accessor('subsidiaryCompany.name', {
+		id: 'subsidiaryCompany.name',
+		header: 'Emp. Contratante',
+		cell: (props) => props.getValue(),
 	}),
 	columnHelper.accessor('contractedCompany.name', {
 		id: 'contractedCompany.name',
-		header: 'Empresa contratada',
+		header: 'Emp. Contratada',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('contractManager.name', {
-		id: 'contractManager.name',
-		header: 'Gestor do contrato',
-		cell: (props) => props.getValue(),
+	columnHelper.accessor((row) => ({ startDate: row.startDate, endDate: row.endDate }), {
+		id: 'periodo',
+		header: 'Período',
+		cell: (props) => {
+			const { startDate, endDate } = props.getValue()
+			return `${formatDate(startDate)} - ${formatDate(endDate)}`
+		},
 	}),
-	columnHelper.accessor('legalRepresentative.name', {
-		id: 'legalRepresentative.name',
-		header: 'Representante legal',
-		cell: (props) => props.getValue(),
+	columnHelper.accessor('financialProgress', {
+		id: 'financialProgress',
+		header: 'Avanço Financeiro',
+		cell: (props) => `${props.getValue()}%`,
 	}),
-	columnHelper.accessor('startDate', {
-		id: 'startDate',
-		header: 'Data de início',
-		cell: (props) => formatDate(props.getValue()),
-	}),
-	columnHelper.accessor('endDate', {
-		id: 'endDate',
-		header: 'Data de fim',
-		cell: (props) => formatDate(props.getValue()),
+	columnHelper.accessor('status', {
+		id: 'status',
+		header: 'Status',
+		cell: (props) => <StatusTag status={props.getValue()} />,
+		enableSorting: false,
 	}),
 ] as ColumnDef<APIContract>[]
 

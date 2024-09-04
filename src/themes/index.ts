@@ -233,5 +233,30 @@ export const theme = createTheme({
 				},
 			},
 		},
+		MuiToggleButton: {
+			styleOverrides: {
+				root: {
+					display: 'flex',
+					justifyContent: 'start',
+					gap: '8px',
+					padding: '16px 24px',
+					color: COLORS.neutral[100],
+					fontWeight: 400,
+					borderRadius: 0,
+					border: 'none',
+
+					'& svg': {
+						fill: COLORS.secondary[60],
+					},
+
+					'&.Mui-selected': {
+						color: COLORS.secondary[60],
+						'& svg': {
+							fill: COLORS.secondary[60],
+						},
+					},
+				},
+			},
+		},
 	},
 })

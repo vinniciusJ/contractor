@@ -57,6 +57,8 @@ const getCompaniesTableColumns = (type: Props['type']) => {
 								Matriz
 							</Tag>
 						),
+					enableSorting: false,
+					enableColumnFilter: false,
 				}),
 			]
 		}

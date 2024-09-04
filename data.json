@@ -465,6 +465,8 @@
 			"id": "1",
 			"name": "Atualização de Infraestrutura de TI",
 			"contractType": "Serviço",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 40,
 			"contractObjective": "Atualização da infraestrutura de TI em todas as filiais.",
 			"contractItems": [
 				{
@@ -573,6 +575,8 @@
 			"id": "2",
 			"name": "Implantação de Sistema de Segurança",
 			"contractType": "Serviço",
+			"status": "CANCELADO",
+			"financialProgress": 50,
 			"contractObjective": "Instalação de um novo sistema de segurança nas unidades.",
 			"contractItems": [
 				{
@@ -660,6 +664,8 @@
 			"id": "3",
 			"name": "Treinamento e Capacitação de Equipe",
 			"contractType": "Serviço",
+			"status": "EM CONTRATAÇÃO",
+			"financialProgress": 0,
 			"contractObjective": "Treinamento da equipe de TI para novos sistemas e tecnologias.",
 			"contractItems": [
 				{
@@ -747,6 +753,8 @@
 			"id": "4",
 			"name": "Renovação do Parque de Máquinas",
 			"contractType": "Compra",
+			"status": "PARALISADO",
+			"financialProgress": 0,
 			"contractObjective": "Aquisição de novos equipamentos de escritório.",
 			"contractItems": [
 				{
@@ -834,6 +842,8 @@
 			"id": "5",
 			"name": "Reforma do Escritório Central",
 			"contractType": "Serviço",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Realizar a reforma completa do escritório central.",
 			"contractItems": [
 				{
@@ -914,6 +924,8 @@
 			"id": "6",
 			"name": "Fornecimento de Equipamentos de TI",
 			"contractType": "Compra",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Aquisição de servidores e periféricos de TI.",
 			"contractItems": [
 				{
@@ -1001,6 +1013,8 @@
 			"id": "7",
 			"name": "Implementação de Rede de Dados",
 			"contractType": "Serviço",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Instalação de infraestrutura de rede em nova sede.",
 			"contractItems": [
 				{
@@ -1116,6 +1130,8 @@
 			"id": "8",
 			"name": "Expansão da Rede de Energia",
 			"contractType": "Serviço",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Expansão da rede elétrica para novas instalações.",
 			"contractItems": [
 				{
@@ -1217,6 +1233,8 @@
 			"id": "9",
 			"name": "Aquisição de Mobiliário",
 			"contractType": "Compra",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Compra de novos móveis para escritório.",
 			"contractItems": [
 				{
@@ -1297,6 +1315,8 @@
 			"id": "10",
 			"name": "Serviços de Consultoria Jurídica",
 			"contractType": "Serviço",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Consultoria para adequação à nova legislação.",
 			"contractItems": [
 				{
@@ -1377,6 +1397,8 @@
 			"id": "11",
 			"name": "Desenvolvimento de Software Personalizado",
 			"contractType": "Serviço",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Criação de um sistema de gestão interna sob medida.",
 			"contractItems": [
 				{
@@ -1478,6 +1500,8 @@
 			"id": "12",
 			"name": "Treinamento de Equipes",
 			"contractType": "Serviço",
+			"status": "EM ANDAMENTO",
+			"financialProgress": 45,
 			"contractObjective": "Capacitação em novas ferramentas de produtividade.",
 			"contractItems": [
 				{

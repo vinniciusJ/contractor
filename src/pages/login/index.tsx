@@ -29,7 +29,7 @@ const LoginPage: FC = () => {
 			<Stack justifyContent="center" alignItems="center" width="55vw" px="15%" gap={4}>
 				<Typography fontSize={24}>Seja bem-vindo(a)</Typography>
 
-				<Input label="Usuário" type="password" name="email" control={form.control} />
+				<Input label="Usuário" name="email" control={form.control} />
 				<PasswordInput label="Senha" name="password" control={form.control} />
 
 				<Button fullWidth onClick={() => navigate('/')}>
