@@ -55,7 +55,7 @@ const ContractPage: FC = () => {
 								fontWeight={600}
 								color={(theme) => theme.palette.juicy.secondary[60]}
 							>
-								{contract.financialProgress}
+								{contract.financialProgress}%
 							</Typography>
 						</Typography>
 					</Stack>

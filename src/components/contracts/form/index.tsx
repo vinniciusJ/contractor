@@ -1,18 +1,16 @@
 import { FC, useCallback } from 'react'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import axios from 'axios'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 
 import { ContractTypeStep } from './steps/contract-type'
 import { OverviewStep } from './steps/overview'
 import { FormModal } from '@/components/ui/form-modal'
 import { useMutation } from '@/hooks/mutations'
-import { Company, HiringCompany } from '@/schemas/company'
-import { Contract, ContractFormFields, contractFormSchema } from '@/schemas/contract'
-import { ContractType } from '@/schemas/contractual-type'
-import { ContractedCompanyEmployee, HiringCompanyEmployee } from '@/schemas/employee'
+import { ContractFormFields, contractFormSchema } from '@/schemas/contract'
 import { MutationFeedback } from '@/schemas/utils/mutations'
-import { Service } from '@/services'
 import { FormProps } from '@/types/form'
 import { getSchemaDefault } from '@/utils/schema'
 
@@ -26,38 +24,39 @@ const UPDATE_FEEDBACK: MutationFeedback = {
 	error: 'Houve um erro durante o cadastro do contrato',
 }
 
-const service = new Service()
-
 export const ContractForm: FC<FormProps> = ({ formRef, id }) => {
 	const form = useForm<ContractFormFields>({
 		defaultValues: getSchemaDefault(contractFormSchema),
 		resolver: zodResolver(contractFormSchema),
 	})
 
-	const mutation = useMutation<Contract>('contract', {
+	const mutation = useMutation<ContractFormFields>('contract', {
 		method: id ? 'PUT' : 'POST',
 		feedback: id ? UPDATE_FEEDBACK : CREATE_FEEDBACK,
 	})
 
 	const submitForm = useCallback(async (data: ContractFormFields) => {
-		const contractType = await service.get<ContractType>(`contract-type/${data.contractTypeId}`)
-		const contractedCompany = await service.get<Company>(`contracted-company/${data.contractedCompanyId}`)
-		const subsidiaryCompany = await service.get<HiringCompany>(`hiring-company/${data.subsidiaryCompanyId}`)
-		const contractManager = await service.get<HiringCompanyEmployee>(
-			`hiring-company-employee/${data.contractManagerId}`
-		)
-		const legalRepresentative = await service.get<ContractedCompanyEmployee>(
-			`contracted-company-employee/${data.legalRepresentativeId}`
-		)
+		const response = await axios.get('https://nominatim.openstreetmap.org/search', {
+			params: {
+				q: data.executionLocal,
+				format: 'json',
+				limit: 1,
+				countrycodes: 'br',
+				featuretype: 'city',
+			},
+		})
 
-		await mutation.mutateAsync({
-			...data,
-			contractType,
-			contractedCompany,
-			subsidiaryCompany,
-			contractManager,
-			legalRepresentative,
-		} as Contract)
+		const result = response.data[0]
+
+		if (result) {
+			const latitude = Number.parseFloat(result.lat)
+			const longitude = Number.parseFloat(result.lon)
+
+			await mutation.mutateAsync({ ...data, latitude, longitude })
+			toast.success('Contrato cadastrado com sucesso!')
+		} else {
+			toast.error('Cidade do local de execução não encontrada!')
+		}
 	}, [])
 
 	return (

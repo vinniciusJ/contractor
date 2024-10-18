@@ -10,21 +10,22 @@ import { Company, HiringCompany } from '@/schemas/company'
 import { ContractFormFields } from '@/schemas/contract'
 import { ContractedCompanyEmployee, HiringCompanyEmployee } from '@/schemas/employee'
 import { PaymentMethod } from '@/schemas/payment-method'
-
-const parseToOptions = (items: { name: string; id: number }[]) =>
-	items.map((item) => ({
-		label: item.name,
-		value: item.id,
-	}))
+import { parseToOptions } from '@/utils/parse-to-options'
 
 export const OverviewStep = () => {
-	const { control } = useFormContext<ContractFormFields>()
+	const { control, watch } = useFormContext<ContractFormFields>()
+
+	const [contractedCompanyId, subsidiaryCompanyId] = watch(['contractedCompanyId', 'subsidiaryCompanyId'])
 
 	const { data: paymentMethods } = useGetList<PaymentMethod>('payment-method')
 	const { data: contractedCompanies } = useGetList<Company>('contracted-company')
 	const { data: subsidiaryCompanies } = useGetList<HiringCompany>('hiring-company')
-	const { data: contractManagers } = useGetList<HiringCompanyEmployee>('hiring-company-employee')
-	const { data: legalRepresentatives } = useGetList<ContractedCompanyEmployee>('contracted-company-employee')
+	const { data: contractManagers } = useGetList<HiringCompanyEmployee>('hiring-company-employee', {
+		companyId: subsidiaryCompanyId,
+	})
+	const { data: legalRepresentatives } = useGetList<ContractedCompanyEmployee>('contracted-company-employee', {
+		companyId: contractedCompanyId,
+	})
 
 	return (
 		<FormModal.StepContent step={0} columns={4}>
