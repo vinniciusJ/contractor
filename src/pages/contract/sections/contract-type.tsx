@@ -6,12 +6,12 @@ import { ContractItems } from '@/components/contract-items'
 import { Field } from '@/components/ui/field'
 import { GridGroup } from '@/components/ui/grid-group'
 import { useGetOne } from '@/hooks/get'
-import { APIContract } from '@/schemas/contract'
+import { Contract } from '@/schemas/contract'
 
 const ContractTypeSection = () => {
 	const { contractId } = useParams()
 
-	const { data: contract } = useGetOne<APIContract>(`contracts/${contractId}`)
+	const { data: contract } = useGetOne<Contract>(`contract/${contractId}`)
 
 	if (!contract) return null
 

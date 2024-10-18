@@ -8,7 +8,7 @@ import FilePreview from '@/components/ui/file-preview'
 import { GridGroup } from '@/components/ui/grid-group'
 import { ActionOption, MenuOptionsButton } from '@/components/ui/menu-options-button'
 import { useGetOne } from '@/hooks/get'
-import { APIContract } from '@/schemas/contract'
+import { Contract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
 const ContractTypeOptions: ActionOption[] = [
@@ -19,7 +19,7 @@ const ContractTypeOptions: ActionOption[] = [
 const ContractPaymentSection = () => {
 	const { contractId } = useParams()
 
-	const { data: contract } = useGetOne<APIContract>(`contracts/${contractId}`)
+	const { data: contract } = useGetOne<Contract>(`contract/${contractId}`)
 
 	if (!contract) return null
 
@@ -36,10 +36,10 @@ const ContractPaymentSection = () => {
 						<GridGroup columns={3}>
 							<Field label="Valor">{installment.value}</Field>
 							<Field label="Data prevista de pagamento">
-								{formatDate(installment.scheduledDeliveryDate)}
+								{formatDate(installment.scheduledPaymentDate)}
 							</Field>
 							<Field label="Data de pagamento">{formatDate(installment.paymentDate)}</Field>
-							{installment.paymentReceipt ? (
+							{installment.paymentReceiptURL ? (
 								<Field label="Comprovante" xs={3}>
 									<FilePreview
 										file={

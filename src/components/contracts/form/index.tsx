@@ -8,7 +8,7 @@ import { OverviewStep } from './steps/overview'
 import { FormModal } from '@/components/ui/form-modal'
 import { useMutation } from '@/hooks/mutations'
 import { Company, HiringCompany } from '@/schemas/company'
-import { APIContract, ContractFormFields, contractFormSchema } from '@/schemas/contract'
+import { Contract, ContractFormFields, contractFormSchema } from '@/schemas/contract'
 import { ContractType } from '@/schemas/contractual-type'
 import { ContractedCompanyEmployee, HiringCompanyEmployee } from '@/schemas/employee'
 import { MutationFeedback } from '@/schemas/utils/mutations'
@@ -34,20 +34,20 @@ export const ContractForm: FC<FormProps> = ({ formRef, id }) => {
 		resolver: zodResolver(contractFormSchema),
 	})
 
-	const mutation = useMutation<APIContract>('contracts', {
+	const mutation = useMutation<Contract>('contract', {
 		method: id ? 'PUT' : 'POST',
 		feedback: id ? UPDATE_FEEDBACK : CREATE_FEEDBACK,
 	})
 
 	const submitForm = useCallback(async (data: ContractFormFields) => {
-		const contractType = await service.get<ContractType>(`contract-types/${data.contractTypeId}`)
-		const contractedCompany = await service.get<Company>(`contracted-companies/${data.contractedCompanyId}`)
-		const subsidiaryCompany = await service.get<HiringCompany>(`hiring-companies/${data.subsidiaryCompanyId}`)
+		const contractType = await service.get<ContractType>(`contract-type/${data.contractTypeId}`)
+		const contractedCompany = await service.get<Company>(`contracted-company/${data.contractedCompanyId}`)
+		const subsidiaryCompany = await service.get<HiringCompany>(`hiring-company/${data.subsidiaryCompanyId}`)
 		const contractManager = await service.get<HiringCompanyEmployee>(
-			`hiring-company-employees/${data.contractManagerId}`
+			`hiring-company-employee/${data.contractManagerId}`
 		)
 		const legalRepresentative = await service.get<ContractedCompanyEmployee>(
-			`contracted-company-employees/${data.legalRepresentativeId}`
+			`contracted-company-employee/${data.legalRepresentativeId}`
 		)
 
 		await mutation.mutateAsync({
@@ -57,7 +57,7 @@ export const ContractForm: FC<FormProps> = ({ formRef, id }) => {
 			subsidiaryCompany,
 			contractManager,
 			legalRepresentative,
-		} as APIContract)
+		} as Contract)
 	}, [])
 
 	return (

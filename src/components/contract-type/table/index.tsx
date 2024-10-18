@@ -16,17 +16,10 @@ const columns = createColumns<ContractType>((helper) => [
 		header: 'Objeto contratual',
 		cell: (props) => props.getValue(),
 	}),
-	helper.accessor('contractItems', {
-		id: 'contractItems',
-		header: 'Itens contratuais',
-		cell: (props) => props.getValue().length,
-	}),
 ])
 
 export const ContractTypesTable: FC = () => {
-	const {
-		data: { data: contractTypes, items },
-	} = useGetPageable<ContractType>('contract-types')
+	const { data: contractTypes, totalDataSize } = useGetPageable<ContractType>('contract-type')
 
-	return <Table columns={columns} data={contractTypes} items={items} to="{id}" />
+	return <Table columns={columns} data={contractTypes} totalDataSize={totalDataSize} to="{id}" />
 }

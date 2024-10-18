@@ -36,13 +36,13 @@ export const EmployeeForm: FC<Props> = ({ formRef, companyType: type, id }) => {
 		resolver: zodResolver(employeeFormSchema),
 	})
 
-	const mutation = useMutation<EmployeeFormFields>(`${type}-company-employees`, {
+	const mutation = useMutation<EmployeeFormFields>(`${type}-company-employee`, {
 		method: id ? 'PUT' : 'POST',
 		feedback: id ? UPDATE_FEEDBACK : CREATE_FEEDBACK,
 	})
 
 	const submitForm = useCallback(async (data: EmployeeFormFields) => {
-		const company = await service.get<Company>(`${type}-companies`)
+		const company = await service.get<Company>(`${type}-company`)
 
 		await mutation.mutateAsync({ ...data, company: company })
 	}, [])

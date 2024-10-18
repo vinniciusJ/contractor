@@ -28,7 +28,7 @@ export const PaymentMethodForm: FC<FormProps> = ({ formRef, id }) => {
 		resolver: zodResolver(paymentMethodFormSchema),
 	})
 
-	const mutation = useMutation<PaymentMethodFormFields>('payment-methods', {
+	const mutation = useMutation<PaymentMethodFormFields>('payment-method', {
 		method: id ? 'PUT' : 'POST',
 		feedback: id ? UPDATE_FEEDBACK : CREATE_FEEDBACK,
 	})

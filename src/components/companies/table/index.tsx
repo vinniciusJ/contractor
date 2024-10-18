@@ -68,11 +68,9 @@ const getCompaniesTableColumns = (type: Props['type']) => {
 }
 
 export const CompaniesTable: FC<Props> = ({ type }) => {
-	const {
-		data: { data: companies, items },
-	} = useGetPageable<Company>(`${type}-companies`)
+	const { data: companies, totalDataSize } = useGetPageable<Company>(`${type}-company`)
 
 	const columns = getCompaniesTableColumns(type)
 
-	return <Table columns={columns} data={companies} items={items} to="{id}" />
+	return <Table columns={columns} data={companies} totalDataSize={totalDataSize} to="{id}" />
 }

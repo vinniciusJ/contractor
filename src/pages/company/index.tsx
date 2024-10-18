@@ -16,10 +16,10 @@ import { withEndpoint } from '@/utils/query'
 
 const getEndpointByType = (type: string, companyId: number) => {
 	if (type === 'hiring') {
-		return withEndpoint`hiring-companies/${companyId}`
+		return withEndpoint`hiring-company/${companyId}`
 	}
 
-	return withEndpoint`contracted-companies/${companyId}`
+	return withEndpoint`contracted-company/${companyId}`
 }
 
 const CompanyPage: FC = () => {

@@ -34,16 +34,16 @@ const FORM_DEFAULT_VALUES = getSchemaDefault(contractTypeFormSchema)
 
 export const ContractTypeForm: FC<FormProps> = ({ formRef, id }) => {
 	const form = useForm<ContractTypeFormFields>({
-		defaultValues: id ? async () => get(`contract-types/${id}`) : FORM_DEFAULT_VALUES,
+		defaultValues: id ? async () => get(`contract-type/${id}`) : FORM_DEFAULT_VALUES,
 		resolver: zodResolver(contractTypeFormSchema),
 	})
 
-	const createMutation = useMutation<ContractTypeFormFields>('contract-types', {
+	const createMutation = useMutation<ContractTypeFormFields>('contract-type', {
 		method: 'POST',
 		feedback: CREATE_FEEDBACK,
 	})
 
-	const updateMutation = useMutation<ContractTypeFormFields>(`contract-types/${id}`, {
+	const updateMutation = useMutation<ContractTypeFormFields>(`contract-type/${id}`, {
 		method: 'PUT',
 		feedback: UPDATE_FEEDBACK,
 	})

@@ -20,12 +20,12 @@ import { interpolate } from '@/utils/interpolate'
 
 interface Props<T extends object> {
 	data: T[]
-	items: number
+	totalDataSize: number
 	columns: ColumnDef<T>[]
 	to?: string
 }
 
-export function Table<T extends object>({ data, items, to, columns }: Readonly<Props<T>>) {
+export function Table<T extends object>({ data, totalDataSize, to, columns }: Readonly<Props<T>>) {
 	const { page, pageSize, setPage, setPageSize } = usePagination()
 
 	const navigate = useNavigate()
@@ -90,11 +90,11 @@ export function Table<T extends object>({ data, items, to, columns }: Readonly<P
 				</MuiTable>
 			</TableContainer>
 
-			{items > 0 && (
+			{totalDataSize > 0 && (
 				<TablePagination
-					count={items}
+					count={totalDataSize}
 					rowsPerPage={pageSize}
-					page={page - 1}
+					page={page}
 					onPageChange={handlePageChange}
 					onRowsPerPageChange={handleRowPerPageChange}
 					labelRowsPerPage={'Linhas por página:'}

@@ -5,11 +5,11 @@ import { Field } from '@/components/ui/field'
 import { Map } from '@/components/ui/map'
 import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetList } from '@/hooks/get'
-import { APIContract } from '@/schemas/contract'
+import { Contract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
 const ContractsMapPage = () => {
-	const { data: contracts } = useGetList<APIContract>('contracts')
+	const { data: contracts } = useGetList<Contract>('contract')
 
 	return (
 		<Map>

@@ -19,9 +19,7 @@ const columns = createColumns<PaymentMethod>((helper) => [
 ])
 
 export const PaymentMethodsTable: FC = () => {
-	const {
-		data: { data: paymentMethods, items },
-	} = useGetPageable<PaymentMethod>('payment-methods')
+	const { data: paymentMethods, totalDataSize } = useGetPageable<PaymentMethod>('payment-method')
 
-	return <Table columns={columns} data={paymentMethods} items={items} />
+	return <Table columns={columns} data={paymentMethods} totalDataSize={totalDataSize} />
 }

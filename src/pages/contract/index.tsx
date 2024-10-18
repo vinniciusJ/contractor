@@ -8,8 +8,7 @@ import { ActionOption, MenuOptionsButton } from '@/components/ui/menu-options-bu
 import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetOne } from '@/hooks/get'
 import { PageLayout } from '@/layouts/page'
-import { APIContract, Contract } from '@/schemas/contract'
-import { PaymentMethod } from '@/schemas/payment-method'
+import { Contract } from '@/schemas/contract'
 import { Section } from '@/types/label-value'
 
 const ContractOptions: ActionOption[] = [
@@ -26,13 +25,8 @@ const SECTIONS: Section[] = [
 const ContractPage: FC = () => {
 	const { contractId } = useParams<Params>()
 
-	const { data, isLoading } = useGetOne<APIContract>(`contracts/${contractId}`)
-	const { data: paymentMethod } = useGetOne<PaymentMethod>(`payment-methods/${data?.paymentMethodId}`)
-
-	const contract: Contract = {
-		...data,
-		paymentMethod: paymentMethod,
-	} as unknown as Contract
+	const { data: contract, isLoading } = useGetOne<Contract>(`contract/${contractId}`)
+	console.log(contract)
 
 	if (isLoading) {
 		return <Loading />

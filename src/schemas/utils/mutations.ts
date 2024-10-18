@@ -32,10 +32,32 @@ export const mutationFeedbackSchema = z.object({
 })
 
 export const getPageableReturnSchema = z.object({
-	first: z.number().nonnegative().default(0),
-	last: z.number().nonnegative().default(0),
-	items: z.number().nonnegative().default(0),
-	data: z.any().array().default([]),
+	content: z.any().array().default([]),
+	pageable: z.object({
+		sort: z.object({
+			sorted: z.boolean(),
+			unsorted: z.boolean(),
+			empty: z.boolean().optional(),
+		}),
+		offset: z.number(),
+		pageNumber: z.number(),
+		pageSize: z.number(),
+		paged: z.boolean(),
+		unpaged: z.boolean(),
+	}),
+	last: z.boolean(),
+	totalPages: z.number(),
+	totalElements: z.number(),
+	size: z.number(),
+	number: z.number(),
+	sort: z.object({
+		sorted: z.boolean(),
+		unsorted: z.boolean(),
+		empty: z.boolean(),
+	}),
+	first: z.boolean(),
+	numberOfElements: z.number(),
+	empty: z.boolean(),
 })
 
 export const mutationMethodsSchema = z.enum(['POST', 'PUT', 'DELETE'])
@@ -43,4 +65,6 @@ export const mutationMethodsSchema = z.enum(['POST', 'PUT', 'DELETE'])
 export type MutationMethods = z.infer<typeof mutationMethodsSchema>
 export type MutationFeedback = z.output<typeof mutationFeedbackSchema>
 
-export type PageableReturn<T extends object> = Omit<z.infer<typeof getPageableReturnSchema>, 'data'> & { data: T[] }
+export type PageableReturn<T extends object> = Omit<z.infer<typeof getPageableReturnSchema>, 'content'> & {
+	content: T[]
+}

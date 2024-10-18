@@ -54,11 +54,12 @@ const getEmployeesTableColumns = (companyType: Props['companyType']) => {
 export const EmployeesTable: FC<Props> = ({ companyId, companyType = 'hiring' }) => {
 	const columns = getEmployeesTableColumns(companyType)
 
-	const {
-		data: { data: employees, items },
-	} = useGetPageable<HiringCompanyEmployee | ContractedCompanyEmployee>(`${companyType}-company-employees`, {
-		'company.id': Number(companyId),
-	})
+	const { data: employees, totalDataSize } = useGetPageable<HiringCompanyEmployee | ContractedCompanyEmployee>(
+		`${companyType}-company-employee`,
+		{
+			companyId: Number(companyId),
+		}
+	)
 
-	return <Table columns={columns} data={employees} items={items} />
+	return <Table columns={columns} data={employees} totalDataSize={totalDataSize} />
 }

@@ -32,7 +32,7 @@ export const CompanyForm: FC<Props> = ({ formRef, type, id }) => {
 		resolver: zodResolver(companyFormSchema),
 	})
 
-	const mutation = useMutation<CompanyFormFields>(`${type}-companies`, {
+	const mutation = useMutation<CompanyFormFields>(`${type}-company`, {
 		method: id ? 'PUT' : 'POST',
 		feedback: id ? UPDATE_FEEDBACK : CREATE_FEEDBACK,
 	})

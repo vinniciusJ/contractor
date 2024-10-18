@@ -20,11 +20,11 @@ const parseToOptions = (items: { name: string; id: number }[]) =>
 export const OverviewStep = () => {
 	const { control } = useFormContext<ContractFormFields>()
 
-	const { data: paymentMethods } = useGetList<PaymentMethod>('payment-methods')
-	const { data: contractedCompanies } = useGetList<Company>('contracted-companies')
-	const { data: subsidiaryCompanies } = useGetList<HiringCompany>('hiring-companies')
-	const { data: contractManagers } = useGetList<HiringCompanyEmployee>('hiring-company-employees')
-	const { data: legalRepresentatives } = useGetList<ContractedCompanyEmployee>('contracted-company-employees')
+	const { data: paymentMethods } = useGetList<PaymentMethod>('payment-method')
+	const { data: contractedCompanies } = useGetList<Company>('contracted-company')
+	const { data: subsidiaryCompanies } = useGetList<HiringCompany>('hiring-company')
+	const { data: contractManagers } = useGetList<HiringCompanyEmployee>('hiring-company-employee')
+	const { data: legalRepresentatives } = useGetList<ContractedCompanyEmployee>('contracted-company-employee')
 
 	return (
 		<FormModal.StepContent step={0} columns={4}>

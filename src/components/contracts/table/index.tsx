@@ -5,10 +5,10 @@ import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
 import { Table } from '@/components/ui/table'
 import { StatusTag } from '@/components/ui/tag/status-tag'
 import { useGetPageable } from '@/hooks/get'
-import { APIContract } from '@/schemas/contract'
+import { Contract } from '@/schemas/contract'
 import { formatDate } from '@/utils/date'
 
-const columnHelper = createColumnHelper<APIContract>()
+const columnHelper = createColumnHelper<Contract>()
 
 const columns = [
 	columnHelper.accessor('name', {
@@ -16,7 +16,7 @@ const columns = [
 		header: 'Nome',
 		cell: (props) => props.getValue(),
 	}),
-	columnHelper.accessor('contractType', {
+	columnHelper.accessor('contractType.id', {
 		id: 'contractType',
 		header: 'Tipo do contrato',
 		cell: (props) => props.getValue(),
@@ -50,10 +50,10 @@ const columns = [
 		cell: (props) => <StatusTag status={props.getValue()} />,
 		enableSorting: false,
 	}),
-] as ColumnDef<APIContract>[]
+] as ColumnDef<Contract>[]
 
 export const ContractsTable: FC = () => {
-	const { data: contracts } = useGetPageable<APIContract>('contracts')
+	const { data: contracts, totalDataSize } = useGetPageable<Contract>('contract')
 
-	return <Table columns={columns} data={contracts.data} items={contracts.items} to="/contracts/{id}/overview" />
+	return <Table columns={columns} data={contracts} totalDataSize={totalDataSize} to="/contracts/{id}/overview" />
 }

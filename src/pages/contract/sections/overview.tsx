@@ -5,12 +5,12 @@ import { CompanyOverview } from '@/components/companies/overview'
 import { ContractOverview } from '@/components/contracts/overview'
 import { EmployeeOverview } from '@/components/employees/overview'
 import { useGetOne } from '@/hooks/get'
-import { APIContract } from '@/schemas/contract'
+import { Contract } from '@/schemas/contract'
 
 const ContractOverviewSection = () => {
 	const { contractId } = useParams()
 
-	const { data: contract } = useGetOne<APIContract>(`contracts/${contractId}`)
+	const { data: contract } = useGetOne<Contract>(`contract/${contractId}`)
 
 	if (!contract) return null
 

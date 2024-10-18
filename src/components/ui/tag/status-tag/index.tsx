@@ -6,10 +6,17 @@ interface Props {
 	status: Status
 }
 const STATUS_COLORS = {
-	'EM ANDAMENTO': { bgcolor: theme.palette.juicy.secondary[20], color: theme.palette.juicy.secondary[60] },
-	'EM CONTRATAÇÃO': { bgcolor: theme.palette.juicy.primary[20], color: theme.palette.juicy.primary[60] },
-	CANCELADO: { bgcolor: theme.palette.juicy.red[10], color: theme.palette.juicy.red[100] },
-	PARALISADO: { bgcolor: theme.palette.juicy.olive[10], color: theme.palette.juicy.olive[100] },
+	IN_PROGRESS: { bgcolor: theme.palette.juicy.secondary[20], color: theme.palette.juicy.secondary[60] },
+	UNDER_CONTRACT: { bgcolor: theme.palette.juicy.primary[20], color: theme.palette.juicy.primary[60] },
+	CANCELED: { bgcolor: theme.palette.juicy.red[10], color: theme.palette.juicy.red[100] },
+	PARALYZED: { bgcolor: theme.palette.juicy.olive[10], color: theme.palette.juicy.olive[100] },
+}
+
+const STATUS_MAP = {
+	IN_PROGRESS: 'Em progresso',
+	UNDER_CONTRACT: 'Em contratação',
+	CANCELED: 'Cancelado',
+	PARALYZED: 'Paralisado',
 }
 
 export const StatusTag = ({ status }: Props) => {
@@ -17,7 +24,7 @@ export const StatusTag = ({ status }: Props) => {
 
 	return (
 		<Tag bgcolor={bgcolor} color={color}>
-			{status.toLowerCase()}
+			{STATUS_MAP[status]}
 		</Tag>
 	)
 }

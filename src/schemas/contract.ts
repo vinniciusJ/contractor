@@ -5,8 +5,9 @@ import { contractItemFormSchema, contractItemSchema } from './contract-item'
 import { contractTypeSchema } from './contractual-type'
 import { contractedCompanyEmployeeSchema, hiringCompanyEmployeeSchema } from './employee'
 import { installmentSchema } from './installment'
+import { paymentMethodSchema } from './payment-method'
 
-const STATUS = ['EM ANDAMENTO', 'EM CONTRATAÇÃO', 'CANCELADO', 'PARALISADO'] as const
+const STATUS = ['IN_PROGRESS', 'UNDER_CONTRACT', 'CANCELED', 'PARALYZED'] as const
 
 export const statusSchema = z.enum(STATUS)
 
@@ -16,7 +17,6 @@ export const contractFormSchema = z.object({
 	name: z.string(),
 	contractTypeId: z.number(),
 	contractObjective: z.string(),
-	contractItems: contractItemFormSchema.array(),
 	startDate: z.date(),
 	endDate: z.date(),
 	contractedValue: z.number(),
@@ -24,16 +24,16 @@ export const contractFormSchema = z.object({
 	executionLocal: z.string(),
 	latitude: z.number(),
 	longitude: z.number(),
-	contractedCompanyId: z.number(),
 	subsidiaryCompanyId: z.number(),
 	contractManagerId: z.number(),
+	contractedCompanyId: z.number(),
 	legalRepresentativeId: z.number(),
-	status: statusSchema,
+	contractItems: contractItemFormSchema.array(),
 })
 
 export type ContractFormFields = z.infer<typeof contractFormSchema>
 
-export const apiContractSchema = contractFormSchema.extend({
+export const contractSchema = contractFormSchema.extend({
 	id: z.number(),
 
 	contractTypeId: z.never(),
@@ -51,12 +51,8 @@ export const apiContractSchema = contractFormSchema.extend({
 	contractManager: hiringCompanyEmployeeSchema,
 	legalRepresentative: contractedCompanyEmployeeSchema,
 	financialProgress: z.number(),
-})
-
-export type APIContract = z.infer<typeof apiContractSchema>
-
-export const contractSchema = apiContractSchema.extend({
-	paymentMethodId: z.never(),
+	status: statusSchema,
+	paymentMethod: paymentMethodSchema,
 })
 
 export type Contract = z.infer<typeof contractSchema>

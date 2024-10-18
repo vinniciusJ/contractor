@@ -1,31 +1,28 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const routes = {
-	companies: {
+	'contract-type': {
 		':id': {},
 	},
-	'contract-types': {
+	'contracted-company-employee': {
 		':id': {},
 	},
-	'contracted-company-employees': {
+	'hiring-company-employee': {
 		':id': {},
 	},
-	'hiring-company-employees': {
+	'hiring-company': {
 		':id': {},
 	},
-	'hiring-companies': {
+	'contracted-company': {
 		':id': {},
 	},
-	'contracted-companies': {
+	installment: {
 		':id': {},
 	},
-	installments: {
+	'payment-method': {
 		':id': {},
 	},
-	'payment-methods': {
-		':id': {},
-	},
-	contracts: {
+	contract: {
 		':id': {},
 	},
 } as const
