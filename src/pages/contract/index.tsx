@@ -67,7 +67,7 @@ const ContractPage: FC = () => {
 
 			<PageLayout.Sections sections={SECTIONS} />
 
-			<PageLayout.Content />
+			<PageLayout.Content>oii</PageLayout.Content>
 		</PageLayout.Root>
 	)
 }

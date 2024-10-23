@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 export interface MutationOptions {
 	method: MutationMethods
-	feedback: MutationFeedback
+	feedback?: MutationFeedback
 }
 
 export interface MutationFn<T> {

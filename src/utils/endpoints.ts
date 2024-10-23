@@ -25,6 +25,7 @@ const routes = {
 	contract: {
 		':id': {},
 	},
+	chatbot: {},
 } as const
 
 type InferRoutes<T> = {

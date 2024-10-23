@@ -3,6 +3,7 @@ import { FC, MouseEvent, useCallback, useMemo } from 'react'
 import {
 	Building as CompaniesIcon,
 	DocumentMultiple_01 as ContractIcon,
+	IbmWatsonAssistant,
 	Logout as LogoutIcon,
 } from '@carbon/icons-react'
 import { Avatar, Divider, Stack, ToggleButtonGroup, Tooltip, Typography } from '@mui/material'
@@ -20,7 +21,8 @@ export const AppMenu: FC = () => {
 		(_: MouseEvent<HTMLElement>, page: string) => {
 			const to = page ?? currentPage
 
-			navigate(`${to}/${to === 'companies' ? 'hiring' : 'map'}`)
+			// eslint-disable-next-line sonarjs/no-nested-conditional
+			navigate(`${to}/${to === 'companies' ? 'hiring' : to == 'contracts' ? 'map' : ''}`)
 		},
 		[currentPage]
 	)
@@ -60,6 +62,10 @@ export const AppMenu: FC = () => {
 					<OptionButton value="companies">
 						<CompaniesIcon />
 						Empresas
+					</OptionButton>
+					<OptionButton value="chatbot">
+						<IbmWatsonAssistant />
+						Assistente virtual
 					</OptionButton>
 				</ToggleButtonGroup>
 			</Stack>
