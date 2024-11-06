@@ -1,5 +1,6 @@
 import { Stack, Typography } from '@mui/material'
 
+import { theme } from '@/themes'
 import { Message as MessageType } from '@/types/message'
 
 export const Message = ({ sender, text }: MessageType) => {
@@ -11,8 +12,14 @@ export const Message = ({ sender, text }: MessageType) => {
 			}}
 			p={2}
 			borderRadius={1}
+			gap={1}
 		>
-			<Typography>{text}</Typography>
+			{sender == 'bot' && (
+				<Typography fontWeight={600} color={theme.palette.juicy.secondary[80]}>
+					Trac
+				</Typography>
+			)}
+			<Typography sx={{ whiteSpace: 'pre-wrap' }}>{text}</Typography>
 		</Stack>
 	)
 }

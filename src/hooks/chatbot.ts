@@ -2,13 +2,13 @@ import { useAtom } from 'jotai'
 
 import { useMutation } from './mutations'
 import { messagesAtom } from '@/atoms/chatbot'
-import { ChatbotFormFields } from '@/schemas/chatbot'
+import { ChatbotType } from '@/schemas/chatbot'
 import { Message } from '@/types/message'
 
 export const useChatbot = () => {
 	const [messages, setMessages] = useAtom(messagesAtom)
 
-	const mutation = useMutation<ChatbotFormFields>('chatbot', {
+	const mutation = useMutation<ChatbotType>('chatbot', {
 		method: 'POST',
 	})
 
@@ -25,10 +25,12 @@ export const useChatbot = () => {
 		addMessage('user', message)
 
 		const response = (await mutation.mutateAsync({ message })) as {
-			data: string
+			data: {
+				message: string
+			}
 		}
 
-		addMessage('bot', response.data)
+		addMessage('bot', response.data.message)
 	}
 
 	return {

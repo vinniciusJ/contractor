@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
-export const chatbotFormSchema = z.object({
+export const chatbotSchema = z.object({
 	message: z.string(),
 })
 
-export type ChatbotFormFields = z.input<typeof chatbotFormSchema>
+export type ChatbotType = z.input<typeof chatbotSchema>

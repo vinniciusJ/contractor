@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
 
 import { SendFilled } from '@carbon/icons-react'
 import { Button, IconButton, Stack, TextField } from '@mui/material'
@@ -9,6 +9,8 @@ import { useChatbot } from '@/hooks/chatbot'
 import { PageLayout } from '@/layouts/page'
 
 const Chatbot: FC = () => {
+	const messagesEndRef = useRef<HTMLDivElement>(null)
+
 	const [message, setMessage] = useState('')
 	const { sendMessage, messages, isPending, clearMessages } = useChatbot()
 
@@ -17,11 +19,17 @@ const Chatbot: FC = () => {
 		setMessage('')
 	}, [message])
 
+	useEffect(() => {
+		if (messagesEndRef.current) {
+			messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
+		}
+	}, [messages, isPending])
+
 	return (
 		<PageLayout.Root>
 			<PageLayout.Header.Root>
 				<PageLayout.Header.Title.Root>
-					<PageLayout.Header.Title.Text>Chatbot</PageLayout.Header.Title.Text>
+					<PageLayout.Header.Title.Text>Assistente virtual</PageLayout.Header.Title.Text>
 				</PageLayout.Header.Title.Root>
 				<PageLayout.Header.RightElementGroup>
 					<Button variant="text" onClick={clearMessages} disabled={messages.length === 0}>
@@ -40,11 +48,18 @@ const Chatbot: FC = () => {
 						gap={3}
 						sx={{ overflowY: 'auto' }}
 					>
+						<Message
+							sender="bot"
+							text="Olá! Sou o Trac, o assistente virtual do Contractor. Como posso te ajudar? 😊"
+						/>
+
 						{messages.map((message, index) => (
 							<Message key={index + message.text} {...message} />
 						))}
 
 						{isPending && <Loading />}
+
+						<div ref={messagesEndRef} />
 					</Stack>
 
 					<TextField
